@@ -1,0 +1,42 @@
+{
+    "name": "multitran-extension",
+    "version": "1.0.0",
+    "description": "Multitran Firefox extension",
+    "main": "manifest.json",
+    "scripts": {
+        "web-ext:ff": "web-ext run --source-dir dist/firefox",
+        "web-ext:chrome": "web-ext run --target chromium --source-dir dist/chrome",
+        "watch:ff": "rollup -c -w",
+        "watch:chrome": "TARGET='chrome' rollup -w",
+        "start:ff": "npm-run-all build:ff --parallel watch:ff web-ext:ff",
+        "start:chrome": "npm-run-all build:chrome --parallel watch:chrome web-ext:chrome",
+        "build:ff": "rollup -c",
+        "build:chrome": "TARGET='chrome' rollup -c",
+        "zip:ff": "web-ext build --source-dir dist/firefox",
+        "zip:chrome": "web-ext build --source-dir dist/chrome",
+        "buildzip:ff": "npm-run-all --sequential build:ff zip:ff",
+        "buildzip:chrome": "npm-run-all --sequential build:chrome zip:chrome",
+        "lint": "eslint ./src",
+        "lint:fix": "eslint --fix ./src"
+    },
+    "author": "Vitaly Yerofeyevsky",
+    "license": "MPL-2.0",
+    "dependencies": {
+        "@rollup/plugin-replace": "^2.3.3",
+        "npm-run-all": "^4.1.5",
+        "rollup": "^2.17.1",
+        "rollup-plugin-copy": "^3.3.0",
+        "rollup-plugin-copy-watch": "0.0.1",
+        "rollup-plugin-delete": "^2.0.0",
+        "web-ext": "^4.2.0",
+        "webextension-polyfill": "^0.6.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.2.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.21.2",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "2.0.5"
+    }
+}

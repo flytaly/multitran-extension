@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "applications": {
+        "gecko": {
+            "strict_min_version": "75.0",
+            "id": "multitran@flytaly"
+        }
+    },
+    "default_locale": "en",
+    "description": "__MSG_description__",
+    "name": "__MSG_name__",
+    "short_name": "Multitran-popup",
+    "version": "1.0.0",
+    "homepage_url": "https://github.com/flytaly/multitran-extension",
+    "icons": {
+        "48": "/images/icon-48.png",
+        "64": "/images/icon-64.png",
+        "96": "/images/icon-96.png"
+    },
+    "permissions": ["https://www.multitran.com/*"],
+    "browser_action": {
+        "default_title": "__MSG_extension_title__",
+        "default_icon": "/images/icon.svg",
+        "default_popup": "popup.html",
+        "browser_style": true
+    },
+    "options_ui": {
+        "page": "options.html",
+        "browser_style": true
+    }
+}

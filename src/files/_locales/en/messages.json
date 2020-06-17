@@ -1,0 +1,14 @@
+{
+    "description": {
+        "message": "Multitran extension",
+        "description": "Description of the extension"
+    },
+    "name": {
+        "message": "Multitran extension",
+        "description": "Name of the extension"
+    },
+    "extension_title": {
+        "message": "Multitran",
+        "description": "Extension title"
+    }
+}
