@@ -19,7 +19,7 @@ const polyfillPath =
         : 'src/firefox/browser-polyfill.js';
 
 const copyPlugin = copy({
-    watch: ['src/files/**/*', 'src/styles/**/*', `src/${target}/*`],
+    ...(isWatchMode ? { watch: ['src/files/**/*', 'src/styles/**/*', `src/${target}/*`] } : {}),
     targets: [
         // { src: 'src/index.html', dest: 'dist/public' },
         { src: 'src/files/*', dest: outputPath },
@@ -27,6 +27,7 @@ const copyPlugin = copy({
         { src: `src/${target}/*`, dest: outputPath },
         { src: polyfillPath, dest: outputPath },
     ],
+    copyOnce: true,
 });
 
 const delPlugin = del({ targets: outputPath, runOnce: true });

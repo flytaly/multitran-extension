@@ -6,6 +6,14 @@
             "id": "multitran@flytaly"
         }
     },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["browser-polyfill.js", "js/content/content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": ["styles/content.css"],
     "default_locale": "en",
     "description": "__MSG_description__",
     "name": "__MSG_name__",
