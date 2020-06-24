@@ -3,7 +3,7 @@ const baseURL = 'https://www.multitran.com';
 
 function fixURL(relativeURL) {
     if (relativeURL.startsWith('/m.exe')) return baseURL + relativeURL;
-    return '#';
+    return relativeURL;
 }
 function getParsedHTML(text) {
     const htmlParser = new DOMParser();
@@ -23,6 +23,14 @@ function getGroupHeader(td) {
         type: 'header',
         content,
     };
+}
+
+function checkOtherLang(html) {
+    const result = Array.from(html.querySelectorAll('td.morelangs a'));
+    return result.map((a) => {
+        a.setAttribute('href', fixURL(a.getAttribute('href')));
+        return a;
+    });
 }
 
 function getTranslationsFromRow(tr) {
@@ -51,7 +59,7 @@ function getTranslationsFromRow(tr) {
 export function parser(text) {
     const html = getParsedHTML(text);
     const tranTable = html.querySelector('table td.subj ~ td.trans')?.closest('table');
-    if (!tranTable) return null;
+    if (!tranTable) return { data: [], otherLang: checkOtherLang(html) };
     const rows = Array.from(tranTable.querySelectorAll('tbody > tr'));
 
     const data = [];
@@ -66,6 +74,5 @@ export function parser(text) {
         }
     });
 
-    // console.log(data);
-    return data;
+    return { data };
 }

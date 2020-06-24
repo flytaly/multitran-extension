@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Parser should math snapshot 1`] = `
+exports[`Parser should match snapshot 1`] = `
 Array [
   Object {
     "content": Array [
