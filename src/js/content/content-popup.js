@@ -1,17 +1,51 @@
 /* eslint-disable no-use-before-define */
 import { state } from './state.js';
+import { multitranData } from '../translate-engine/multitran.js';
 
-export function showPopup({ parent = document.body, top = 0, left = 0, content }) {
+export function popupMarkup(data) {
+    const rootElement = document.createElement('div');
+    rootElement.id = 'translate-popup';
+    const elementsList = [];
+    let prevRowType = null;
+    data.forEach((row) => {
+        const rowContainer = document.createElement('div');
+        if (row.type === 'header') {
+            rowContainer.classList.add('header');
+            rowContainer.append(...row.content);
+            elementsList.push(rowContainer);
+        }
+        if (row.type === 'translation') {
+            let ol;
+            if (prevRowType === 'translation') {
+                ol = elementsList[elementsList.length - 1];
+            } else {
+                ol = document.createElement('ol');
+                elementsList.push(ol);
+            }
+            const li = document.createElement('li');
+            ol.appendChild(li);
+            li.append(...row.trans);
+        }
+        prevRowType = row.type;
+    });
+    rootElement.append(...elementsList);
+    return rootElement;
+}
+
+export async function showPopup({ parent = document.body, top = 0, left = 0, text }) {
     state.isPopupOpened = true;
-    const popupElement = document.createElement('div');
-    popupElement.id = 'translate-popup';
+
+    const { data } = await multitranData(text, 2, 1, 2);
+    if (!data || !data.length) return;
+
+    const popupElement = popupMarkup(data);
     parent.appendChild(popupElement);
+
     const style = {
         top: `${top}px`,
         left: `${left}px`,
     };
     Object.assign(popupElement.style, style);
-    popupElement.innerHTML = `<b>${content}</b>`;
 
     function hidePopupMouse(e) {
         if (!e.target.closest('#translate-popup')) {

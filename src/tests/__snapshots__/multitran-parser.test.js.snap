@@ -1,608 +1,1195 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Parser should match snapshot 1`] = `
-Array [
-  Object {
-    "content": Array [
-      Object {
-        "href": "https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1",
-        "tag": "A",
-        "text": "prescription",
-      },
-      Object {
-        "tag": "SPAN",
-        "text": "[prɪ'skrɪpʃ(ə)n]",
-      },
-      Object {
-        "tag": "EM",
-        "text": "n",
-      },
-    ],
-    "type": "header",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
-      title="General"
-    >
-      gen.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
+Object {
+  "data": Array [
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+        >
+          prescription
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          n
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
+        title="General"
       >
-        предписывание
+        gen.
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
+        >
+          предписывание
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+        >
+          распоряжение
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
+        >
+          рекомендация
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
+        >
+          неписаный закон
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
+        >
+          назначение
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
+        >
+          рецепт
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
+        >
+          пресекательный срок
+        </a>,
+        <span
+          class="description"
+        >
+          (Lavrov)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=истечение+срока&l1=2&l2=1"
+        >
+          истечение срока
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
+        >
+          инструкция
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
+        >
+          диоптрия
+        </a>,
+        <span
+          class="description"
+        >
+          (Контекстный перевод. Например, prescription glasses eugenius_rus)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=установка&l1=2&l2=1"
+        >
+          установка
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
+        >
+          директива
+        </a>,
+        <span
+          class="description"
+        >
+          (ssn)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
+        title="Agriculture"
       >
-        распоряжение
+        agric.
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+        >
+          предписание
+        </a>,
+        <span
+          class="description"
+        >
+          (лекарства)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
+        >
+          указание
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
+        title="Business"
       >
-        рекомендация
+        busin.
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
+        >
+          право приобретательной давности
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
+        >
+          право погасительной давности
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
+        title="Dentistry"
       >
-        неписаный закон
+        dentist.
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
+        >
+          пропись для брекета
+        </a>,
+        <span
+          class="description"
+        >
+          (характеристики положения паза брекета по отношению к основанию брекета schyzomaniac)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
+        title="Economy"
       >
-        назначение
+        econ.
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+        >
+          распоряжение
+        </a>,
+        <span
+          class="description"
+        >
+          (инструкция, указание)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
+        title="Forestry"
       >
-        рецепт
+        forestr.
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
+        >
+          лесорубочный билет
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
+        title="Law"
       >
-        пресекательный срок
+        law
       </a>,
-      <span
-        class="description"
-      >
-        (Lavrov)
-      </span>,
-      <a
-        href="https://www.multitran.com/m.exe?s=истечение+срока&l1=2&l2=1"
-      >
-        истечение срока
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
-      >
-        инструкция
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
-      >
-        диоптрия
-      </a>,
-      <span
-        class="description"
-      >
-        (Контекстный перевод. Например, prescription glasses eugenius_rus)
-      </span>,
-      <a
-        href="https://www.multitran.com/m.exe?s=установка&l1=2&l2=1"
-      >
-        установка
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
-      >
-        директива
-      </a>,
-      <span
-        class="description"
-      >
-        (ssn)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
-      title="Agriculture"
-    >
-      agric.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
-      >
-        предписание
-      </a>,
-      <span
-        class="description"
-      >
-        (лекарства)
-      </span>,
-      <a
-        href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
-      >
-        указание
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
-      title="Business"
-    >
-      busin.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
-      >
-        право приобретательной давности
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
-      >
-        право погасительной давности
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
-      title="Dentistry"
-    >
-      dentist.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
-      >
-        пропись для брекета
-      </a>,
-      <span
-        class="description"
-      >
-        (характеристики положения паза брекета по отношению к основанию брекета schyzomaniac)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
-      title="Economy"
-    >
-      econ.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
-      >
-        распоряжение
-      </a>,
-      <span
-        class="description"
-      >
-        (инструкция, указание)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
-      title="Forestry"
-    >
-      forestr.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
-      >
-        лесорубочный билет
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
-      title="Law"
-    >
-      law
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
-      >
-        право давности
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
-      >
-        давность
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
-      >
-        приобретательная давность
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=данность&l1=2&l2=1"
-      >
-        данность
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
-      >
-        срок приобретательной или исковой давности
-      </a>,
-      <span
-        class="description"
-      >
-        (The process of acquiring title to property by reason of uninterrupted possession of
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
+        >
+          право давности
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+        >
+          давность
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
+        >
+          приобретательная давность
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=данность&l1=2&l2=1"
+        >
+          данность
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
+        >
+          срок приобретательной или исковой давности
+        </a>,
+        <span
+          class="description"
+        >
+          (The process of acquiring title to property by reason of uninterrupted possession of
                                 specified duration. Also called positive prescription. Law The limitation of time beyond
                                 which an action, debt, or crime is no longer valid or enforceable. Also called negative
                                 prescription. Maksim Kozlov)
-      </span>,
-      <a
-        href="https://www.multitran.com/m.exe?s=срок+исковой+давности&l1=2&l2=1"
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+исковой+давности&l1=2&l2=1"
+        >
+          срок исковой давности
+        </a>,
+        <span
+          class="description"
+        >
+          (MichaelBurov)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=исковая+давность&l1=2&l2=1"
+        >
+          исковая давность
+        </a>,
+        <span
+          class="description"
+        >
+          (MichaelBurov)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+        >
+          срок давности
+        </a>,
+        <span
+          class="description"
+        >
+          (MichaelBurov)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
+        title="Makarov"
       >
-        срок исковой давности
+        Makarov.
       </a>,
-      <span
-        class="description"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
+        >
+          задание
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
+        title="Medical"
       >
-        (MichaelBurov)
-      </span>,
-      <a
-        href="https://www.multitran.com/m.exe?s=исковая+давность&l1=2&l2=1"
-      >
-        исковая давность
+        med.
       </a>,
-      <span
-        class="description"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
+        >
+          пропись
+        </a>,
+        <span
+          class="description"
+        >
+          (лекарственная)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
+        title="Notarial practice"
       >
-        (MichaelBurov)
-      </span>,
-      <a
-        href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
-      >
-        срок давности
+        notar.
       </a>,
-      <span
-        class="description"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
+        >
+          норма
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
+        >
+          приобретение по давности
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+        >
+          давность
+        </a>,
+        <span
+          class="description"
+        >
+          (in most general sense of the word, as it is used, for example, in louisiana)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
+        title="Officialese"
       >
-        (MichaelBurov)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
-      title="Makarov"
-    >
-      Makarov.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
-      >
-        задание
+        offic.
       </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
-      title="Medical"
-    >
-      med.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
+        >
+          регламентация
+        </a>,
+        <span
+          class="description"
+        >
+          (igisheva)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=регламентирование&l1=2&l2=1"
+        >
+          регламентирование
+        </a>,
+        <span
+          class="description"
+        >
+          (igisheva)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
+        title="Patents"
       >
-        пропись
+        patents.
       </a>,
-      <span
-        class="description"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
+        >
+          положение
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+        >
+          предписание
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-л.+по+давности+владения&l1=2&l2=1"
+        >
+          утверждение права на что-л. по давности владения
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
+        title="Psychology"
       >
-        (лекарственная)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
-      title="Notarial practice"
-    >
-      notar.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
-      >
-        норма
+        psychol.
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
+        >
+          прописанное лекарство
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
+        title="Slang"
       >
-        приобретение по давности
+        slang
       </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
+        >
+          наркотик, выдаваемый по рецепту
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
+        title="Sports"
       >
-        давность
+        sports.
       </a>,
-      <span
-        class="description"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
+        >
+          рецептура
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [
+        <span>
+          time of
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+        >
+          prescription
+        </a>,
+        <em>
+          n
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
+        title="Economy"
       >
-        (in most general sense of the word, as it is used, for example, in louisiana)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
-      title="Officialese"
-    >
-      offic.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
-      >
-        регламентация
+        econ.
       </a>,
-      <span
-        class="description"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+        >
+          срок давности
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=PRESCRIPTION&l1=1&l2=2&init=1"
+        >
+          PRESCRIPTION
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          n
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=PRESCRIPTION&sc=48"
+        title="Law"
       >
-        (igisheva)
-      </span>,
-      <a
-        href="https://www.multitran.com/m.exe?s=регламентирование&l1=2&l2=1"
-      >
-        регламентирование
+        law
       </a>,
-      <span
-        class="description"
-      >
-        (igisheva)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
-      title="Patents"
-    >
-      patents.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
-      >
-        положение
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
-      >
-        предписание
-      </a>,
-      <a
-        href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-л.+по+давности+владения&l1=2&l2=1"
-      >
-        утверждение права на что-л. по давности владения
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
-      title="Psychology"
-    >
-      psychol.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
-      >
-        прописанное лекарство
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
-      title="Slang"
-    >
-      slang
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
-      >
-        наркотик, выдаваемый по рецепту
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
-      title="Sports"
-    >
-      sports.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
-      >
-        рецептура
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "content": Array [
-      Object {
-        "tag": "SPAN",
-        "text": "time of",
-      },
-      Object {
-        "href": "https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1",
-        "tag": "A",
-        "text": "prescription",
-      },
-      Object {
-        "tag": "EM",
-        "text": "n",
-      },
-    ],
-    "type": "header",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
-      title="Economy"
-    >
-      econ.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
-      >
-        срок давности
-      </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "content": Array [
-      Object {
-        "href": "https://www.multitran.com/m.exe?a=118&s=PRESCRIPTION&l1=1&l2=2&init=1",
-        "tag": "A",
-        "text": "PRESCRIPTION",
-      },
-      Object {
-        "tag": "SPAN",
-        "text": "[prɪ'skrɪpʃ(ə)n]",
-      },
-      Object {
-        "tag": "EM",
-        "text": "n",
-      },
-    ],
-    "type": "header",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=PRESCRIPTION&sc=48"
-      title="Law"
-    >
-      law
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=Метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+Метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
-      >
-        Метод приобретения права на использование земельного участка без права на
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=Метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+Метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
+        >
+          Метод приобретения права на использование земельного участка без права на
                                 собственность. Метод обусловлен длительным использованием данного земельного участка.
-      </a>,
-      <span
-        class="description"
+        </a>,
+        <span
+          class="description"
+        >
+          (/techtranslation-english mazurov)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [],
+      "type": "header",
+    },
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+        >
+          prescription
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          abbr.
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=prescription&sc=120"
+        title="Abbreviation, Medical"
       >
-        (/techtranslation-english mazurov)
-      </span>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "content": Array [],
-    "type": "header",
-  },
-  Object {
-    "content": Array [
-      Object {
-        "href": "https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1",
-        "tag": "A",
-        "text": "prescription",
-      },
-      Object {
-        "tag": "SPAN",
-        "text": "[prɪ'skrɪpʃ(ə)n]",
-      },
-      Object {
-        "tag": "EM",
-        "text": "abbr.",
-      },
-    ],
-    "type": "header",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=prescription&sc=120"
-      title="Abbreviation, Medical"
-    >
-      abbr., med.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
-      >
-        presc
+        abbr., med.
       </a>,
-    ],
-    "type": "translation",
-  },
-  Object {
-    "content": Array [
-      Object {
-        "href": "https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1",
-        "tag": "A",
-        "text": "Prescription",
-      },
-      Object {
-        "tag": "SPAN",
-        "text": "[prɪ'skrɪpʃ(ə)n]",
-      },
-      Object {
-        "tag": "EM",
-        "text": "abbr.",
-      },
-    ],
-    "type": "header",
-  },
-  Object {
-    "subjLink": <a
-      href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=Prescription&sc=120"
-      title="Abbreviation"
-    >
-      abbr.
-    </a>,
-    "trans": Array [
-      <a
-        href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
+        >
+          presc
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
+        >
+          Prescription
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          abbr.
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=Prescription&sc=120"
+        title="Abbreviation"
       >
-        7
+        abbr.
       </a>,
-    ],
-    "type": "translation",
-  },
-]
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
+        >
+          7
+        </a>,
+      ],
+      "type": "translation",
+    },
+  ],
+}
+`;
+
+exports[`Parser should match snapshot 2 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+        >
+          prescription
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          сущ.
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
+        title="Общая лексика"
+      >
+        общ.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
+        >
+          предписывание
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+        >
+          распоряжение
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
+        >
+          рекомендация
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
+        >
+          неписаный закон
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
+        >
+          назначение
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
+        >
+          рецепт
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
+        >
+          пресекательный срок
+        </a>,
+        <span
+          class="description"
+        >
+          (Lavrov)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=истечение+срока&l1=2&l2=1"
+        >
+          истечение срока
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
+        >
+          инструкция
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
+        >
+          диоптрия
+        </a>,
+        <span
+          class="description"
+        >
+          (Контекстный перевод. Например, prescription glasses eugenius_rus)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=установка&l1=2&l2=1"
+        >
+          установка
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
+        >
+          директива
+        </a>,
+        <span
+          class="description"
+        >
+          (ssn)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
+        title="Бизнес"
+      >
+        бизн.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
+        >
+          право приобретательной давности
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
+        >
+          право погасительной давности
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
+        title="Канцеляризм"
+      >
+        канц.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
+        >
+          регламентация
+        </a>,
+        <span
+          class="description"
+        >
+          (igisheva)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=регламентирование&l1=2&l2=1"
+        >
+          регламентирование
+        </a>,
+        <span
+          class="description"
+        >
+          (igisheva)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
+        title="Лесоводство"
+      >
+        лес.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
+        >
+          лесорубочный билет
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
+        title="Макаров"
+      >
+        Макаров.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
+        >
+          задание
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
+        title="Медицина"
+      >
+        мед.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
+        >
+          пропись
+        </a>,
+        <span
+          class="description"
+        >
+          (лекарственная)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
+        title="Нотариальная практика"
+      >
+        нотар.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
+        >
+          норма
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
+        >
+          приобретение по давности
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+        >
+          давность
+        </a>,
+        <span
+          class="description"
+        >
+          (in most general sense of the word, as it is used, for example, in louisiana)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
+        title="Патенты"
+      >
+        пат.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
+        >
+          положение
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+        >
+          предписание
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-л.+по+давности+владения&l1=2&l2=1"
+        >
+          утверждение права на что-л. по давности владения
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
+        title="Психология"
+      >
+        психол.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
+        >
+          прописанное лекарство
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
+        title="Сельское хозяйство"
+      >
+        с.-х.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+        >
+          предписание
+        </a>,
+        <span
+          class="description"
+        >
+          (лекарства)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
+        >
+          указание
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
+        title="Сленг"
+      >
+        сл.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
+        >
+          наркотик, выдаваемый по рецепту
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
+        title="Спорт"
+      >
+        спорт.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
+        >
+          рецептура
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
+        title="Стоматология"
+      >
+        стом.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
+        >
+          пропись для брекета
+        </a>,
+        <span
+          class="description"
+        >
+          (характеристики положения паза брекета по отношению к основанию брекета schyzomaniac)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
+        title="Экономика"
+      >
+        эк.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+        >
+          распоряжение
+        </a>,
+        <span
+          class="description"
+        >
+          (инструкция, указание)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
+        title="Юриспруденция"
+      >
+        юр.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
+        >
+          право давности
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+        >
+          давность
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
+        >
+          приобретательная давность
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=данность&l1=2&l2=1"
+        >
+          данность
+        </a>,
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
+        >
+          срок приобретательной или исковой давности
+        </a>,
+        <span
+          class="description"
+        >
+          (The process of acquiring title to property by reason of uninterrupted possession of specified duration. Also called positive prescription. Law The limitation of time beyond which an action, debt, or crime is no longer valid or enforceable. Also called negative prescription. Maksim Kozlov)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+исковой+давности&l1=2&l2=1"
+        >
+          срок исковой давности
+        </a>,
+        <span
+          class="description"
+        >
+          (MichaelBurov)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=исковая+давность&l1=2&l2=1"
+        >
+          исковая давность
+        </a>,
+        <span
+          class="description"
+        >
+          (MichaelBurov)
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+        >
+          срок давности
+        </a>,
+        <span
+          class="description"
+        >
+          (MichaelBurov)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [
+        <span>
+          time of
+        </span>,
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+        >
+          prescription
+        </a>,
+        <em>
+          сущ.
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
+        title="Экономика"
+      >
+        эк.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+        >
+          срок давности
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=PRESCRIPTION&l1=1&l2=2&init=1"
+        >
+          PRESCRIPTION
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          сущ.
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=PRESCRIPTION&sc=48"
+        title="Юриспруденция"
+      >
+        юр.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=Метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+Метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
+        >
+          Метод приобретения права на использование земельного участка без права на собственность. Метод обусловлен длительным использованием данного земельного участка.
+        </a>,
+        <span
+          class="description"
+        >
+          (/techtranslation-english mazurov)
+        </span>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [],
+      "type": "header",
+    },
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+        >
+          prescription
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          сокр.
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=prescription&sc=120"
+        title="Сокращение, Медицина"
+      >
+        сокр., мед.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
+        >
+          presc
+        </a>,
+      ],
+      "type": "translation",
+    },
+    Object {
+      "content": Array [
+        <a
+          href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
+        >
+          Prescription
+        </a>,
+        <span>
+          [prɪ'skrɪpʃ(ə)n]
+        </span>,
+        <em>
+          сокр.
+        </em>,
+      ],
+      "type": "header",
+    },
+    Object {
+      "subjLink": <a
+        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=Prescription&sc=120"
+        title="Сокращение"
+      >
+        сокр.
+      </a>,
+      "trans": Array [
+        <a
+          href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
+        >
+          7
+        </a>,
+      ],
+      "type": "translation",
+    },
+  ],
+}
 `;

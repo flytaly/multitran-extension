@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-const baseURL = 'https://www.multitran.com';
+import { baseURL } from '../configs.js';
 
 function fixURL(relativeURL) {
     if (relativeURL.startsWith('/m.exe')) return baseURL + relativeURL;
@@ -13,11 +13,10 @@ function getParsedHTML(text) {
 function getGroupHeader(td) {
     const content = [];
     td.querySelectorAll('a, span, em').forEach((elem) => {
-        content.push({
-            tag: elem.tagName,
-            ...(elem.tagName === 'A' ? { href: fixURL(elem.getAttribute('href')) } : {}),
-            text: elem.textContent,
-        });
+        const resultElem = document.createElement(elem.tagName);
+        if (elem.tagName === 'A') resultElem.setAttribute('href', fixURL(elem.getAttribute('href')));
+        resultElem.textContent = elem.textContent;
+        content.push(resultElem);
     });
     return {
         type: 'header',
@@ -36,6 +35,7 @@ function checkOtherLang(html) {
 function getTranslationsFromRow(tr) {
     const subjLink = tr.querySelector('td.subj a');
     subjLink.setAttribute('href', fixURL(subjLink.getAttribute('href')));
+
     const trans = Array.from(tr.querySelectorAll('td.trans > a, td.trans > span')).map((t) => {
         if (t.tagName === 'SPAN') {
             const span = document.createElement('span');

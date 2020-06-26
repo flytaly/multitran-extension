@@ -8,7 +8,7 @@ function processSelection(target) {
     const { selection, coords } = getSelection(target);
     if (selection.length) {
         showPopup({
-            content: selection,
+            text: selection,
             parent: shadowElem,
             ...coords,
         });

@@ -1,12 +1,38 @@
 import prescriptionEN from './mocks/prescription.en.html';
+import prescriptionRU from './mocks/prescription.html';
 import notFound from './mocks/not-found.html';
 import otherLangs from './mocks/other-lang.html';
+import { langIds } from '../js/configs.js';
 import { parser } from '../js/translate-engine/multitran-parser.js';
+import { multitranData } from '../js/translate-engine/multitran.js';
 
 describe('Parser', () => {
-    test('should match snapshot', () => {
-        expect(parser(prescriptionEN).data).toMatchSnapshot();
+    test('should match snapshot', async () => {
+        window.fetch = jest.fn(async (url) => {
+            expect(url).toBe('https://www.multitran.com/m.exe?l1=1&l2=2&SHL=1&s=prescription');
+            return {
+                status: 200,
+                text: jest.fn(async () => prescriptionEN),
+            };
+        });
+        const data = await multitranData('prescription', langIds.English, langIds.Russian, langIds.English);
+
+        expect(data).toMatchSnapshot();
     });
+
+    test('should match snapshot 2', async () => {
+        window.fetch = jest.fn(async (url) => {
+            expect(url).toBe('https://www.multitran.com/m.exe?l1=1&l2=2&SHL=2&s=prescription');
+            return {
+                status: 200,
+                text: jest.fn(async () => prescriptionRU),
+            };
+        });
+        const data = await multitranData('prescription', langIds.English, langIds.Russian, langIds.Russian);
+
+        expect(data).toMatchSnapshot();
+    });
+
     test("data should be empty if word isn't found", () => {
         expect(parser(notFound).data).toHaveLength(0);
         expect(parser(notFound).otherLang).toHaveLength(0);
