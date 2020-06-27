@@ -1,0 +1,65 @@
+@import './content-popup.css';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 62.5%; ==10px if default font size is 16px */
+    font-family: 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+    width: 350px;
+    padding: 2px;
+    min-height: 200px;
+    overflow: hidden auto;
+}
+
+.text-input {
+    display: flex;
+    width: 100%;
+    border: 2px solid #dddddd;
+    background-color: #ffffff;
+    margin-bottom: 1em;
+}
+
+.lang-select {
+    text-align: center;
+    margin: 0.6em 0;
+}
+
+button.icon {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5em;
+}
+.icon img {
+    height: 16px;
+}
+
+input {
+    flex-grow: 1;
+    height: 28px;
+    margin: 0;
+    padding: 3px 0 3px 10px;
+    font-size: 18px;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+#translate-popup {
+    position: relative;
+    border: 0;
+}
+
+.loading {
+    text-align: center;
+}

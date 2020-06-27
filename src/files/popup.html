@@ -3,12 +3,98 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="styles/popup/popup.css" />
+        <link rel="stylesheet" href="styles/toolbar-popup.css" />
         <script src="browser-polyfill.js"></script>
         <script src="js/popup/popup.js" defer></script>
     </head>
 
     <body>
-        <h1>Popup</h1>
+        <div class="lang-select">
+            <select id="l1">
+                <option value="10">Arabic</option>
+                <option value="68">Basque</option>
+                <option value="15">Bulgarian</option>
+                <option value="53">Catalan</option>
+                <option value="17">Chinese</option>
+                <option value="98">Chinese Taiwan</option>
+                <option value="97">Chinese simplified</option>
+                <option value="8">Croatian</option>
+                <option value="16">Czech</option>
+                <option value="22">Danish</option>
+                <option selected="" value="1">English</option>
+                <option value="26">Estonian</option>
+                <option value="36">Finnish</option>
+                <option value="4">French</option>
+                <option value="3">German</option>
+                <option value="38">Greek</option>
+                <option value="42">Hungarian</option>
+                <option value="49">Irish</option>
+                <option value="23">Italian</option>
+                <option value="28">Japanese</option>
+                <option value="39">Korean</option>
+                <option value="37">Latin</option>
+                <option value="27">Latvian</option>
+                <option value="12">Lithuanian</option>
+                <option value="78">Maltese</option>
+                <option value="30">Norwegian Bokmål</option>
+                <option value="14">Polish</option>
+                <option value="11">Portuguese</option>
+                <option value="13">Romanian</option>
+                <option value="2">Russian</option>
+                <option value="60">Slovak</option>
+                <option value="67">Slovenian</option>
+                <option value="5">Spanish</option>
+                <option value="29">Swedish</option>
+                <option value="32">Turkish</option>
+                <option value="33">Ukrainian</option>
+                <option value="24">Verklaren op eer</option>
+            </select>
+            <a href="#">⇄</a>
+            <select id="l2">
+                <option value="10">Arabic</option>
+                <option value="68">Basque</option>
+                <option value="15">Bulgarian</option>
+                <option value="53">Catalan</option>
+                <option value="17">Chinese</option>
+                <option value="98">Chinese Taiwan</option>
+                <option value="97">Chinese simplified</option>
+                <option value="8">Croatian</option>
+                <option value="16">Czech</option>
+                <option value="22">Danish</option>
+                <option value="1">English</option>
+                <option value="26">Estonian</option>
+                <option value="36">Finnish</option>
+                <option value="4">French</option>
+                <option value="3">German</option>
+                <option value="38">Greek</option>
+                <option value="42">Hungarian</option>
+                <option value="49">Irish</option>
+                <option value="23">Italian</option>
+                <option value="28">Japanese</option>
+                <option value="39">Korean</option>
+                <option value="37">Latin</option>
+                <option value="27">Latvian</option>
+                <option value="12">Lithuanian</option>
+                <option value="78">Maltese</option>
+                <option value="30">Norwegian Bokmål</option>
+                <option value="14">Polish</option>
+                <option value="11">Portuguese</option>
+                <option value="13">Romanian</option>
+                <option selected="" value="2">Russian</option>
+                <option value="60">Slovak</option>
+                <option value="67">Slovenian</option>
+                <option value="5">Spanish</option>
+                <option value="29">Swedish</option>
+                <option value="32">Turkish</option>
+                <option value="33">Ukrainian</option>
+                <option value="24">Verklaren op eer</option>
+            </select>
+        </div>
+
+        <form class="text-input" method="post">
+            <input name="words-input" type="text" autofocus />
+            <button class="icon" type="submit"><img src="images/Search.svg" /></button>
+        </form>
+        <div class="loading" hidden>Loading...</div>
     </body>
 </html>

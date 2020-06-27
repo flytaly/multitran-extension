@@ -1,8 +1,13 @@
+#translate-popup * {
+    box-sizing: border-box;
+}
+
 #translate-popup {
     all: initial;
     position: absolute;
     border-radius: 6px;
-    padding: 1rem;
+    font-size: 15px;
+    padding: 1em;
     background-color: #f1f1f1;
     border: 1px solid #bababa;
     min-height: 40px;
@@ -12,7 +17,6 @@
     z-index: 9999;
     overflow: scroll;
     color: #060606;
-    font-size: 15px;
     overflow-wrap: break-word;
 }
 

@@ -8,7 +8,7 @@
             "run_at": "document_end"
         }
     ],
-    "web_accessible_resources": ["styles/content.css"],
+    "web_accessible_resources": ["styles/content-popup.css"],
     "default_locale": "en",
     "description": "__MSG_description__",
     "name": "__MSG_name__",
