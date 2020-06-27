@@ -23,6 +23,11 @@ export function popupMarkup(data) {
                 elementsList.push(ol);
             }
             const li = document.createElement('li');
+            const colon = document.createTextNode(': ');
+            if (row.subjLink) {
+                row.subjLink.classList.add('subj');
+                li.append(row.subjLink, colon);
+            }
             ol.appendChild(li);
             li.append(...row.trans);
         }

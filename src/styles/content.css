@@ -18,13 +18,15 @@
 
 a {
     color: #000000;
-    font-weight: bold;
+    /* font-weight: 600; */
     text-decoration: none;
 }
 
 .header > * {
+    font-size: 1.2em;
     margin-right: 1em;
 }
+
 .header > span,
 .header > em {
     color: #848484;
@@ -40,9 +42,11 @@ li {
     padding: 0;
     margin: 0 0 0 1em;
 }
-li > * {
-    margin-right: 0.5em;
-}
+
 li > span {
     color: #848484;
+}
+li > .subj {
+    color: #555555;
+    font-style: italic;
 }

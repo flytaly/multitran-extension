@@ -36,17 +36,23 @@ function getTranslationsFromRow(tr) {
     const subjLink = tr.querySelector('td.subj a');
     subjLink.setAttribute('href', fixURL(subjLink.getAttribute('href')));
 
-    const trans = Array.from(tr.querySelectorAll('td.trans > a, td.trans > span')).map((t) => {
+    const transElems = Array.from(tr.querySelectorAll('td.trans > a, td.trans > span'));
+    const trans = [];
+    transElems.forEach((t, idx) => {
         if (t.tagName === 'SPAN') {
+            trans.push(document.createTextNode(' '));
             const span = document.createElement('span');
             span.textContent = t.textContent;
             span.classList.add('description');
-            return span;
+            trans.push(span);
         }
         if (t.tagName === 'A') {
+            if (idx) {
+                trans.push(document.createTextNode('; '));
+            }
             t.setAttribute('href', fixURL(t.getAttribute('href')));
+            trans.push(t);
         }
-        return t;
     });
 
     return {
