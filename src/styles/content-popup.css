@@ -26,6 +26,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #5f5ff1;
+    text-decoration: underline;
+}
+
 .header > * {
     font-size: 1.2em;
     margin-right: 1em;

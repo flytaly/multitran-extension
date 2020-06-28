@@ -27,48 +27,57 @@ Object {
         gen.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
         >
           предписывание
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
         >
           распоряжение
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
         >
           рекомендация
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
         >
           неписаный закон
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
         >
           назначение
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
         >
           рецепт
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
         >
           пресекательный срок
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
@@ -80,19 +89,22 @@ Object {
         >
           истечение срока
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
         >
           инструкция
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
         >
           диоптрия
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
@@ -104,18 +116,22 @@ Object {
         >
           установка
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
         >
           директива
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (ssn)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -127,23 +143,29 @@ Object {
         agric.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
         >
           предписание
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (лекарства)
         </span>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
         >
           указание
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -155,17 +177,22 @@ Object {
         busin.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
         >
           право приобретательной давности
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
         >
           право погасительной давности
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -177,17 +204,22 @@ Object {
         dentist.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
         >
           пропись для брекета
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (характеристики положения паза брекета по отношению к основанию брекета schyzomaniac)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -199,17 +231,22 @@ Object {
         econ.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
         >
           распоряжение
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (инструкция, указание)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -221,11 +258,15 @@ Object {
         forestr.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
         >
           лесорубочный билет
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -237,18 +278,22 @@ Object {
         law
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
         >
           право давности
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
         >
           давность
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
         >
@@ -260,13 +305,15 @@ Object {
         >
           данность
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
         >
           срок приобретательной или исковой давности
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
@@ -281,7 +328,8 @@ Object {
         >
           срок исковой давности
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
@@ -293,7 +341,8 @@ Object {
         >
           исковая давность
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
@@ -305,12 +354,15 @@ Object {
         >
           срок давности
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (MichaelBurov)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -338,17 +390,22 @@ Object {
         med.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
         >
           пропись
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (лекарственная)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -360,29 +417,36 @@ Object {
         notar.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
         >
           норма
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
         >
           приобретение по давности
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
         >
           давность
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (in most general sense of the word, as it is used, for example, in louisiana)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -394,12 +458,15 @@ Object {
         offic.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
         >
           регламентация
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
@@ -411,12 +478,15 @@ Object {
         >
           регламентирование
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (igisheva)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -428,23 +498,29 @@ Object {
         patents.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
         >
           положение
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
         >
           предписание
         </a>,
-        ; ,
+        ;
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-л.+по+давности+владения&l1=2&l2=1"
         >
           утверждение права на что-л. по давности владения
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -456,11 +532,15 @@ Object {
         psychol.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
         >
           прописанное лекарство
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -472,11 +552,15 @@ Object {
         slang
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
         >
           наркотик, выдаваемый по рецепту
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -520,11 +604,15 @@ Object {
         econ.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
         >
           срок давности
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -552,18 +640,23 @@ Object {
         law
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=Метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+Метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
         >
           Метод приобретения права на использование земельного участка без права на
                                 собственность. Метод обусловлен длительным использованием данного земельного участка.
         </a>,
-         ,
+        
+                            ,
         <span
           class="description"
         >
           (/techtranslation-english mazurov)
         </span>,
+        
+                        ,
       ],
       "type": "translation",
     },
@@ -595,11 +688,15 @@ Object {
         abbr., med.
       </a>,
       "trans": Array [
+        
+                            ,
         <a
           href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
         >
           presc
         </a>,
+        
+                        ,
       ],
       "type": "translation",
     },

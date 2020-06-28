@@ -33,33 +33,34 @@ function checkOtherLang(html) {
 }
 
 function getTranslationsFromRow(tr) {
-    const subjLink = tr.querySelector('td.subj a');
-    subjLink.setAttribute('href', fixURL(subjLink.getAttribute('href')));
-
-    const transElems = Array.from(tr.querySelectorAll('td.trans > a, td.trans > span'));
-    const trans = [];
-    transElems.forEach((t, idx) => {
-        if (t.tagName === 'SPAN') {
-            trans.push(document.createTextNode(' '));
-            const span = document.createElement('span');
-            span.textContent = t.textContent;
-            span.classList.add('description');
-            trans.push(span);
-        }
-        if (t.tagName === 'A') {
-            if (idx) {
-                trans.push(document.createTextNode('; '));
-            }
-            t.setAttribute('href', fixURL(t.getAttribute('href')));
-            trans.push(t);
-        }
-    });
-
-    return {
+    const result = {
         type: 'translation',
-        subjLink,
-        trans,
+        subjLink: null,
+        trans: [],
     };
+    result.subjLink = tr.querySelector('td.subj a');
+    if (result.subjLink) result.subjLink.setAttribute('href', fixURL(result.subjLink.getAttribute('href')));
+
+    const translations = tr.querySelector('td.trans');
+    if (!translations) return result;
+    for (let node = translations.firstChild; node; node = node.nextSibling) {
+        if (node.nodeType === Node.TEXT_NODE) {
+            result.trans.push(node);
+        }
+        if (node.nodeType === Node.ELEMENT_NODE) {
+            if (node.tagName === 'SPAN') {
+                const span = document.createElement('span');
+                span.textContent = node.textContent;
+                span.classList.add('description');
+                result.trans.push(span);
+            }
+            if (node.tagName === 'A') {
+                node.setAttribute('href', fixURL(node.getAttribute('href')));
+                result.trans.push(node);
+            }
+        }
+    }
+    return result;
 }
 
 export function parser(text) {
@@ -76,7 +77,10 @@ export function parser(text) {
             data.push(getGroupHeader(tds[0]));
         }
         if (tds.length === 2) {
-            data.push(getTranslationsFromRow(row));
+            const translations = getTranslationsFromRow(row);
+            if (translations.trans && translations.trans.length) {
+                data.push(translations);
+            }
         }
     });
 
