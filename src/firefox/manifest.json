@@ -25,7 +25,7 @@
         "64": "/images/icon-64.png",
         "96": "/images/icon-96.png"
     },
-    "permissions": ["https://www.multitran.com/*"],
+    "permissions": ["storage", "https://www.multitran.com/*"],
     "browser_action": {
         "default_title": "__MSG_extension_title__",
         "default_icon": "/images/icon.svg",
