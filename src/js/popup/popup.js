@@ -6,13 +6,21 @@ import { storage } from '../storage.js';
 async function renderTranslation(text) {
     const prevTranslation = document.querySelector('#translate-popup');
     const loadingElem = document.querySelector('.loading');
-    if (prevTranslation) document.body.removeChild(prevTranslation);
+    const errorElem = document.querySelector('.error');
+    errorElem.hidden = true;
     loadingElem.hidden = false;
+
+    if (prevTranslation) document.body.removeChild(prevTranslation);
     const { l1, l2 } = await storage.getLanguages();
-    const { data } = await multitranData(text, l1, l2, 2);
-    if (!data || !data.length) return;
-    const translationElem = popupMarkup(data);
+    const { data, error } = await multitranData(text, l1, l2, 2);
     loadingElem.hidden = true;
+    if (error) {
+        errorElem.hidden = false;
+        errorElem.textContent = error.message;
+    }
+    if (!data || !data.length) return;
+
+    const translationElem = popupMarkup(data);
     document.body.appendChild(translationElem);
 }
 

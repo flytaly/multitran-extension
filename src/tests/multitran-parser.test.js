@@ -46,4 +46,15 @@ describe('Parser', () => {
         expect(otherLang[1].getAttribute('href')).toBe('https://www.multitran.com/m.exe?l1=28&l2=2&s=日');
         expect(otherLang[1].textContent).toBe('Japanese');
     });
+
+    test('should return error', async () => {
+        const msg = 'NetworkError when attempting to fetch resource.';
+        window.fetch = jest.fn(async () => {
+            throw new TypeError(msg);
+        });
+        const { data, error } = await multitranData('prescription', langIds.English, langIds.Russian, langIds.English);
+
+        expect(data).toBeUndefined();
+        expect(error.message).toBe(msg);
+    });
 });

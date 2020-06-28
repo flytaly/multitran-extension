@@ -40,7 +40,8 @@ export function popupMarkup(data) {
 export async function showPopup({ parent = document.body, top = 0, left = 0, text }) {
     state.isPopupOpened = true;
 
-    const { data } = await multitranData(text, 2, 1, 2);
+    const { data, error } = await multitranData(text, 2, 1, 2);
+    if (error) console.error(error);
     if (!data || !data.length) return;
 
     const popupElement = popupMarkup(data);

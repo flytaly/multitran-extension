@@ -63,3 +63,8 @@ input:focus {
 .loading {
     text-align: center;
 }
+.error {
+    text-align: center;
+    color: darkred;
+    font-weight: bold;
+}
