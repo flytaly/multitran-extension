@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
 import { state } from './state.js';
 import { multitranData } from '../translate-engine/multitran.js';
+import { storage } from '../storage.js';
 
 export function popupMarkup(data) {
     const rootElement = document.createElement('div');
@@ -39,8 +40,8 @@ export function popupMarkup(data) {
 
 export async function showPopup({ parent = document.body, top = 0, left = 0, text }) {
     state.isPopupOpened = true;
-
-    const { data, error } = await multitranData(text, 2, 1, 2);
+    const { l1, l2 } = await storage.getLanguages();
+    const { data, error } = await multitranData(text, l1, l2, 2);
     if (error) console.error(error);
     if (!data || !data.length) return;
 
