@@ -6,14 +6,16 @@ export function getSelection(target) {
     if (['TEXTAREA', 'INPUT'].includes(target.nodeName)) {
         selection = target.value.substring(target.selectionStart, target.selectionEnd);
         const caret = getCaretCoordinates(target, target.selectionEnd);
-        coords.top = target.offsetTop - target.scrollTop + caret.top;
-        coords.left = target.offsetLeft - target.scrollLeft + caret.left;
+        const { top, left } = target.getBoundingClientRect();
+
+        coords.top = top - target.scrollTop + caret.top;
+        coords.left = left - target.scrollLeft + caret.left;
     } else {
         const sel = window.getSelection();
         selection = sel.toString();
-        const { top, right } = sel.getRangeAt(0).getBoundingClientRect();
-        coords.top = window.pageYOffset + top;
-        coords.left = window.pageXOffset + right;
+        const { bottom, left } = sel.getRangeAt(0).getBoundingClientRect();
+        coords.top = window.pageYOffset + bottom;
+        coords.left = window.pageXOffset + left;
     }
     selection = selection.trim();
 

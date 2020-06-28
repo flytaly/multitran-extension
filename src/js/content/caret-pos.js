@@ -66,7 +66,7 @@ function getCaretCoordinates(element, position, options) {
     document.body.appendChild(div);
 
     const { style } = div;
-    const computed = window.getComputedStyle;
+    const computed = window.getComputedStyle(element);
     const isInput = element.nodeName === 'INPUT';
 
     // Default textarea styles
