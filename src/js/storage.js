@@ -1,19 +1,32 @@
 import { langIds } from './configs.js';
 
+/**
+ * @typedef {Object} Options
+ * @property {string} l1 - "from" language
+ * @property {string} l2 - "to" language
+ */
+
 export const storage = {
-    async saveLanguages({ l1, l2 }) {
-        if (l1) {
-            await browser.storage.local.set({ l1 });
-        }
-        if (l2) {
-            await browser.storage.local.set({ l2 });
-        }
+    /**
+     * @param {Options} options
+     */
+    async saveOptions(options) {
+        const prevOptions = await this.getOptions();
+        await browser.storage.local.set({
+            options: {
+                ...prevOptions,
+                ...options,
+            },
+        });
     },
-    async getLanguages() {
-        const { l1, l2 } = await browser.storage.local.get(['l1', 'l2']);
-        return {
-            l1: l1 || langIds.English,
-            l2: l2 || langIds.Russian,
-        };
+
+    /**
+     * @returns {Promise<Options>} options
+     */
+    async getOptions() {
+        const { options = {} } = await browser.storage.local.get('options');
+        if (!options.l1) options.l1 = langIds.English;
+        if (!options.l2) options.l2 = langIds.Russian;
+        return options;
     },
 };

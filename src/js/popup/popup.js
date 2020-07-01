@@ -11,7 +11,7 @@ async function renderTranslation(text) {
     loadingElem.hidden = false;
 
     if (prevTranslation) document.body.removeChild(prevTranslation);
-    const { l1, l2 } = await storage.getLanguages();
+    const { l1, l2 } = await storage.getOptions();
     const { data, error } = await multitranData(text, l1, l2, 2);
     loadingElem.hidden = true;
     if (error) {

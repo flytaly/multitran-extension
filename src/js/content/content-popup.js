@@ -40,7 +40,7 @@ export function popupMarkup(data) {
 
 export async function showPopup({ parent = document.body, shadowHost, text, top = 0, left = 0 }) {
     state.isPopupOpened = true;
-    const { l1, l2 } = await storage.getLanguages();
+    const { l1, l2 } = await storage.getOptions();
     const { data, error } = await multitranData(text, l1, l2, 2);
     if (error) console.error(error);
     if (!data || !data.length) return null;
