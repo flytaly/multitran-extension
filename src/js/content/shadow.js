@@ -6,4 +6,4 @@ link.setAttribute('rel', 'stylesheet');
 link.setAttribute('href', browser.runtime.getURL('styles/content-popup.css'));
 shadowElem.appendChild(link);
 
-export { shadowElem };
+export { shadowElem, shadowHost };

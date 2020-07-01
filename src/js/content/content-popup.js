@@ -38,12 +38,12 @@ export function popupMarkup(data) {
     return rootElement;
 }
 
-export async function showPopup({ parent = document.body, top = 0, left = 0, text }) {
+export async function showPopup({ parent = document.body, shadowHost, text, top = 0, left = 0 }) {
     state.isPopupOpened = true;
     const { l1, l2 } = await storage.getLanguages();
     const { data, error } = await multitranData(text, l1, l2, 2);
     if (error) console.error(error);
-    if (!data || !data.length) return;
+    if (!data || !data.length) return null;
 
     const popupElement = popupMarkup(data);
     parent.appendChild(popupElement);
@@ -55,7 +55,7 @@ export async function showPopup({ parent = document.body, top = 0, left = 0, tex
     Object.assign(popupElement.style, style);
 
     function hidePopupMouse(e) {
-        if (!e.target.closest('#translate-popup')) {
+        if (e.target !== shadowHost) {
             removePopup();
         }
     }
@@ -78,4 +78,6 @@ export async function showPopup({ parent = document.body, top = 0, left = 0, tex
         document.addEventListener('mousedown', hidePopupMouse);
         document.addEventListener('keydown', hidePopupKeyDown);
     }, 10);
+
+    return popupElement;
 }
