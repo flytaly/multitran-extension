@@ -3,6 +3,8 @@ import { popupMarkup } from '../content/content-popup.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
 
+import { throttle } from '../utils.js';
+
 async function renderTranslation(text) {
     const prevTranslation = document.querySelector('#translate-popup');
     const loadingElem = document.querySelector('.loading');
@@ -18,22 +20,27 @@ async function renderTranslation(text) {
         errorElem.hidden = false;
         errorElem.textContent = error.message;
     }
-    if (!data || !data.length) return;
+    if (!data || !data.length) return null;
 
     const translationElem = popupMarkup(data);
     document.body.appendChild(translationElem);
+    return translationElem;
 }
 
 function setListeners() {
     setLangSelectorListeners();
     const form = document.querySelector('.text-input');
     const input = document.querySelector('.text-input input');
+
+    // prevent spamming requests by holding Enter
+    const throttledRender = throttle(() => {
+        const value = input.value.trim();
+        renderTranslation(value);
+    }, 800);
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const value = input.value.trim();
-        if (value) {
-            renderTranslation(value);
-        }
+        throttledRender();
     });
 }
 
