@@ -5,10 +5,102 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="styles/options/options.css" />
         <script src="browser-polyfill.js"></script>
-        <script src="js/options/options.js"></script>
+        <script src="js/options/options.js" defer></script>
     </head>
 
     <body>
-        <h1>Options</h1>
+        <section class="browser-style">
+            <label for="l1" class="browser-style-label" data-l10n-id="settingLangPair">Language pair</label>
+            <select id="l1" class="browser-style">
+                <option value="10">Arabic</option>
+                <option value="68">Basque</option>
+                <option value="15">Bulgarian</option>
+                <option value="53">Catalan</option>
+                <option value="17">Chinese</option>
+                <option value="98">Chinese Taiwan</option>
+                <option value="97">Chinese simplified</option>
+                <option value="8">Croatian</option>
+                <option value="16">Czech</option>
+                <option value="22">Danish</option>
+                <option value="1" selected>English</option>
+                <option value="26">Estonian</option>
+                <option value="36">Finnish</option>
+                <option value="4">French</option>
+                <option value="3">German</option>
+                <option value="38">Greek</option>
+                <option value="42">Hungarian</option>
+                <option value="49">Irish</option>
+                <option value="23">Italian</option>
+                <option value="28">Japanese</option>
+                <option value="39">Korean</option>
+                <option value="37">Latin</option>
+                <option value="27">Latvian</option>
+                <option value="12">Lithuanian</option>
+                <option value="78">Maltese</option>
+                <option value="30">Norwegian Bokmål</option>
+                <option value="14">Polish</option>
+                <option value="11">Portuguese</option>
+                <option value="13">Romanian</option>
+                <option value="2">Russian</option>
+                <option value="60">Slovak</option>
+                <option value="67">Slovenian</option>
+                <option value="5">Spanish</option>
+                <option value="29">Swedish</option>
+                <option value="32">Turkish</option>
+                <option value="33">Ukrainian</option>
+                <option value="24">Verklaren op eer</option>
+            </select>
+            <button id="lang-swap" class="browser-style">⇄</button>
+            <select id="l2" class="browser-style">
+                <option value="10">Arabic</option>
+                <option value="68">Basque</option>
+                <option value="15">Bulgarian</option>
+                <option value="53">Catalan</option>
+                <option value="17">Chinese</option>
+                <option value="98">Chinese Taiwan</option>
+                <option value="97">Chinese simplified</option>
+                <option value="8">Croatian</option>
+                <option value="16">Czech</option>
+                <option value="22">Danish</option>
+                <option value="1">English</option>
+                <option value="26">Estonian</option>
+                <option value="36">Finnish</option>
+                <option value="4">French</option>
+                <option value="3">German</option>
+                <option value="38">Greek</option>
+                <option value="42">Hungarian</option>
+                <option value="49">Irish</option>
+                <option value="23">Italian</option>
+                <option value="28">Japanese</option>
+                <option value="39">Korean</option>
+                <option value="37">Latin</option>
+                <option value="27">Latvian</option>
+                <option value="12">Lithuanian</option>
+                <option value="78">Maltese</option>
+                <option value="30">Norwegian Bokmål</option>
+                <option value="14">Polish</option>
+                <option value="11">Portuguese</option>
+                <option value="13">Romanian</option>
+                <option value="2" selected>Russian</option>
+                <option value="60">Slovak</option>
+                <option value="67">Slovenian</option>
+                <option value="5">Spanish</option>
+                <option value="29">Swedish</option>
+                <option value="32">Turkish</option>
+                <option value="33">Ukrainian</option>
+                <option value="24">Verklaren op eer</option>
+            </select>
+        </section>
+        <section class="browser-style">
+            <label for="mtLang" class="browser-style-label" data-l10n-id="settingMultitranLang"
+                >Multitran language</label
+            >
+            <select id="mtLang" class="browser-style">
+                <option value="1">English</option>
+                <option value="2">Russian</option>
+                <option value="3">German</option>
+                <option value="33">Ukrainian</option>
+            </select>
+        </section>
     </body>
 </html>

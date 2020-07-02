@@ -10,5 +10,17 @@
     "extension_title": {
         "message": "Multitran",
         "description": "Extension title"
+    },
+    "optionsButton_title": {
+        "message": "Options",
+        "description": "Options button"
+    },
+    "settingLangPair": {
+        "message": "Language pair",
+        "description": "Settings: language pair"
+    },
+    "settingMultitranLang": {
+        "message": "Multitran interface language",
+        "description": "Settings: multitran language"
     }
 }

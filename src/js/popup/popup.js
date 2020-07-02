@@ -1,3 +1,4 @@
+import '../l10n.js';
 import { multitranData } from '../translate-engine/multitran.js';
 import { popupMarkup } from '../content/content-popup.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
@@ -13,8 +14,9 @@ async function renderTranslation(text) {
     loadingElem.hidden = false;
 
     if (prevTranslation) document.body.removeChild(prevTranslation);
-    const { l1, l2 } = await storage.getOptions();
-    const { data, error } = await multitranData(text, l1, l2, 2);
+    const { l1, l2, multitranLang } = await storage.getOptions();
+    const { data, error } = await multitranData(text, l1, l2, multitranLang);
+
     loadingElem.hidden = true;
     if (error) {
         errorElem.hidden = false;
@@ -31,6 +33,12 @@ function setListeners() {
     setLangSelectorListeners();
     const form = document.querySelector('.text-input');
     const input = document.querySelector('.text-input input');
+    const optionButton = document.querySelector('button.header-icon');
+
+    optionButton.addEventListener('click', async () => {
+        await browser.runtime.openOptionsPage();
+        window.close();
+    });
 
     // prevent spamming requests by holding Enter
     const throttledRender = throttle(() => {

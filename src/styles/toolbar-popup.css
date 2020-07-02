@@ -14,8 +14,33 @@ body {
     background-color: #f1f1f1;
     width: 350px;
     padding: 2px;
-    min-height: 200px;
+    min-height: 150px;
     overflow: hidden auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.6em;
+}
+
+button.header-icon {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background: none;
+    border: none;
+    transform-origin: 50%;
+}
+
+button.header-icon:focus,
+button.header-icon:hover {
+    transform: scale(1.05, 1.05);
+}
+
+button.header-icon:active {
+    transform: scale(0.98, 0.98);
 }
 
 .text-input {
@@ -24,11 +49,6 @@ body {
     border: 2px solid #dddddd;
     background-color: #ffffff;
     margin-bottom: 1em;
-}
-
-.lang-select {
-    text-align: center;
-    margin: 0.6em 0;
 }
 
 button.icon {
