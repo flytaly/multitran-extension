@@ -1,6 +1,23 @@
+import { storage } from '../storage.js';
+
 export const state = {
-    isPopupOpened: false,
     withKey: false, // show popup only if key is pressed
-    isKeyPressed: false,
-    key: 'Alt',
+    keys: { altKey: false },
+
+    isPopupOpened: false,
+    areKeysPressed: false,
+    onOptionsChange: () => {},
 };
+
+async function setStateFromStorage() {
+    const { keys, withKey } = await storage.getOptions();
+    state.keys = keys;
+    state.withKey = withKey;
+}
+
+setStateFromStorage();
+
+browser.storage.onChanged.addListener(async (/* changes,  areaName */) => {
+    state.onOptionsChange();
+    await setStateFromStorage();
+});

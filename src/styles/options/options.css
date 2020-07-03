@@ -1,5 +1,42 @@
 @import url('./target-styles.css');
 
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding-top: 1rem;
+}
+
+label {
+    margin-right: 1rem;
+}
+
+input[disabled] {
+    background-color: lightgrey;
+}
+
+input[disabled] + label {
+    color: grey;
+}
+
+ul {
+    margin: 0;
+    margin-left: 2rem;
+    padding: 0;
+}
+
+#tranAfter > div,
+#tranAfter li {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    margin: 10px 5px;
+}
+
 @media (prefers-color-scheme: dark) {
     html {
         --bgColor: #202023;
@@ -31,17 +68,8 @@
     button:active {
         background-color: #737373;
     }
-}
 
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
-    padding-top: 1rem;
-}
-
-label {
-    margin-right: 1rem;
+    input[disabled] {
+        background-color: grey;
+    }
 }

@@ -22,5 +22,37 @@
     "settingMultitranLang": {
         "message": "Язык интерфейса мультитрана",
         "description": "Settings: multitran language"
+    },
+    "settingTranslationHeader": {
+        "message": "Настройки перевода",
+        "description": "Settings: translation settings header"
+    },
+    "settingContentPopupHeader": {
+        "message": "Переводить слова после",
+        "description": "Settings: content popup settings header"
+    },
+    "settingDoubleClick": {
+        "message": "Двойного клика",
+        "description": "Settings: translate after Double click"
+    },
+    "settingSelectingText": {
+        "message": "Выбора текста",
+        "description": "Settings: translate after selecting text"
+    },
+    "settingPressKey": {
+        "message": "и нажатия следующих клавиш:",
+        "description": "Settings: press following key"
+    },
+    "settingAlt": {
+        "message": "Alt",
+        "description": "Settings: Alt key"
+    },
+    "settingCtrlKey": {
+        "message": "Control",
+        "description": "Settings: Control key"
+    },
+    "settingCmd": {
+        "message": "Клавиши Windows или Cmd (для MacOS)",
+        "description": "Settings: Meta key"
     }
 }

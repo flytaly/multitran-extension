@@ -35,36 +35,49 @@ async function processSelection(target) {
     }
 }
 
-document.body.addEventListener('mouseup', (e) => {
-    if ((state.withKey && state.isKeyPressed) || (!state.withKey && e.detail <= 2)) {
-        setTimeout(() => {
+state.onOptionsChange = () => {
+    function mouseupHandler(e) {
+        if ((state.withKey && state.isKeyPressed) || (!state.withKey && e.detail <= 2)) {
+            setTimeout(() => {
+                processSelection(e.target);
+            }, 10);
+        }
+    }
+    function keydownHandler(e) {
+        let areKeysPressed = true;
+        if (
+            (state.keys.altKey && !e.altKey) ||
+            (state.keys.ctrlKey && !e.ctrlKey) ||
+            (state.keys.metaKey && !e.metaKey)
+        ) {
+            areKeysPressed = false;
+        }
+        if (areKeysPressed) {
+            state.areKeysPressed = areKeysPressed;
             processSelection(e.target);
-        }, 50);
+        }
     }
-});
 
-function keydownHandler(e) {
-    if (e.key === state.key) {
-        state.isKeyPressed = true;
-        processSelection(e.target);
+    function keyupHandler(e) {
+        if (e.key === 'Meta' || e.key === 'Control' || e.key === 'Alt') {
+            state.areKeysPressed = false;
+        }
     }
-}
 
-function keyUpHandler(e) {
-    if (e.key === state.key) {
-        state.isKeyPressed = false;
+    function removeHandlers() {
+        document.body.removeEventListener('mouseup', mouseupHandler);
+        document.body.removeEventListener('keydown', keydownHandler);
+        document.body.removeEventListener('keyup', keyupHandler);
     }
-}
-function addKeysHandler() {
-    document.body.addEventListener('keydown', keydownHandler);
-    document.body.addEventListener('keyup', keyUpHandler);
-}
 
-/* function removeKeysHandler() {
-    document.body.removeEventListener('keydown', keydownHandler);
-    document.body.removeEventListener('keyup', keyUpHandler);
-} */
+    removeHandlers();
 
-if (state.withKey) {
-    addKeysHandler();
-}
+    document.body.addEventListener('mouseup', mouseupHandler);
+
+    if (state.withKey) {
+        document.body.addEventListener('keydown', keydownHandler);
+        document.body.addEventListener('keyup', keyupHandler);
+    }
+};
+
+state.onOptionsChange();
