@@ -8,7 +8,7 @@ import { langIds } from './configs.js';
  * @property {string} multitranLang - multitran interface language
  * @property {boolean} doubleClick - double click to show translation
  * @property {boolean} select - select text to translate
- * @property {boolean} withKey - show popup only if key is pressed
+ * @property {boolean} withKey - translate selected text only if key is pressed
  * @property {object} keys - keys that should be pressed to show selected text translation
  */
 

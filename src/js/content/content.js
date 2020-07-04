@@ -1,4 +1,4 @@
-import { state } from './state.js';
+import { state, setStateFromStorage } from './state.js';
 import { showPopup } from './content-popup.js';
 import { shadowElem, shadowHost } from './shadow.js';
 import { getSelection } from './selection.js';
@@ -35,14 +35,17 @@ async function processSelection(target) {
     }
 }
 
-state.onOptionsChange = () => {
+state.onOptionsChange = async () => {
     function mouseupHandler(e) {
-        if ((state.withKey && state.isKeyPressed) || (!state.withKey && e.detail <= 2)) {
-            setTimeout(() => {
-                processSelection(e.target);
-            }, 10);
+        const launch = () => setTimeout(() => processSelection(e.target), 10);
+        if (state.doubleClick && e.detail === 2) {
+            launch();
+        } else {
+            if (!state.select || (state.withKey && !state.areKeysPressed)) return;
+            launch();
         }
     }
+
     function keydownHandler(e) {
         let areKeysPressed = true;
         if (
@@ -73,11 +76,10 @@ state.onOptionsChange = () => {
     removeHandlers();
 
     document.body.addEventListener('mouseup', mouseupHandler);
-
     if (state.withKey) {
         document.body.addEventListener('keydown', keydownHandler);
         document.body.addEventListener('keyup', keyupHandler);
     }
 };
 
-state.onOptionsChange();
+setStateFromStorage().then(() => state.onOptionsChange());

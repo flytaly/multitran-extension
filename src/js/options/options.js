@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import '../l10n.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
@@ -17,28 +18,28 @@ async function init() {
         storage.saveOptions({ doubleClick: doubleClickInput.checked });
     });
 
+    const keysInputs = document.querySelectorAll('#keys input');
+    keysInputs.forEach((keyInput) => {
+        const { name } = keyInput;
+        keyInput.checked = keys[name];
+        keyInput.addEventListener('change', () => {
+            storage.saveKeys({ [name]: keyInput.checked });
+        });
+    });
+
+    // set keys input disabled if 'selecting text' option isn't selected
+    const setDisableAttribute = (isDisabled) => {
+        keysInputs.forEach((keyInput) => {
+            keyInput.disabled = isDisabled;
+        });
+    };
+
     const selectingInput = document.getElementById('selecting');
     selectingInput.checked = select;
+    setDisableAttribute(!selectingInput.checked);
     selectingInput.addEventListener('change', () => {
         storage.saveOptions({ select: selectingInput.checked });
-    });
-
-    const altKeyInput = document.getElementById('altKey');
-    altKeyInput.checked = keys.altKey;
-    altKeyInput.addEventListener('change', () => {
-        storage.saveKeys({ altKey: altKeyInput.checked });
-    });
-
-    const ctrlKeyInput = document.getElementById('ctrlKey');
-    ctrlKeyInput.checked = keys.ctrlKey;
-    ctrlKeyInput.addEventListener('change', () => {
-        storage.saveKeys({ ctrlKey: ctrlKeyInput.checked });
-    });
-
-    const metaKeyInput = document.getElementById('metaKey');
-    metaKeyInput.checked = keys.metaKey;
-    metaKeyInput.addEventListener('change', () => {
-        storage.saveKeys({ metaKey: metaKeyInput.checked });
+        setDisableAttribute(!selectingInput.checked);
     });
 }
 
