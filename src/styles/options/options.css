@@ -9,10 +9,6 @@ body {
     padding-top: 1rem;
 }
 
-label {
-    margin-right: 1rem;
-}
-
 input[disabled] {
     background-color: lightgrey;
 }
@@ -21,20 +17,18 @@ input[disabled] + label {
     color: grey;
 }
 
-ul {
-    margin: 0;
-    margin-left: 2rem;
-    padding: 0;
-}
-
 #tranAfter > div,
 #tranAfter li {
     display: flex;
     align-items: center;
 }
 
+#tranAfter > div > label {
+    font-size: 1.2rem;
+}
+
 .text {
-    margin: 10px 5px;
+    margin-left: 29px;
 }
 
 @media (prefers-color-scheme: dark) {

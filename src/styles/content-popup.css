@@ -15,7 +15,7 @@
     max-width: 380px;
     max-height: 380px;
     z-index: 9999;
-    overflow: scroll;
+    overflow: auto;
     color: #060606;
     overflow-wrap: break-word;
 }

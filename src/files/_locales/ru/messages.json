@@ -27,16 +27,12 @@
         "message": "Настройки перевода",
         "description": "Settings: translation settings header"
     },
-    "settingContentPopupHeader": {
-        "message": "Переводить слова после",
-        "description": "Settings: content popup settings header"
-    },
     "settingDoubleClick": {
-        "message": "Двойного клика",
+        "message": "Переводить по Двойному клику",
         "description": "Settings: translate after Double click"
     },
     "settingSelectingText": {
-        "message": "Выбора текста",
+        "message": "Переводить текст после Выделения",
         "description": "Settings: translate after selecting text"
     },
     "settingPressKey": {
@@ -48,7 +44,7 @@
         "description": "Settings: Alt key"
     },
     "settingCtrlKey": {
-        "message": "Control",
+        "message": "Ctrl",
         "description": "Settings: Control key"
     },
     "settingCmd": {
