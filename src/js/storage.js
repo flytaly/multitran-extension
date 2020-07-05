@@ -56,12 +56,12 @@ export const storage = {
         if (!options.l2) options.l2 = langIds.Russian;
         if (!options.multitranLang) options.multitranLang = langIds.English;
         if (options.doubleClick === undefined) options.doubleClick = true;
-        if (options.select === undefined) options.selecting = false;
-        if (options.withKey === undefined) options.withKey = false;
+        if (options.select === undefined) options.select = true;
+        if (options.withKey === undefined) options.withKey = true;
         if (!options.keys)
             options.keys = {
                 altKey: false,
-                ctrlKey: false,
+                ctrlKey: true,
                 metaKey: false,
             };
         return options;
