@@ -29,7 +29,7 @@
     "browser_action": {
         "default_title": "__MSG_extension_title__",
         "default_icon": {
-            "16": "images/icon-16.svg",
+            "16": "images/icon-16.png",
             "32": "images/icon-32.png",
             "64": "images/icon-64.png"
         },
