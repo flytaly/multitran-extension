@@ -18,7 +18,7 @@
     "description": "__MSG_description__",
     "name": "__MSG_name__",
     "short_name": "Multitran-popup",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage_url": "https://github.com/flytaly/multitran-extension",
     "icons": {
         "48": "images/icon_light-48.png",
