@@ -14,7 +14,10 @@ function getGroupHeader(td) {
     const content = [];
     td.querySelectorAll('a, span, em').forEach((elem) => {
         const resultElem = document.createElement(elem.tagName);
-        if (elem.tagName === 'A') resultElem.setAttribute('href', fixURL(elem.getAttribute('href')));
+        if (elem.tagName === 'A') {
+            resultElem.setAttribute('href', fixURL(elem.getAttribute('href')));
+            resultElem.setAttribute('target', '_blank');
+        }
         resultElem.textContent = elem.textContent;
         content.push(resultElem);
     });
@@ -28,6 +31,7 @@ function checkOtherLang(html) {
     const result = Array.from(html.querySelectorAll('td.morelangs a'));
     return result.map((a) => {
         a.setAttribute('href', fixURL(a.getAttribute('href')));
+        a.setAttribute('target', '_blank');
         return a;
     });
 }
@@ -39,7 +43,10 @@ function getTranslationsFromRow(tr) {
         trans: [],
     };
     result.subjLink = tr.querySelector('td.subj a');
-    if (result.subjLink) result.subjLink.setAttribute('href', fixURL(result.subjLink.getAttribute('href')));
+    if (result.subjLink) {
+        result.subjLink.setAttribute('href', fixURL(result.subjLink.getAttribute('href')));
+        result.subjLink.setAttribute('target', '_blank');
+    }
 
     const translations = tr.querySelector('td.trans');
     if (!translations) return result;
@@ -56,6 +63,7 @@ function getTranslationsFromRow(tr) {
             }
             if (node.tagName === 'A') {
                 node.setAttribute('href', fixURL(node.getAttribute('href')));
+                node.setAttribute('target', '_blank');
                 result.trans.push(node);
             }
         }
