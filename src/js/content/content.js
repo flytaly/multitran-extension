@@ -6,7 +6,7 @@ import { getSelection } from './selection.js';
 async function processSelection(target) {
     if (state.isPopupOpened) return;
     const { selection, coords } = getSelection(target);
-    if (selection.length) {
+    if (selection.length > 0 && selection.length < 150) {
         /* Render popup with coords (0,0) so it has right width/height
         and then adjust its position */
         const popupElement = await showPopup({
