@@ -7,6 +7,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           prescription
         </a>,
@@ -22,6 +23,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
+        target="_blank"
         title="General"
       >
         gen.
@@ -31,6 +33,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
+          target="_blank"
         >
           предписывание
         </a>,
@@ -38,6 +41,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+          target="_blank"
         >
           распоряжение
         </a>,
@@ -45,6 +49,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
+          target="_blank"
         >
           рекомендация
         </a>,
@@ -52,6 +57,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
+          target="_blank"
         >
           неписаный закон
         </a>,
@@ -59,6 +65,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
+          target="_blank"
         >
           назначение
         </a>,
@@ -66,6 +73,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
+          target="_blank"
         >
           рецепт
         </a>,
@@ -73,6 +81,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
+          target="_blank"
         >
           пресекательный срок
         </a>,
@@ -86,6 +95,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=истечение+срока&l1=2&l2=1"
+          target="_blank"
         >
           истечение срока
         </a>,
@@ -93,6 +103,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
+          target="_blank"
         >
           инструкция
         </a>,
@@ -100,6 +111,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
+          target="_blank"
         >
           диоптрия
         </a>,
@@ -113,6 +125,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=установка&l1=2&l2=1"
+          target="_blank"
         >
           установка
         </a>,
@@ -120,6 +133,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
+          target="_blank"
         >
           директива
         </a>,
@@ -138,6 +152,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
+        target="_blank"
         title="Agriculture"
       >
         agric.
@@ -147,6 +162,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+          target="_blank"
         >
           предписание
         </a>,
@@ -161,6 +177,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
+          target="_blank"
         >
           указание
         </a>,
@@ -172,6 +189,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
+        target="_blank"
         title="Business"
       >
         busin.
@@ -181,6 +199,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
+          target="_blank"
         >
           право приобретательной давности
         </a>,
@@ -188,6 +207,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
+          target="_blank"
         >
           право погасительной давности
         </a>,
@@ -199,6 +219,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
+        target="_blank"
         title="Dentistry"
       >
         dentist.
@@ -208,6 +229,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
+          target="_blank"
         >
           пропись для брекета
         </a>,
@@ -226,6 +248,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
+        target="_blank"
         title="Economy"
       >
         econ.
@@ -235,6 +258,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+          target="_blank"
         >
           распоряжение
         </a>,
@@ -253,6 +277,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
+        target="_blank"
         title="Forestry"
       >
         forestr.
@@ -262,6 +287,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
+          target="_blank"
         >
           лесорубочный билет
         </a>,
@@ -273,6 +299,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
+        target="_blank"
         title="Law"
       >
         law
@@ -282,6 +309,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
+          target="_blank"
         >
           право давности
         </a>,
@@ -289,6 +317,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+          target="_blank"
         >
           давность
         </a>,
@@ -296,12 +325,14 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
+          target="_blank"
         >
           приобретательная давность
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=данность&l1=2&l2=1"
+          target="_blank"
         >
           данность
         </a>,
@@ -309,6 +340,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок приобретательной или исковой давности
         </a>,
@@ -325,6 +357,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+исковой+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок исковой давности
         </a>,
@@ -338,6 +371,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=исковая+давность&l1=2&l2=1"
+          target="_blank"
         >
           исковая давность
         </a>,
@@ -351,6 +385,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок давности
         </a>,
@@ -369,6 +404,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
+        target="_blank"
         title="Makarov"
       >
         Makarov.
@@ -376,6 +412,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
+          target="_blank"
         >
           задание
         </a>,
@@ -385,6 +422,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
+        target="_blank"
         title="Medical"
       >
         med.
@@ -394,6 +432,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
+          target="_blank"
         >
           пропись
         </a>,
@@ -412,6 +451,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
+        target="_blank"
         title="Notarial practice"
       >
         notar.
@@ -421,6 +461,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
+          target="_blank"
         >
           норма
         </a>,
@@ -428,6 +469,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
+          target="_blank"
         >
           приобретение по давности
         </a>,
@@ -435,6 +477,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+          target="_blank"
         >
           давность
         </a>,
@@ -453,6 +496,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
+        target="_blank"
         title="Officialese"
       >
         offic.
@@ -462,6 +506,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
+          target="_blank"
         >
           регламентация
         </a>,
@@ -475,6 +520,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=регламентирование&l1=2&l2=1"
+          target="_blank"
         >
           регламентирование
         </a>,
@@ -493,6 +539,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
+        target="_blank"
         title="Patents"
       >
         patents.
@@ -502,6 +549,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
+          target="_blank"
         >
           положение
         </a>,
@@ -509,6 +557,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+          target="_blank"
         >
           предписание
         </a>,
@@ -516,6 +565,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-л.+по+давности+владения&l1=2&l2=1"
+          target="_blank"
         >
           утверждение права на что-л. по давности владения
         </a>,
@@ -527,6 +577,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
+        target="_blank"
         title="Psychology"
       >
         psychol.
@@ -536,6 +587,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
+          target="_blank"
         >
           прописанное лекарство
         </a>,
@@ -547,6 +599,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
+        target="_blank"
         title="Slang"
       >
         slang
@@ -556,6 +609,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
+          target="_blank"
         >
           наркотик, выдаваемый по рецепту
         </a>,
@@ -567,6 +621,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
+        target="_blank"
         title="Sports"
       >
         sports.
@@ -574,6 +629,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
+          target="_blank"
         >
           рецептура
         </a>,
@@ -587,6 +643,7 @@ Object {
         </span>,
         <a
           href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           prescription
         </a>,
@@ -599,6 +656,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
+        target="_blank"
         title="Economy"
       >
         econ.
@@ -608,6 +666,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок давности
         </a>,
@@ -620,6 +679,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=PRESCRIPTION&l1=1&l2=2&init=1"
+          target="_blank"
         >
           PRESCRIPTION
         </a>,
@@ -635,6 +695,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=PRESCRIPTION&sc=48"
+        target="_blank"
         title="Law"
       >
         law
@@ -644,6 +705,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=Метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+Метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
+          target="_blank"
         >
           Метод приобретения права на использование земельного участка без права на
                                 собственность. Метод обусловлен длительным использованием данного земельного участка.
@@ -668,6 +730,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           prescription
         </a>,
@@ -683,6 +746,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=prescription&sc=120"
+        target="_blank"
         title="Abbreviation, Medical"
       >
         abbr., med.
@@ -692,6 +756,7 @@ Object {
                             ,
         <a
           href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
+          target="_blank"
         >
           presc
         </a>,
@@ -704,6 +769,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           Prescription
         </a>,
@@ -719,6 +785,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=Prescription&sc=120"
+        target="_blank"
         title="Abbreviation"
       >
         abbr.
@@ -726,6 +793,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
+          target="_blank"
         >
           7
         </a>,
@@ -743,6 +811,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           prescription
         </a>,
@@ -758,6 +827,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
+        target="_blank"
         title="Общая лексика"
       >
         общ.
@@ -765,42 +835,49 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
+          target="_blank"
         >
           предписывание
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+          target="_blank"
         >
           распоряжение
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
+          target="_blank"
         >
           рекомендация
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
+          target="_blank"
         >
           неписаный закон
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
+          target="_blank"
         >
           назначение
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
+          target="_blank"
         >
           рецепт
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
+          target="_blank"
         >
           пресекательный срок
         </a>,
@@ -813,18 +890,21 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=истечение+срока&l1=2&l2=1"
+          target="_blank"
         >
           истечение срока
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
+          target="_blank"
         >
           инструкция
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
+          target="_blank"
         >
           диоптрия
         </a>,
@@ -837,12 +917,14 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=установка&l1=2&l2=1"
+          target="_blank"
         >
           установка
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
+          target="_blank"
         >
           директива
         </a>,
@@ -858,6 +940,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
+        target="_blank"
         title="Бизнес"
       >
         бизн.
@@ -865,12 +948,14 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
+          target="_blank"
         >
           право приобретательной давности
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
+          target="_blank"
         >
           право погасительной давности
         </a>,
@@ -880,6 +965,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
+        target="_blank"
         title="Канцеляризм"
       >
         канц.
@@ -887,6 +973,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
+          target="_blank"
         >
           регламентация
         </a>,
@@ -899,6 +986,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=регламентирование&l1=2&l2=1"
+          target="_blank"
         >
           регламентирование
         </a>,
@@ -914,6 +1002,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
+        target="_blank"
         title="Лесоводство"
       >
         лес.
@@ -921,6 +1010,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
+          target="_blank"
         >
           лесорубочный билет
         </a>,
@@ -930,6 +1020,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
+        target="_blank"
         title="Макаров"
       >
         Макаров.
@@ -937,6 +1028,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
+          target="_blank"
         >
           задание
         </a>,
@@ -946,6 +1038,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
+        target="_blank"
         title="Медицина"
       >
         мед.
@@ -953,6 +1046,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
+          target="_blank"
         >
           пропись
         </a>,
@@ -968,6 +1062,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
+        target="_blank"
         title="Нотариальная практика"
       >
         нотар.
@@ -975,18 +1070,21 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
+          target="_blank"
         >
           норма
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
+          target="_blank"
         >
           приобретение по давности
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+          target="_blank"
         >
           давность
         </a>,
@@ -1002,6 +1100,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
+        target="_blank"
         title="Патенты"
       >
         пат.
@@ -1009,18 +1108,21 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
+          target="_blank"
         >
           положение
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+          target="_blank"
         >
           предписание
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-л.+по+давности+владения&l1=2&l2=1"
+          target="_blank"
         >
           утверждение права на что-л. по давности владения
         </a>,
@@ -1030,6 +1132,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
+        target="_blank"
         title="Психология"
       >
         психол.
@@ -1037,6 +1140,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
+          target="_blank"
         >
           прописанное лекарство
         </a>,
@@ -1046,6 +1150,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
+        target="_blank"
         title="Сельское хозяйство"
       >
         с.-х.
@@ -1053,6 +1158,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
+          target="_blank"
         >
           предписание
         </a>,
@@ -1065,6 +1171,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
+          target="_blank"
         >
           указание
         </a>,
@@ -1074,6 +1181,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
+        target="_blank"
         title="Сленг"
       >
         сл.
@@ -1081,6 +1189,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
+          target="_blank"
         >
           наркотик, выдаваемый по рецепту
         </a>,
@@ -1090,6 +1199,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
+        target="_blank"
         title="Спорт"
       >
         спорт.
@@ -1097,6 +1207,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
+          target="_blank"
         >
           рецептура
         </a>,
@@ -1106,6 +1217,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
+        target="_blank"
         title="Стоматология"
       >
         стом.
@@ -1113,6 +1225,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
+          target="_blank"
         >
           пропись для брекета
         </a>,
@@ -1128,6 +1241,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
+        target="_blank"
         title="Экономика"
       >
         эк.
@@ -1135,6 +1249,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
+          target="_blank"
         >
           распоряжение
         </a>,
@@ -1150,6 +1265,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
+        target="_blank"
         title="Юриспруденция"
       >
         юр.
@@ -1157,30 +1273,35 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
+          target="_blank"
         >
           право давности
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
+          target="_blank"
         >
           давность
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
+          target="_blank"
         >
           приобретательная давность
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=данность&l1=2&l2=1"
+          target="_blank"
         >
           данность
         </a>,
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок приобретательной или исковой давности
         </a>,
@@ -1193,6 +1314,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+исковой+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок исковой давности
         </a>,
@@ -1205,6 +1327,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=исковая+давность&l1=2&l2=1"
+          target="_blank"
         >
           исковая давность
         </a>,
@@ -1217,6 +1340,7 @@ Object {
         ; ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок давности
         </a>,
@@ -1236,6 +1360,7 @@ Object {
         </span>,
         <a
           href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           prescription
         </a>,
@@ -1248,6 +1373,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
+        target="_blank"
         title="Экономика"
       >
         эк.
@@ -1255,6 +1381,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
+          target="_blank"
         >
           срок давности
         </a>,
@@ -1265,6 +1392,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=PRESCRIPTION&l1=1&l2=2&init=1"
+          target="_blank"
         >
           PRESCRIPTION
         </a>,
@@ -1280,6 +1408,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=PRESCRIPTION&sc=48"
+        target="_blank"
         title="Юриспруденция"
       >
         юр.
@@ -1287,6 +1416,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=Метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+Метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
+          target="_blank"
         >
           Метод приобретения права на использование земельного участка без права на собственность. Метод обусловлен длительным использованием данного земельного участка.
         </a>,
@@ -1307,6 +1437,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           prescription
         </a>,
@@ -1322,6 +1453,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=prescription&sc=120"
+        target="_blank"
         title="Сокращение, Медицина"
       >
         сокр., мед.
@@ -1329,6 +1461,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
+          target="_blank"
         >
           presc
         </a>,
@@ -1339,6 +1472,7 @@ Object {
       "content": Array [
         <a
           href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
+          target="_blank"
         >
           Prescription
         </a>,
@@ -1354,6 +1488,7 @@ Object {
     Object {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=Prescription&sc=120"
+        target="_blank"
         title="Сокращение"
       >
         сокр.
@@ -1361,6 +1496,7 @@ Object {
       "trans": Array [
         <a
           href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
+          target="_blank"
         >
           7
         </a>,

@@ -48,7 +48,7 @@ function getTranslationsFromRow(tr) {
         result.subjLink.setAttribute('target', '_blank');
     }
 
-    const translations = tr.querySelector('td.trans');
+    const translations = tr.querySelector('td.trans, td.trans1');
     if (!translations) return result;
     for (let node = translations.firstChild; node; node = node.nextSibling) {
         if (node.nodeType === Node.TEXT_NODE) {
@@ -73,7 +73,7 @@ function getTranslationsFromRow(tr) {
 
 export function parser(text) {
     const html = getParsedHTML(text);
-    const tranTable = html.querySelector('table td.subj ~ td.trans')?.closest('table');
+    const tranTable = html.querySelector('table td.subj ~ td.trans, table td.subj ~ td.trans1')?.closest('table');
     if (!tranTable) return { data: [], otherLang: checkOtherLang(html) };
     const rows = Array.from(tranTable.querySelectorAll('tbody > tr'));
 
