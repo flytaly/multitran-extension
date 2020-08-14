@@ -8,9 +8,10 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://*/*"],
+            "matches": ["<all_urls>"],
             "js": ["browser-polyfill.js", "js/content/content.js"],
-            "run_at": "document_end"
+            "run_at": "document_end",
+            "all_frames": true
         }
     ],
     "web_accessible_resources": ["styles/content-popup.css"],
