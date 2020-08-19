@@ -63,6 +63,7 @@ export const storage = {
                 altKey: false,
                 ctrlKey: true,
                 metaKey: false,
+                shiftKey: false,
             };
         return options;
     },

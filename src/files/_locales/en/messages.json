@@ -47,6 +47,10 @@
         "message": "Ctrl key",
         "description": "Settings: Control key"
     },
+    "settingShiftKey": {
+        "message": "Shift key",
+        "description": "Settings: Shift key"
+    },
     "settingCmd": {
         "message": "Cmd key (MacOS) or Windows key",
         "description": "Settings: Meta key"
