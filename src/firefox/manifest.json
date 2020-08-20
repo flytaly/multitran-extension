@@ -14,6 +14,9 @@
             "all_frames": true
         }
     ],
+    "background": {
+        "scripts": ["js/background/background.js"]
+    },
     "web_accessible_resources": ["styles/content-popup.css"],
     "default_locale": "en",
     "description": "__MSG_description__",

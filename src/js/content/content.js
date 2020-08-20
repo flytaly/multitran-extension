@@ -3,35 +3,59 @@ import { showPopup } from './content-popup.js';
 import { shadowElem, shadowHost } from './shadow.js';
 import { getSelection } from './selection.js';
 
+let lastFetchTS = 0;
+const throttleDuration = 600;
+
+function positionPopup(popupElement, coords) {
+    const { innerWidth, innerHeight } = window;
+    const { width, height } = popupElement.getBoundingClientRect();
+
+    if (coords.left + width > innerWidth) {
+        coords.left = innerWidth - width;
+    }
+    if (coords.top + height > innerHeight) {
+        // if popup's top coordinate is above viewport don't change it
+        const popupTop = coords.top - height - coords.height;
+        coords.top = popupTop > 0 ? popupTop : coords.top;
+    }
+
+    popupElement.style.left = `${window.pageXOffset + coords.left}px`;
+    popupElement.style.top = `${window.pageYOffset + coords.top}px`;
+}
+
 async function processSelection(target) {
     if (state.isPopupOpened) return;
     const { selection, coords } = getSelection(target);
-    if (selection.length > 0 && selection.length < 150) {
-        /* Render popup with coords (0,0) so it has right width/height
-        and then adjust its position */
-        const popupElement = await showPopup({
-            text: selection,
-            parent: shadowElem,
-            shadowHost,
-            // ...coords,
-        });
 
-        if (popupElement) {
-            const { innerWidth, innerHeight } = window;
-            const { width, height } = popupElement.getBoundingClientRect();
-
-            if (coords.left + width > innerWidth) {
-                coords.left = innerWidth - width;
+    async function handleResponse(message) {
+        if (message.type === 'MULTITRAN_DATA') {
+            const { translationPage } = message;
+            /* Render popup with coords (0,0) so it has right width/height and then adjust its position */
+            const popupElement = await showPopup({
+                translationPage,
+                parent: shadowElem,
+                shadowHost,
+            });
+            if (popupElement) {
+                positionPopup(popupElement, coords);
             }
-            if (coords.top + height > innerHeight) {
-                // if popup's top coordinate is above viewport don't change it
-                const popupTop = coords.top - height - coords.height;
-                coords.top = popupTop > 0 ? popupTop : coords.top;
-            }
-
-            popupElement.style.left = `${window.pageXOffset + coords.left}px`;
-            popupElement.style.top = `${window.pageYOffset + coords.top}px`;
         }
+    }
+
+    function handleError(error) {
+        console.error(error);
+    }
+
+    if (selection.length > 0 && selection.length < 150) {
+        const timestamp = Date.now();
+        if (timestamp - lastFetchTS < throttleDuration) return;
+        lastFetchTS = timestamp;
+
+        const sending = browser.runtime.sendMessage({
+            type: 'GET_MULTITRAN_DATA',
+            selection,
+        });
+        sending.then(handleResponse, handleError);
     }
 }
 

@@ -61,4 +61,14 @@ export default [
         ],
         plugins,
     },
+    {
+        input: './src/js/background/background.js',
+        output: [
+            {
+                file: `${outputPath}js/background/background.js`,
+                format: 'iife',
+            },
+        ],
+        plugins,
+    },
 ];

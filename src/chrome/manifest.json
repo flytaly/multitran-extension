@@ -3,11 +3,16 @@
     "minimum_chrome_version": "80",
     "content_scripts": [
         {
-            "matches": ["*://*/*"],
+            "matches": ["<all_urls>"],
             "js": ["browser-polyfill.js", "js/content/content.js"],
-            "run_at": "document_end"
+            "run_at": "document_end",
+            "all_frames": true
         }
     ],
+    "background": {
+        "scripts": ["browser-polyfill.js", "js/background/background.js"],
+        "persistent": false
+    },
     "web_accessible_resources": ["styles/content-popup.css"],
     "default_locale": "en",
     "description": "__MSG_description__",
@@ -15,13 +20,21 @@
     "short_name": "Multitran-popup",
     "version": "1.2.0",
     "homepage_url": "https://github.com/flytaly/multitran-extension",
-
+    "icons": {
+        "48": "images/icon_light-48.png",
+        "64": "images/icon_light-64.png",
+        "96": "images/icon_light-96.png"
+    },
     "permissions": ["storage", "https://www.multitran.com/*"],
     "browser_action": {
         "default_title": "__MSG_extension_title__",
-
+        "default_icon": {
+            "16": "images/icon_light-16.png",
+            "32": "images/icon_light-32.png",
+            "64": "images/icon_light-64.png"
+        },
         "default_popup": "popup.html",
-        "chrome_style": true
+        "browser_style": true
     },
     "options_ui": {
         "page": "options.html",
