@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    min-width: 450px;
     height: 100%;
     padding-top: 1rem;
 }
@@ -39,6 +40,9 @@ input[disabled] + label {
 
     body,
     select,
+    h1,
+    h2,
+    h3,
     option,
     [label],
     .browser-style > input[type='url'],
