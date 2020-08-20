@@ -31,6 +31,8 @@
         "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
         "import/prefer-default-export": "off",
         "import/extensions": ["error", "always"],
-        "implicit-arrow-linebreak": "off"
+        "implicit-arrow-linebreak": "off",
+        "no-param-reassign": "off",
+        "consistent-return": "off"
     }
 }
