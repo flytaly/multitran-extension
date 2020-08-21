@@ -1,13 +1,9 @@
 @import url('./target-styles.css');
 
-html {
-    height: 100%;
-}
-
 body {
-    min-width: 450px;
-    height: 100%;
+    min-width: 500px;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 input[disabled] {
