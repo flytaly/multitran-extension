@@ -1,6 +1,6 @@
 import { state, setStateFromStorage } from './state.js';
 import { showPopup } from './content-popup.js';
-import { shadowElem, shadowHost } from './shadow.js';
+import { shadow } from './shadow.js';
 import { getSelection } from './selection.js';
 
 let lastFetchTS = 0;
@@ -26,9 +26,15 @@ function positionPopup(popupElement, coords) {
 async function processSelection(target) {
     if (state.isPopupOpened) return;
     const { selection, coords } = getSelection(target);
+    if (!selection.length || selection.length > 150) return;
+
+    const timestamp = Date.now();
+    if (timestamp - lastFetchTS < throttleDuration) return;
+    lastFetchTS = timestamp;
 
     async function handleResponse(message) {
         if (message.type === 'MULTITRAN_DATA') {
+            const { shadowElem, shadowHost } = shadow;
             const { translationPage } = message;
             /* Render popup with coords (0,0) so it has right width/height and then adjust its position */
             const popupElement = await showPopup({
@@ -46,17 +52,12 @@ async function processSelection(target) {
         console.error(error);
     }
 
-    if (selection.length > 0 && selection.length < 150) {
-        const timestamp = Date.now();
-        if (timestamp - lastFetchTS < throttleDuration) return;
-        lastFetchTS = timestamp;
+    const sending = browser.runtime.sendMessage({
+        type: 'GET_MULTITRAN_DATA',
+        selection,
+    });
 
-        const sending = browser.runtime.sendMessage({
-            type: 'GET_MULTITRAN_DATA',
-            selection,
-        });
-        sending.then(handleResponse, handleError);
-    }
+    sending.then(handleResponse, handleError);
 }
 
 state.onOptionsChange = async () => {

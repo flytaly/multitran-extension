@@ -57,7 +57,7 @@ export async function showPopup({ parent = document.body, shadowHost, translatio
     }
 
     function hidePopupKeyDown(e) {
-        if (e.key === 'Escape' || e.key === state.key || e.key === 'Shift') {
+        if (e.key === 'Escape' || e.key === 'Shift') {
             removePopup();
             // e.stopPropagation()
         }
