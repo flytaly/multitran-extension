@@ -23,7 +23,8 @@
     "icons": {
         "48": "images/icon_light-48.png",
         "64": "images/icon_light-64.png",
-        "96": "images/icon_light-96.png"
+        "96": "images/icon_light-96.png",
+        "128": "images/icon_light-128.png"
     },
     "permissions": ["storage", "https://www.multitran.com/*"],
     "browser_action": {
