@@ -1,6 +1,6 @@
 {
     "name": "multitran-extension",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Multitran Firefox extension",
     "main": "manifest.json",
     "scripts": {
