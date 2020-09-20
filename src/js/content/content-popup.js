@@ -37,6 +37,24 @@ export function popupMarkup(data) {
     return rootElement;
 }
 
+export function otherLangsPopupMarkup(otherLangs = []) {
+    const rootElement = document.createElement('div');
+    rootElement.id = 'translate-popup';
+    const header = document.createElement('div');
+    header.textContent = browser.i18n.getMessage('otherLanguagesHeader');
+    rootElement.appendChild(header);
+    const linksContainer = document.createElement('div');
+    linksContainer.classList.add('other-langs');
+    otherLangs.forEach((link, idx) => {
+        linksContainer.appendChild(link);
+        if (idx !== otherLangs.length - 1) {
+            linksContainer.appendChild(document.createTextNode(', '));
+        }
+    });
+    rootElement.appendChild(linksContainer);
+    return rootElement;
+}
+
 export async function showPopup({ parent = document.body, shadowHost, translationPage, top = 0, left = 0 }) {
     const parsed = parser(translationPage);
     if (!parsed.data || !parsed.data.length) return null;

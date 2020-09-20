@@ -56,7 +56,12 @@ li {
 li > span {
     color: #848484;
 }
+
 li > .subj {
     color: #555555;
     font-style: italic;
+}
+
+.other-langs {
+    margin: 0.5em 0.5em 1em 1em;
 }

@@ -11,6 +11,10 @@
         "message": "Multitran",
         "description": "Extension title"
     },
+    "otherLanguagesHeader": {
+        "message": "translation from other languages",
+        "description": "Other languages header"
+    },
     "optionsButton_title": {
         "message": "Options",
         "description": "Options button"

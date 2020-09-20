@@ -1,6 +1,6 @@
 import '../l10n.js';
 import { multitranData } from '../translate-engine/multitran.js';
-import { popupMarkup } from '../content/content-popup.js';
+import { otherLangsPopupMarkup, popupMarkup } from '../content/content-popup.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
 
@@ -15,18 +15,26 @@ async function renderTranslation(text) {
 
     if (prevTranslation) document.body.removeChild(prevTranslation);
     const { l1, l2, multitranLang } = await storage.getOptions();
-    const { data, error } = await multitranData(text, l1, l2, multitranLang);
+    const { data, error, otherLang } = await multitranData(text, l1, l2, multitranLang);
 
     loadingElem.hidden = true;
     if (error) {
         errorElem.hidden = false;
         errorElem.textContent = error.message;
     }
-    if (!data || !data.length) return null;
+    if (data && data.length) {
+        const translationElem = popupMarkup(data);
+        document.body.appendChild(translationElem);
+        return translationElem;
+    }
 
-    const translationElem = popupMarkup(data);
-    document.body.appendChild(translationElem);
-    return translationElem;
+    if (otherLang && otherLang.length) {
+        const translationElem = otherLangsPopupMarkup(otherLang);
+        document.body.appendChild(translationElem);
+        return translationElem;
+    }
+
+    return null;
 }
 
 function setListeners() {
