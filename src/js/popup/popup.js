@@ -15,7 +15,7 @@ async function renderTranslation(text) {
 
     if (prevTranslation) document.body.removeChild(prevTranslation);
     const { l1, l2, multitranLang } = await storage.getOptions();
-    const { data, error, otherLang } = await multitranData(text, l1, l2, multitranLang);
+    const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
 
     loadingElem.hidden = true;
     if (error) {
@@ -23,7 +23,7 @@ async function renderTranslation(text) {
         errorElem.textContent = error.message;
     }
     if (data && data.length) {
-        const translationElem = popupMarkup(data);
+        const translationElem = popupMarkup(data, text, l1_, l2_);
         document.body.appendChild(translationElem);
         return translationElem;
     }

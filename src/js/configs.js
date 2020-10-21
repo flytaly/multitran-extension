@@ -40,4 +40,12 @@ export const langIds = {
     'Verklaren op eer': '24',
 };
 
+export const idToLangMap = Object.entries(langIds).reduce(
+    (prev, curr) => ({
+        ...prev,
+        [curr[1]]: curr[0],
+    }),
+    {},
+);
+
 export const interfaceLangs = ['English', 'Russian', 'German', 'Ukrainian'];

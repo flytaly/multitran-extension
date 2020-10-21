@@ -32,6 +32,29 @@ a:hover {
     text-decoration: underline;
 }
 
+.popup-header {
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6em;
+}
+
+.popup-header .translation-text {
+    font-weight: bold;
+    margin-right: 1em;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.popup-header .translation-pair {
+    font-size: 0.7em;
+    margin-left: auto;
+    align-self: flex-start;
+    color: #848484;
+}
+
 .header > * {
     font-size: 1.2em;
     margin-right: 1em;

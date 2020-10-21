@@ -1,12 +1,31 @@
 /* eslint-disable no-use-before-define */
 import { state } from './state.js';
 import { parser } from '../translate-engine/multitran-parser.js';
+import { idToLangMap } from '../configs.js';
 
-export function popupMarkup(data) {
+function popupHeader(text, l1Code, l2Code) {
+    const header = document.createElement('div');
+    header.className = 'popup-header';
+    const translationText = document.createElement('span');
+    translationText.textContent = text;
+    translationText.className = 'translation-text';
+    const langPair = document.createElement('span');
+    langPair.className = 'translation-pair';
+    if (l1Code && l2Code) {
+        langPair.textContent = `${idToLangMap[l1Code]}-${idToLangMap[l2Code]}`;
+    }
+    header.append(translationText, langPair);
+    return header;
+}
+
+export function popupMarkup(data, text, l1Code, l2Code) {
     const rootElement = document.createElement('div');
     rootElement.id = 'translate-popup';
     const elementsList = [];
     let prevRowType = null;
+
+    elementsList.push(popupHeader(text, l1Code, l2Code));
+
     data.forEach((row) => {
         const rowContainer = document.createElement('div');
         if (row.type === 'header') {
@@ -55,10 +74,19 @@ export function otherLangsPopupMarkup(otherLangs = []) {
     return rootElement;
 }
 
-export async function showPopup({ parent = document.body, shadowHost, translationPage, top = 0, left = 0 }) {
+export async function showPopup({
+    parent = document.body,
+    shadowHost,
+    text,
+    l1,
+    l2,
+    translationPage,
+    top = 0,
+    left = 0,
+}) {
     const parsed = parser(translationPage);
     if (!parsed.data || !parsed.data.length) return null;
-    const popupElement = popupMarkup(parsed.data);
+    const popupElement = popupMarkup(parsed.data, text, l1, l2);
     parent.appendChild(popupElement);
     state.isPopupOpened = true;
 

@@ -20,5 +20,7 @@ export async function multitranData(text, langFrom, langTo, interfaceLang = 1) {
     if (page.error) return { error: page.error };
     if (!page || !page.textData) return { data: [] };
 
-    return parser(page.textData);
+    const parsed = parser(page.textData);
+
+    return parsed;
 }

@@ -71,6 +71,18 @@ function getTranslationsFromRow(tr) {
     return result;
 }
 
+/**
+ * @typedef {Object} ParsedPage
+ * @property {Array} parsedPage.data - translations
+ * @property {string} [parsedPage.l1] - "from" language
+ * @property {string} [parsedPage.l2] - "to" language
+ * @property {Array} [parsedPage.otherLang] - translation in other language pairs
+ */
+
+/**
+ * @param {string} text
+ * @returns {ParsedPage} parsedPage
+ */
 export function parser(text) {
     const html = getParsedHTML(text);
     const tranTable = html.querySelector('table td.subj ~ td.trans, table td.subj ~ td.trans1')?.closest('table');
@@ -92,5 +104,9 @@ export function parser(text) {
         }
     });
 
-    return { data };
+    const l1Input = html.getElementById('l1');
+    const l2Input = html.getElementById('l2');
+    const l1 = l1Input && l1Input.value;
+    const l2 = l2Input && l2Input.value;
+    return { data, l1, l2 };
 }

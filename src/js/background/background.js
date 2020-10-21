@@ -13,6 +13,9 @@ async function handleMessage(request) {
             return {
                 type: 'MULTITRAN_DATA',
                 translationPage: textData,
+                text: selection,
+                l1,
+                l2,
             };
         }
     }

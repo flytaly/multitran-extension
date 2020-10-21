@@ -35,12 +35,15 @@ async function processSelection(target) {
     async function handleResponse(message) {
         if (message.type === 'MULTITRAN_DATA') {
             const { shadowElem, shadowHost } = shadow;
-            const { translationPage } = message;
+            const { translationPage, text, l1, l2 } = message;
             /* Render popup with coords (0,0) so it has right width/height and then adjust its position */
             const popupElement = await showPopup({
                 translationPage,
                 parent: shadowElem,
                 shadowHost,
+                text,
+                l1,
+                l2,
             });
             if (popupElement) {
                 positionPopup(popupElement, coords);
