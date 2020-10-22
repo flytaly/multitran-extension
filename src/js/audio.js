@@ -17,13 +17,14 @@ const getFlagUrl = (title) => {
 export const addAudioElements = (container, audioFiles) => {
     const flags = [];
     if (!container) return;
-    audioFiles.forEach((f) => {
-        const flagUrl = getFlagUrl(f.title);
+    audioFiles.forEach((file) => {
+        if (!file.flag) return;
+        const flagUrl = browser.runtime.getURL(file.flag);
         if (flagUrl) {
             const flagButton = document.createElement('button');
             const img = document.createElement('img');
-            const audio = new Audio(f.url);
-            flagButton.title = f.title;
+            const audio = new Audio(file.url);
+            flagButton.title = file.title;
             img.src = flagUrl;
             flagButton.appendChild(img);
             flagButton.onclick = () => {

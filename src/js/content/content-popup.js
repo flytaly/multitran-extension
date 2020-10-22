@@ -124,7 +124,7 @@ export async function showPopup({
     const parsed = parser(translationPage);
     if (!parsed.data || !parsed.data.length) return null;
     const popupElement = popupMarkup(parsed.data, text, l1, l2);
-    addPronunciation(text, l1, popupElement);
+    addPronunciation(text, parsed.l1 || l1, popupElement);
     parent.appendChild(popupElement);
     state.isPopupOpened = true;
 

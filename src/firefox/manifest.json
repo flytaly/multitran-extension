@@ -21,7 +21,8 @@
         "styles/content-popup.css",
         "images/flags/us.svg",
         "images/flags/uk.svg",
-        "images/flags/au.svg"
+        "images/flags/au.svg",
+        "images/flags/ru.svg"
     ],
     "default_locale": "en",
     "description": "__MSG_description__",
