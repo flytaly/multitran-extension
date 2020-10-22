@@ -2,19 +2,27 @@
 import { state } from './state.js';
 import { parser } from '../translate-engine/multitran-parser.js';
 import { idToLangMap } from '../configs.js';
+import { addAudioElements } from '../audio.js';
 
 function popupHeader(text, l1Code, l2Code) {
     const header = document.createElement('div');
     header.className = 'popup-header';
+
     const translationText = document.createElement('span');
     translationText.textContent = text;
     translationText.className = 'translation-text';
+
     const langPair = document.createElement('span');
     langPair.className = 'translation-pair';
     if (l1Code && l2Code) {
         langPair.textContent = `${idToLangMap[l1Code]}-${idToLangMap[l2Code]}`;
     }
-    header.append(translationText, langPair);
+
+    const pronunciationBlock = document.createElement('div');
+    pronunciationBlock.className = 'pronunciation';
+    pronunciationBlock.id = 'pronunciation';
+
+    header.append(translationText, pronunciationBlock, langPair);
     return header;
 }
 
@@ -74,6 +82,35 @@ export function otherLangsPopupMarkup(otherLangs = []) {
     return rootElement;
 }
 
+/**
+ * Request pronunciation and show in the popup
+ * @param {string} word
+ * @param {string} lang
+ * @param {HTMLElement} popupElement
+ */
+function addPronunciation(word, lang, popupElement) {
+    const container = popupElement.querySelector('#pronunciation');
+    container.textContent = 'fetching audio...';
+    async function handleResponse(message) {
+        container.textContent = '';
+        if (message.type === 'PRONUNCIATION_LIST') {
+            addAudioElements(container, message.audio);
+        }
+    }
+
+    function handleError(error) {
+        console.error(error);
+    }
+
+    const sending = browser.runtime.sendMessage({
+        type: 'GET_PRONUNCIATION',
+        word,
+        lang,
+    });
+
+    sending.then(handleResponse, handleError);
+}
+
 export async function showPopup({
     parent = document.body,
     shadowHost,
@@ -87,6 +124,7 @@ export async function showPopup({
     const parsed = parser(translationPage);
     if (!parsed.data || !parsed.data.length) return null;
     const popupElement = popupMarkup(parsed.data, text, l1, l2);
+    addPronunciation(text, l1, popupElement);
     parent.appendChild(popupElement);
     state.isPopupOpened = true;
 

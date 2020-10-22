@@ -13,7 +13,12 @@
         "scripts": ["browser-polyfill.js", "js/background/background.js"],
         "persistent": false
     },
-    "web_accessible_resources": ["styles/content-popup.css"],
+    "web_accessible_resources": [
+        "styles/content-popup.css",
+        "images/flags/us.svg",
+        "images/flags/uk.svg",
+        "images/flags/au.svg"
+    ],
     "default_locale": "en",
     "description": "__MSG_description__",
     "name": "__MSG_name__",

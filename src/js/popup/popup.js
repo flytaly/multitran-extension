@@ -5,6 +5,8 @@ import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
 
 import { throttle } from '../utils.js';
+import { addAudioElements } from '../audio.js';
+import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 
 async function renderTranslation(text) {
     const prevTranslation = document.querySelector('#translate-popup');
@@ -18,12 +20,19 @@ async function renderTranslation(text) {
     const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
 
     loadingElem.hidden = true;
+
     if (error) {
         errorElem.hidden = false;
         errorElem.textContent = error.message;
     }
     if (data && data.length) {
         const translationElem = popupMarkup(data, text, l1_, l2_);
+        const container = translationElem.querySelector('#pronunciation');
+        container.textContent = 'fetching audio...';
+        getAudioUrls(text, l1_).then((audioFiles) => {
+            container.textContent = '';
+            addAudioElements(container, audioFiles);
+        });
         document.body.appendChild(translationElem);
         return translationElem;
     }

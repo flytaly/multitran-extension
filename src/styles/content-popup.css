@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+button:not(:focus-visible) {
+    outline: none;
+}
+
 #translate-popup {
     all: initial;
     display: block;
@@ -37,6 +41,7 @@ a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 0.6em;
+    min-height: 25px;
 }
 
 .popup-header .translation-text {
@@ -49,10 +54,29 @@ a:hover {
 }
 
 .popup-header .translation-pair {
-    font-size: 0.7em;
     margin-left: auto;
-    align-self: flex-start;
+    text-align: right;
+}
+
+.popup-header .translation-pair,
+.popup-header .pronunciation {
+    font-size: 0.7em;
     color: #848484;
+}
+
+.popup-header .pronunciation {
+    max-width: 200px;
+}
+.popup-header .pronunciation img {
+    width: 24px;
+    vertical-align: middle;
+}
+.popup-header button {
+    padding: 0;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
 }
 
 .header > * {

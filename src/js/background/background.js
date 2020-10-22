@@ -1,5 +1,6 @@
 import { fetchPage } from '../translate-engine/multitran.js';
 import { storage } from '../storage.js';
+import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 
 async function handleMessage(request) {
     if (request.type === 'GET_MULTITRAN_DATA') {
@@ -18,6 +19,11 @@ async function handleMessage(request) {
                 l2,
             };
         }
+    }
+
+    if (request.type === 'GET_PRONUNCIATION') {
+        const audio = await getAudioUrls(request.word, request.lang);
+        return { type: 'PRONUNCIATION_LIST', audio };
     }
 }
 
