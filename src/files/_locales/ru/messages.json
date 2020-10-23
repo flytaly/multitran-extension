@@ -58,5 +58,13 @@
     "settingCmd": {
         "message": "Клавиши Windows или Cmd (для MacOS)",
         "description": "Settings: Meta key"
+    },
+    "settingLinkGithub": {
+        "message": "github",
+        "description": "Settings page: Link to github"
+    },
+    "settingLinkStore": {
+        "message": "поставить оценку",
+        "description": "Settings page: Link to browser's store"
     }
 }

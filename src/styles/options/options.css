@@ -10,6 +10,10 @@ input[disabled] {
     background-color: lightgrey;
 }
 
+section {
+    margin: 1em 0;
+}
+
 input[disabled] + label {
     color: grey;
 }
@@ -26,6 +30,10 @@ input[disabled] + label {
 
 .text {
     margin-left: 29px;
+}
+
+a {
+    color: #016ed8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,4 +74,18 @@ input[disabled] + label {
     input[disabled] {
         background-color: grey;
     }
+    a {
+        color: #98c0ff;
+    }
+}
+
+footer {
+    margin: 2em 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer > * {
+    margin-right: 1em;
 }

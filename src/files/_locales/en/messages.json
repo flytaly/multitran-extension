@@ -58,5 +58,13 @@
     "settingCmd": {
         "message": "Cmd key (MacOS) or Windows key",
         "description": "Settings: Meta key"
+    },
+    "settingLinkGithub": {
+        "message": "github",
+        "description": "Settings page: Link to github"
+    },
+    "settingLinkStore": {
+        "message": "rate extension",
+        "description": "Settings page: Link to browser's store"
     }
 }

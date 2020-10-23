@@ -3,8 +3,19 @@ import '../l10n.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
 
+function addLinkToBrowserStore() {
+    const storeLink = document.getElementById('storeLink');
+    if (!storeLink) return;
+    if (TARGET === 'firefox') {
+        storeLink.href = 'https://addons.mozilla.org/firefox/addon/multitran/';
+    } else {
+        storeLink.href = 'https://chrome.google.com/webstore/detail/multitran-popup/fbncpmcdhgdolipfkpeckjajpgjdpehj';
+    }
+}
+
 async function init() {
     setLangSelectorListeners();
+    addLinkToBrowserStore();
     const { multitranLang, doubleClick, select, keys } = await storage.getOptions();
 
     // multitran interface language
