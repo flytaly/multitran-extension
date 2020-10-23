@@ -9,7 +9,7 @@ const distPaths = {
     chrome: './dist/chrome/',
 };
 const target = distPaths[process.env.TARGET] ? process.env.TARGET : 'firefox';
-const outputPath = distPaths[process.env.TARGET];
+const outputPath = distPaths[target];
 const isWatchMode = process.env.ROLLUP_WATCH;
 
 const plugins = [
