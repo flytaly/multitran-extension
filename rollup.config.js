@@ -3,8 +3,13 @@ import replace from '@rollup/plugin-replace';
 import copy from 'rollup-plugin-copy-watch';
 import del from 'rollup-plugin-delete';
 
-const target = process.env.TARGET ? process.env.TARGET : 'firefox';
-const outputPath = target === 'firefox' ? './dist/firefox/' : './dist/chrome/';
+const distPaths = {
+    firefox: './dist/firefox/',
+    edge: './dist/edge/',
+    chrome: './dist/chrome/',
+};
+const target = distPaths[process.env.TARGET] ? process.env.TARGET : 'firefox';
+const outputPath = distPaths[process.env.TARGET];
 const isWatchMode = process.env.ROLLUP_WATCH;
 
 const plugins = [
