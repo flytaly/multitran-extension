@@ -59,6 +59,10 @@
         "message": "Cmd key (MacOS) or Windows key",
         "description": "Settings: Meta key"
     },
+    "settingAudio": {
+        "message": "Add words pronunciation (only for Russian, English)",
+        "description": "Settings: enable pronunciation"
+    },
     "settingLinkGithub": {
         "message": "github",
         "description": "Settings page: Link to github"

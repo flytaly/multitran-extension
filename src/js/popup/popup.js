@@ -16,7 +16,7 @@ async function renderTranslation(text) {
     loadingElem.hidden = false;
 
     if (prevTranslation) document.body.removeChild(prevTranslation);
-    const { l1, l2, multitranLang } = await storage.getOptions();
+    const { l1, l2, multitranLang, fetchAudio } = await storage.getOptions();
     const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
 
     loadingElem.hidden = true;
@@ -27,12 +27,15 @@ async function renderTranslation(text) {
     }
     if (data && data.length) {
         const translationElem = popupMarkup(data, text, l1_, l2_);
-        const container = translationElem.querySelector('#pronunciation');
-        container.textContent = 'fetching audio...';
-        getAudioUrls(text, l1_).then((audioFiles) => {
-            container.textContent = '';
-            addAudioElements(container, audioFiles);
-        });
+        if (fetchAudio) {
+            const container = translationElem.querySelector('#pronunciation');
+            container.textContent = 'fetching audio...';
+
+            getAudioUrls(text, l1_).then((audioFiles) => {
+                container.textContent = '';
+                addAudioElements(container, audioFiles);
+            });
+        }
         document.body.appendChild(translationElem);
         return translationElem;
     }

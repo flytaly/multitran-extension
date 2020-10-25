@@ -7,11 +7,12 @@ export const state = {
 };
 
 export async function setStateFromStorage() {
-    const { keys, withKey, doubleClick, select } = await storage.getOptions();
+    const { keys, withKey, doubleClick, select, fetchAudio } = await storage.getOptions();
     state.keys = keys;
     state.withKey = withKey;
     state.doubleClick = doubleClick;
     state.select = select;
+    state.fetchAudio = fetchAudio;
 }
 
 browser.storage.onChanged.addListener(async (/* changes,  areaName */) => {

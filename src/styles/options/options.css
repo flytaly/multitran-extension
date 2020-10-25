@@ -11,7 +11,7 @@ input[disabled] {
 }
 
 section {
-    margin: 1em 0;
+    margin: 0 0 2em 0;
 }
 
 input[disabled] + label {

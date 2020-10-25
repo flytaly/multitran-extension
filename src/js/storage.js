@@ -9,6 +9,7 @@ import { langIds } from './configs.js';
  * @property {boolean} doubleClick - double click to show translation
  * @property {boolean} select - select text to translate
  * @property {boolean} withKey - translate selected text only if key is pressed
+ * @property {boolean} fetchAudio
  * @property {object} keys - keys that should be pressed to show selected text translation
  */
 
@@ -58,6 +59,7 @@ export const storage = {
         if (options.doubleClick === undefined) options.doubleClick = true;
         if (options.select === undefined) options.select = true;
         if (options.withKey === undefined) options.withKey = true;
+        if (options.fetchAudio === undefined) options.fetchAudio = true;
         if (!options.keys)
             options.keys = {
                 altKey: false,

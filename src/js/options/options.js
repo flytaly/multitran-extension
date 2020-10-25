@@ -16,7 +16,7 @@ function addLinkToBrowserStore() {
 async function init() {
     setLangSelectorListeners();
     addLinkToBrowserStore();
-    const { multitranLang, doubleClick, select, keys } = await storage.getOptions();
+    const { multitranLang, doubleClick, select, keys, fetchAudio } = await storage.getOptions();
 
     // multitran interface language
     const mtLang = document.getElementById('mtLang');
@@ -51,6 +51,13 @@ async function init() {
     selectingInput.addEventListener('change', () => {
         storage.saveOptions({ select: selectingInput.checked });
         setDisableAttribute(!selectingInput.checked);
+    });
+
+    // audio
+    const audioCheckbox = document.getElementById('audio');
+    audioCheckbox.checked = fetchAudio;
+    audioCheckbox.addEventListener('change', () => {
+        storage.saveOptions({ fetchAudio: audioCheckbox.checked });
     });
 }
 
