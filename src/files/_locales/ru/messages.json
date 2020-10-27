@@ -19,6 +19,10 @@
         "message": "Настройки",
         "description": "Options button"
     },
+    "settingTranslationHeader": {
+        "message": "Настройки перевода",
+        "description": "Settings: translation settings block header"
+    },
     "settingLangPair": {
         "message": "Направление перевода",
         "description": "Settings: language pair"
@@ -27,9 +31,9 @@
         "message": "Язык интерфейса мультитрана",
         "description": "Settings: multitran language"
     },
-    "settingTranslationHeader": {
-        "message": "Настройки перевода",
-        "description": "Settings: translation settings header"
+    "settingWebPageHeader": {
+        "message": "Перевод слов на веб-страницах",
+        "description": "Settings: web page translation block header"
     },
     "settingDoubleClick": {
         "message": "Переводить по Двойному клику",
@@ -51,9 +55,21 @@
         "message": "Очистить",
         "description": "Settings: clear shortcut"
     },
+    "settingAudioHeader": {
+        "message": "Звук",
+        "description": "Settings: audio block header"
+    },
     "settingAudio": {
-        "message": "Добавить произношение слов (только для русского и английского)",
+        "message": "Добавить произношение слов (только для русского и английского языков)",
         "description": "Settings: enable pronunciation"
+    },
+    "settingContextMenuHeader": {
+        "message": "Контекстное меню",
+        "description": "Settings: context menu block header"
+    },
+    "settingContextMenu": {
+        "message": "Добавить ссылку на вызов перевода в контекстное меню",
+        "description": "Settings: context menu block header"
     },
     "settingLinkGithub": {
         "message": "github",

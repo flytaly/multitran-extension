@@ -1,3 +1,4 @@
+import { addToContextMenu, removeFromContextMenu } from '../context-menu.js';
 /* eslint-disable no-param-reassign */
 import '../l10n.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
@@ -17,7 +18,7 @@ function addLinkToBrowserStore() {
 async function init() {
     setLangSelectorListeners();
     addLinkToBrowserStore();
-    const { multitranLang, doubleClick, select, keys, fetchAudio } = await storage.getOptions();
+    const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem } = await storage.getOptions();
     // multitran interface language
     const mtLang = document.getElementById('mtLang');
     mtLang.value = multitranLang;
@@ -46,6 +47,18 @@ async function init() {
     audioCheckbox.checked = fetchAudio;
     audioCheckbox.addEventListener('change', () => {
         storage.saveOptions({ fetchAudio: audioCheckbox.checked });
+    });
+
+    // context menu
+    const contextMenuCheckbox = document.getElementById('contextMenu');
+    contextMenuCheckbox.checked = contextMenuItem;
+    contextMenuCheckbox.addEventListener('change', () => {
+        storage.saveOptions({ contextMenuItem: contextMenuCheckbox.checked });
+        if (contextMenuCheckbox.checked) {
+            addToContextMenu();
+        } else {
+            removeFromContextMenu();
+        }
     });
 }
 

@@ -60,6 +60,7 @@ export const storage = {
         if (options.select === undefined) options.select = true;
         if (options.withKey === undefined) options.withKey = true;
         if (options.fetchAudio === undefined) options.fetchAudio = true;
+        if (options.contextMenuItem === undefined) options.contextMenuItem = true;
         if (!options.keys)
             options.keys = {
                 altKey: false,

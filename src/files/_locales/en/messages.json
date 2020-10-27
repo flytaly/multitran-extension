@@ -19,6 +19,10 @@
         "message": "Options",
         "description": "Options button"
     },
+    "settingTranslationHeader": {
+        "message": "Translation settings",
+        "description": "Settings: translation settings block header"
+    },
     "settingLangPair": {
         "message": "Language pair",
         "description": "Settings: language pair"
@@ -27,9 +31,9 @@
         "message": "Multitran interface language",
         "description": "Settings: multitran language"
     },
-    "settingTranslationHeader": {
-        "message": "Translation settings",
-        "description": "Settings: translation settings header"
+    "settingWebPageHeader": {
+        "message": "Web page words translation",
+        "description": "Settings: web page translation block header"
     },
     "settingDoubleClick": {
         "message": "Translate by Double click",
@@ -51,9 +55,21 @@
         "message": "Clear",
         "description": "Settings: clear shortcut"
     },
+    "settingAudioHeader": {
+        "message": "Audio",
+        "description": "Settings: audio block header"
+    },
     "settingAudio": {
-        "message": "Add words pronunciation (only for Russian, English)",
+        "message": "Fetch words pronunciation (only for Russian, English)",
         "description": "Settings: enable pronunciation"
+    },
+    "settingContextMenuHeader": {
+        "message": "Context menu",
+        "description": "Settings: context menu block header"
+    },
+    "settingContextMenu": {
+        "message": "Add item to context menu",
+        "description": "Settings: context menu block header"
     },
     "settingLinkGithub": {
         "message": "github",

@@ -1,6 +1,7 @@
 import { fetchPage } from '../translate-engine/multitran.js';
 import { storage } from '../storage.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
+import { CONTEXT_ID, addToContextMenu } from '../context-menu.js';
 
 async function handleMessage(request) {
     if (request.type === 'GET_MULTITRAN_DATA') {
@@ -27,23 +28,22 @@ async function handleMessage(request) {
     }
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+async function run() {
+    browser.runtime.onMessage.addListener(handleMessage);
 
-const CONTEXT_ID = 'multitran-translate-selected';
+    const { contextMenuItem } = await storage.getOptions();
+    if (contextMenuItem) addToContextMenu();
 
-browser.contextMenus.create({
-    id: CONTEXT_ID,
-    title: browser.i18n.getMessage('contextMenuTranslateSelection'),
-    contexts: ['selection'],
-});
-
-const contextMenuClickHandler = (info, tab) => {
-    if (info.menuItemId === CONTEXT_ID) {
-        const { selectionText } = info;
-        if (selectionText) {
-            browser.tabs.sendMessage(tab.id, { type: 'TRANSLATE_SELECTION' });
+    const contextMenuClickHandler = (info, tab) => {
+        if (info.menuItemId === CONTEXT_ID) {
+            const { selectionText } = info;
+            if (selectionText) {
+                browser.tabs.sendMessage(tab.id, { type: 'TRANSLATE_SELECTION' });
+            }
         }
-    }
-};
+    };
 
-browser.contextMenus.onClicked.addListener(contextMenuClickHandler);
+    browser.contextMenus.onClicked.addListener(contextMenuClickHandler);
+}
+
+run();
