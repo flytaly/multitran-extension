@@ -28,10 +28,6 @@ input[disabled] + label {
     font-size: 1.2rem;
 }
 
-.text {
-    margin-left: 29px;
-}
-
 a {
     color: #016ed8;
 }
@@ -77,6 +73,40 @@ a {
     a {
         color: #98c0ff;
     }
+}
+
+label {
+    vertical-align: middle;
+}
+
+label.shortcutLabel {
+    margin-left: 29px;
+    margin-right: 1em;
+}
+
+.shortcutInputRow {
+    display: inline-flex;
+    position: relative;
+}
+.shortcutInputRow .clear {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    width: 1.8em;
+    height: 100%;
+    max-height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.shortcutInputRow .clear:hover svg,
+.shortcutInputRow .clear:focus svg {
+    stroke: lightcoral;
+}
+
+#shortcutInput {
+    min-width: 12em;
 }
 
 footer {

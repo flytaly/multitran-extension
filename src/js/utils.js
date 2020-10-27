@@ -11,3 +11,16 @@ export function throttle(func, ms) {
         }, wait);
     };
 }
+
+export function debounce(func, ms) {
+    let waiting = false;
+    let tmId;
+    return (...args) => {
+        if (waiting) clearTimeout(tmId);
+        waiting = true;
+        tmId = setTimeout(() => {
+            func(...args);
+            waiting = false;
+        }, ms);
+    };
+}

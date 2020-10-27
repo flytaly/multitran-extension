@@ -66,6 +66,7 @@ export const storage = {
                 ctrlKey: true,
                 metaKey: false,
                 shiftKey: false,
+                additionalKey: null,
             };
         return options;
     },

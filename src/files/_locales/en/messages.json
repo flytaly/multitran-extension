@@ -41,23 +41,15 @@
     },
     "settingPressKey": {
         "message": "and pressing following keys:",
-        "description": "Settings: press following key"
+        "description": "Settings: shortcut label"
     },
-    "settingAlt": {
-        "message": "Alt key",
-        "description": "Settings: Alt key"
+    "settingPressKey_title": {
+        "message": "Allowed: Shift, Alt, Control, Cmd plus 1 Letter, Number or F1-F12 key",
+        "description": "Attribute title of shortcuts"
     },
-    "settingCtrlKey": {
-        "message": "Ctrl key",
-        "description": "Settings: Control key"
-    },
-    "settingShiftKey": {
-        "message": "Shift key",
-        "description": "Settings: Shift key"
-    },
-    "settingCmd": {
-        "message": "Cmd key (MacOS) or Windows key",
-        "description": "Settings: Meta key"
+    "settingClearShortcut_title": {
+        "message": "Clear",
+        "description": "Settings: clear shortcut"
     },
     "settingAudio": {
         "message": "Add words pronunciation (only for Russian, English)",

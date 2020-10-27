@@ -80,7 +80,8 @@ state.onOptionsChange = async () => {
             (state.keys.altKey && !e.altKey) ||
             (state.keys.ctrlKey && !e.ctrlKey) ||
             (state.keys.metaKey && !e.metaKey) ||
-            (state.keys.shiftKey && !e.shiftKey)
+            (state.keys.shiftKey && !e.shiftKey) ||
+            (state.keys.additionalKey && e.code !== state.keys.additionalKey)
         ) {
             areKeysPressed = false;
         }
@@ -90,10 +91,8 @@ state.onOptionsChange = async () => {
         }
     }
 
-    function keyupHandler(e) {
-        if (e.key === 'Meta' || e.key === 'Control' || e.key === 'Alt' || e.key === 'Shift') {
-            state.areKeysPressed = false;
-        }
+    function keyupHandler() {
+        state.areKeysPressed = false;
     }
 
     function removeHandlers() {

@@ -2,6 +2,7 @@
 import '../l10n.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
+import { setShortcut } from './shortcuts.js';
 
 function addLinkToBrowserStore() {
     const storeLink = document.getElementById('storeLink');
@@ -17,7 +18,6 @@ async function init() {
     setLangSelectorListeners();
     addLinkToBrowserStore();
     const { multitranLang, doubleClick, select, keys, fetchAudio } = await storage.getOptions();
-
     // multitran interface language
     const mtLang = document.getElementById('mtLang');
     mtLang.value = multitranLang;
@@ -29,28 +29,16 @@ async function init() {
         storage.saveOptions({ doubleClick: doubleClickInput.checked });
     });
 
-    const keysInputs = document.querySelectorAll('#keys input');
-    keysInputs.forEach((keyInput) => {
-        const { name } = keyInput;
-        keyInput.checked = keys[name];
-        keyInput.addEventListener('change', () => {
-            storage.saveKeys({ [name]: keyInput.checked });
-        });
-    });
+    setShortcut(keys);
 
-    // set keys input disabled if 'selecting text' option isn't selected
-    const setDisableAttribute = (isDisabled) => {
-        keysInputs.forEach((keyInput) => {
-            keyInput.disabled = isDisabled;
-        });
-    };
-
+    const shortcutInput = document.getElementById('shortcutInput');
     const selectingInput = document.getElementById('selecting');
     selectingInput.checked = select;
-    setDisableAttribute(!selectingInput.checked);
+    // set keys input disabled if 'selecting text' option isn't selected
+    shortcutInput.disabled = !selectingInput.checked;
     selectingInput.addEventListener('change', () => {
         storage.saveOptions({ select: selectingInput.checked });
-        setDisableAttribute(!selectingInput.checked);
+        shortcutInput.disabled = !selectingInput.checked;
     });
 
     // audio

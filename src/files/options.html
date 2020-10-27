@@ -105,10 +105,10 @@
 
         <section class="browser-style">
             <br />
-            <form id="tranAfter" class="browser-style">
+            <div id="tranAfter" class="browser-style">
                 <div class="browser-style">
                     <input type="checkbox" id="doubleClick" name="doubleClick" />
-                    <label for="doubleClick" data-l10n-id="settingDoubleClick">Double clicking</label>
+                    <label for="doubleClick" data-l10n-id="settingDoubleClick">Double clicking </label>
                 </div>
                 <br />
                 <br />
@@ -116,26 +116,47 @@
                     <input type="checkbox" id="selecting" name="selecting" />
                     <label for="selecting" data-l10n-id="settingSelectingText">Translate text by Selecting</label>
                 </div>
-                <div class="browser-style text" data-l10n-id="settingPressKey">and pressing following keys:</div>
-                <ul id="keys">
-                    <li class="browser-style">
-                        <input type="checkbox" id="altKey" name="altKey" />
-                        <label for="altKey" data-l10n-id="settingAlt">Alt key</label>
-                    </li>
-                    <li class="browser-style">
-                        <input type="checkbox" id="ctrlKey" name="ctrlKey" />
-                        <label for="ctrlKey" data-l10n-id="settingCtrlKey">Control key</label>
-                    </li>
-                    <li class="browser-style">
-                        <input type="checkbox" id="shiftKey" name="shiftKey" />
-                        <label for="shiftKey" data-l10n-id="settingShiftKey">Shift key</label>
-                    </li>
-                    <li class="browser-style">
-                        <input type="checkbox" id="metaKey" name="metaKey" />
-                        <label for="metaKey" data-l10n-id="settingCmd">Cmd (MacOS) or Windows key</label>
-                    </li>
-                </ul>
-            </form>
+                <label
+                    for="shortcutInput"
+                    class="browser-style shortcutLabel"
+                    data-l10n-id="settingPressKey"
+                    data-l10n-attrs="title"
+                >
+                    and pressing following keys:
+                </label>
+                <span class="browser-style shortcutInputRow">
+                    <input
+                        id="shortcutInput"
+                        type="text"
+                        data-l10n-id="settingPressKey"
+                        data-l10n-attrs="title"
+                        data-l10n-nocontent="true"
+                    />
+                    <button
+                        class="clear"
+                        id="shortcutClear"
+                        data-l10n-id="settingClearShortcut"
+                        data-l10n-attrs="title"
+                        data-l10n-nocontent="true"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="100%"
+                            width="100%"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                    </button>
+                </span>
+            </div>
         </section>
         <section class="browser-style">
             <div class="browser-style">
