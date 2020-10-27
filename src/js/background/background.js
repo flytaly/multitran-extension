@@ -28,3 +28,22 @@ async function handleMessage(request) {
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
+
+const CONTEXT_ID = 'multitran-translate-selected';
+
+browser.contextMenus.create({
+    id: CONTEXT_ID,
+    title: browser.i18n.getMessage('contextMenuTranslateSelection'),
+    contexts: ['selection'],
+});
+
+const contextMenuClickHandler = (info, tab) => {
+    if (info.menuItemId === CONTEXT_ID) {
+        const { selectionText } = info;
+        if (selectionText) {
+            browser.tabs.sendMessage(tab.id, { type: 'TRANSLATE_SELECTION' });
+        }
+    }
+};
+
+browser.contextMenus.onClicked.addListener(contextMenuClickHandler);

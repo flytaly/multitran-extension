@@ -31,6 +31,7 @@
     },
     "permissions": [
         "storage",
+        "contextMenus",
         "https://www.multitran.com/*",
         "https://*.wiktionary.org/api/*",
         "https://*.wikimedia.org/*"

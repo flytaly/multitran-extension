@@ -62,5 +62,9 @@
     "settingLinkStore": {
         "message": "rate extension",
         "description": "Settings page: Link to browser's store"
+    },
+    "contextMenuTranslateSelection": {
+        "message": "Translate with Multitran",
+        "description": "Context menu text"
     }
 }

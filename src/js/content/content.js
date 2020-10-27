@@ -111,3 +111,9 @@ state.onOptionsChange = async () => {
 };
 
 setStateFromStorage().then(() => state.onOptionsChange());
+
+browser.runtime.onMessage.addListener((message) => {
+    if (message.type === 'TRANSLATE_SELECTION') {
+        processSelection(document.activeElement || document.body);
+    }
+});

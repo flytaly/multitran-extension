@@ -62,5 +62,9 @@
     "settingLinkStore": {
         "message": "поставить оценку",
         "description": "Settings page: Link to browser's store"
+    },
+    "contextMenuTranslateSelection": {
+        "message": "Перевести используя Multitran",
+        "description": "Context menu text"
     }
 }
