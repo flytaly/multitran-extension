@@ -51,6 +51,10 @@
         "message": "Allowed: Shift, Alt, Control, Cmd plus 1 Letter, Number or F1-F12 key",
         "description": "Attribute title of shortcuts"
     },
+    "settingPressKey_placeholder": {
+        "message": "Type a shortcut",
+        "description": "Attribute placeholder of shortcuts"
+    },
     "settingClearShortcut_title": {
         "message": "Clear",
         "description": "Settings: clear shortcut"

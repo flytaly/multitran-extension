@@ -29,3 +29,7 @@ input[type='checkbox'] {
 li {
     margin: 6px;
 }
+
+body {
+    margin-left: 50px;
+}

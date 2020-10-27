@@ -51,6 +51,10 @@
         "message": "Доступны: Shift, Alt, Control, Cmd плюс 1 буква, число или F1-F12 клавиша",
         "description": "Attribute title of shortcuts"
     },
+    "settingPressKey_placeholder": {
+        "message": "Нажмите сочетание клавиш",
+        "description": "Attribute placeholder of shortcuts"
+    },
     "settingClearShortcut_title": {
         "message": "Очистить",
         "description": "Settings: clear shortcut"
