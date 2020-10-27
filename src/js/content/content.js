@@ -104,7 +104,7 @@ state.onOptionsChange = async () => {
     removeHandlers();
 
     document.body.addEventListener('mouseup', mouseupHandler);
-    if (state.withKey) {
+    if (state.select && state.withKey) {
         document.body.addEventListener('keydown', keydownHandler);
         document.body.addEventListener('keyup', keyupHandler);
     }
