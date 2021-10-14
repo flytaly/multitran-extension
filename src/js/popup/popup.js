@@ -1,3 +1,4 @@
+import { browser } from 'webextension-polyfill-ts';
 import '../l10n.js';
 import { multitranData } from '../translate-engine/multitran.js';
 import { otherLangsPopupMarkup, popupMarkup } from '../content/content-popup.js';

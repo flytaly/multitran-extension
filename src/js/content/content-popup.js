@@ -1,4 +1,5 @@
 /* eslint-disable no-use-before-define */
+import { browser } from 'webextension-polyfill-ts';
 import { state } from './state.js';
 import { parser } from '../translate-engine/multitran-parser.js';
 import { idToLangMap } from '../configs.js';

@@ -3,6 +3,8 @@
  * if you add them right away. Even if there is "run_at": "document_end" in manifest.
  * One way to fix it is to create shadow element inside requestIdleCallback.
  */
+import { browser } from 'webextension-polyfill-ts';
+
 export const shadow = {};
 
 window.requestIdleCallback(() => {
@@ -12,7 +14,7 @@ window.requestIdleCallback(() => {
 
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('href', browser.runtime.getURL('styles/content-popup.css'));
+    link.setAttribute('href', browser.runtime.getURL('styles.css'));
     shadowElem.appendChild(link);
 
     shadow.shadowHost = shadowHost;

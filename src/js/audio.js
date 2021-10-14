@@ -1,3 +1,5 @@
+import { browser } from 'webextension-polyfill-ts';
+
 /**
  * @param {HTMLElement} container
  * @param {Object} audioFiles

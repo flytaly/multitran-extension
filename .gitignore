@@ -2,6 +2,7 @@
 .DS_Store
 node_modules
 .idea
-js/config.js
+.vscode
 web-ext-artifacts
 dist/
+extension/manifest.json

@@ -1,3 +1,4 @@
+import { browser } from 'webextension-polyfill-ts';
 import { state, setStateFromStorage } from './state.js';
 import { showPopup } from './content-popup.js';
 import { shadow } from './shadow.js';

@@ -1,3 +1,4 @@
+import { browser } from 'webextension-polyfill-ts';
 import { storage } from '../storage.js';
 
 export const state = {

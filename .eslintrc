@@ -6,8 +6,6 @@
     },
     "env": {
         "browser": true,
-        "es6": true,
-        "webextensions": true,
         "jest": true
     },
     "globals": {
@@ -31,6 +29,7 @@
         "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
         "import/prefer-default-export": "off",
         "import/extensions": ["error", "always"],
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
         "implicit-arrow-linebreak": "off",
         "no-param-reassign": "off",
         "consistent-return": "off"

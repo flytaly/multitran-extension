@@ -1,3 +1,5 @@
+import { browser } from 'webextension-polyfill-ts';
+
 export const CONTEXT_ID = 'multitran-translate-selected';
 
 export const addToContextMenu = () => {
