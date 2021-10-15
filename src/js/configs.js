@@ -40,6 +40,7 @@ export const langIds = {
     'Verklaren op eer': '24',
 };
 
+/** @type {Record<string,string>} */
 export const idToLangMap = Object.entries(langIds).reduce(
     (prev, curr) => ({
         ...prev,

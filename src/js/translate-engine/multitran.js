@@ -25,9 +25,8 @@ async function getParsedData(text, langFrom, langTo, interfaceLang = 1) {
 }
 
 /**
- * Get translation data.
- * If there is translation in reverse order (e.g. English-Spanish -> Spanish-English)
- * make another request.
+ * Get translation data. If there is translation in reverse order
+ * (e.g. English-Spanish -> Spanish-English) make another request.
  */
 export async function multitranData(text, langFrom, langTo, interfaceLang = 1) {
     const parsed = await getParsedData(text, langFrom, langTo, interfaceLang);

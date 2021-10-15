@@ -30,6 +30,7 @@
         "import/prefer-default-export": "off",
         "import/extensions": ["error", "always"],
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "no-await-in-loop": "off",
         "implicit-arrow-linebreak": "off",
         "no-param-reassign": "off",
         "consistent-return": "off"

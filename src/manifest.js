@@ -68,7 +68,7 @@ export async function getManifest() {
         background: {
             scripts: ['dist/background/background.js'],
         },
-        web_accessible_resources: ['styles.css', 'images/flags/*.svg'],
+        web_accessible_resources: ['templates.html', 'styles.css', 'images/flags/*.svg'],
         icons: {
             48: 'images/icon_light-48.png',
             64: 'images/icon_light-64.png',
@@ -91,11 +91,9 @@ export async function getManifest() {
             },
             ...themeIcons,
             default_popup: 'popup.html',
-            browser_style: true,
         },
         options_ui: {
             page: 'options.html',
-            chrome_style: true,
         },
     };
 }

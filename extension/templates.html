@@ -1,0 +1,43 @@
+<template id="translate-popup">
+    <article
+        id="translate-popup-container"
+        class="
+            absolute
+            block
+            text-gray-800
+            font-normal
+            text-sm
+            font-sans
+            break-words
+            overflow-auto
+            z-50
+            min-h-[40px] min-w-[100px]
+            max-h-[380px] max-w-[400px]
+            border border-gray-400
+            bg-gray-100
+            p-4
+            pt-2
+            rounded-md
+        "
+    >
+        <header class="flex items-center mb-2 min-h-[25px] text-lg">
+            <span class="font-bold mr-4 max-w-[200px] overflow-hidden whitespace-nowrap overflow-ellipsis"></span>
+            <span id="pronunciation" class="max-w-[150px] text-xs"></span>
+            <span class="text-xs text-right ml-auto text-gray-400"></span>
+        </header>
+    </article>
+</template>
+
+<template id="flag-button">
+    <button class="w-8 h-8 mr-1">
+        <img alt="play" class="w-8" />
+    </button>
+</template>
+
+<template id="row-header">
+    <div class="text-base space-x-6 text-gray-500"></div>
+</template>
+
+<template id="row-translations">
+    <ol class="list-decimal p-2 pl-10 text-gray-500 text-sm"></ol>
+</template>

@@ -1,78 +1,69 @@
+/* eslint-disable no-await-in-loop */
 /* eslint-disable no-use-before-define */
 import { browser } from 'webextension-polyfill-ts';
 import { state } from './state.js';
 import { parser } from '../translate-engine/multitran-parser.js';
 import { idToLangMap } from '../configs.js';
 import { addAudioElements } from '../audio.js';
+import { getTemplate } from '../templates.js';
 
-function popupHeader(text, l1Code, l2Code) {
-    const header = document.createElement('div');
-    header.className = 'popup-header';
+/**
+ * @typedef { import("../translate-engine/multitran-parser").MtGroup } MtGroup
+ * @param {Array<MtGroup>} data
+ * @param {string} text
+ * @param {string} l1Code
+ * @param {string} l2Code
+ * @returns
+ */
+export async function popupMarkup(data, text, l1Code, l2Code) {
+    const rootElement = await getTemplate('translate-popup');
 
-    const translationText = document.createElement('span');
-    translationText.textContent = text;
-    translationText.className = 'translation-text';
-
-    const langPair = document.createElement('span');
-    langPair.className = 'translation-pair';
-    if (l1Code && l2Code) {
-        langPair.textContent = `${idToLangMap[l1Code]}-${idToLangMap[l2Code]}`;
-    }
-
-    const pronunciationBlock = document.createElement('div');
-    pronunciationBlock.className = 'pronunciation';
-    pronunciationBlock.id = 'pronunciation';
-
-    header.append(translationText, pronunciationBlock, langPair);
-    return header;
-}
-
-export function popupMarkup(data, text, l1Code, l2Code) {
-    const rootElement = document.createElement('div');
-    rootElement.id = 'translate-popup';
     const elementsList = [];
     let prevRowType = null;
 
-    elementsList.push(popupHeader(text, l1Code, l2Code));
-
-    data.forEach((row) => {
-        const rowContainer = document.createElement('div');
+    // Header
+    const spans = rootElement.querySelectorAll('article > header > span');
+    spans[0].innerText = text;
+    if (l1Code && l2Code) {
+        spans[2].textContent = `${idToLangMap[l1Code]}-${idToLangMap[l2Code]}`;
+    }
+    for (const row of data) {
+        // const rowContainer = document.createElement('div');
         if (row.type === 'header') {
-            rowContainer.classList.add('header');
-            rowContainer.append(...row.content);
-            elementsList.push(rowContainer);
+            const header = await getTemplate('row-header');
+            header.append(...row.content);
+            elementsList.push(header);
         }
         if (row.type === 'translation') {
             let ol;
             if (prevRowType === 'translation') {
                 ol = elementsList[elementsList.length - 1];
             } else {
-                ol = document.createElement('ol');
+                // ol = document.createElement('ol');
+                ol = await getTemplate('row-translations');
                 elementsList.push(ol);
             }
             const li = document.createElement('li');
             const colon = document.createTextNode(': ');
             if (row.subjLink) {
-                row.subjLink.classList.add('subj');
+                row.subjLink.classList.add('translation-subject');
                 li.append(row.subjLink, colon);
             }
             ol.appendChild(li);
             li.append(...row.trans);
         }
         prevRowType = row.type;
-    });
+    }
     rootElement.append(...elementsList);
     return rootElement;
 }
 
-export function otherLangsPopupMarkup(otherLangs = []) {
-    const rootElement = document.createElement('div');
-    rootElement.id = 'translate-popup';
+export async function otherLangsPopupMarkup(otherLangs = []) {
+    const rootElement = await getTemplate('translate-popup');
     const header = document.createElement('div');
     header.textContent = browser.i18n.getMessage('otherLanguagesHeader');
     rootElement.appendChild(header);
     const linksContainer = document.createElement('div');
-    linksContainer.classList.add('other-langs');
     otherLangs.forEach((link, idx) => {
         linksContainer.appendChild(link);
         if (idx !== otherLangs.length - 1) {
@@ -95,7 +86,7 @@ function addPronunciation(word, lang, popupElement) {
     async function handleResponse(message) {
         container.textContent = '';
         if (message.type === 'PRONUNCIATION_LIST') {
-            addAudioElements(container, message.audio);
+            await addAudioElements(container, message.audio);
         }
     }
 
@@ -124,7 +115,7 @@ export async function showPopup({
 }) {
     const parsed = parser(translationPage);
     if (!parsed.data || !parsed.data.length) return null;
-    const popupElement = popupMarkup(parsed.data, text, l1, l2);
+    const popupElement = await popupMarkup(parsed.data, text, l1, l2);
     if (state.fetchAudio) addPronunciation(text, parsed.l1 || l1, popupElement);
     parent.appendChild(popupElement);
     state.isPopupOpened = true;

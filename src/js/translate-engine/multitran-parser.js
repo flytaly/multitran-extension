@@ -9,7 +9,15 @@ function getParsedHTML(text) {
     const htmlParser = new DOMParser();
     return htmlParser.parseFromString(text, 'text/html');
 }
-
+/**
+ * @typedef {Object} MtGroupHeader
+ * @property {"header"} type
+ * @property {Array<HTMLElement>} content
+ */
+/**
+ * @param {Element} td
+ * @returns {MtGroupHeader}
+ */
 function getGroupHeader(td) {
     const content = [];
     td.querySelectorAll('a, span, em').forEach((elem) => {
@@ -26,7 +34,11 @@ function getGroupHeader(td) {
         content,
     };
 }
-
+/**
+ *
+ * @param {Element} html
+ * @returns {Array<HTMLAnchorElement>}
+ */
 function checkOtherLang(html) {
     const result = Array.from(html.querySelectorAll('td.morelangs a'));
     return result.map((a) => {
@@ -35,8 +47,17 @@ function checkOtherLang(html) {
         return a;
     });
 }
-
+/**
+ * @typedef {Object} MtGroupTrans
+ * @property {"translation"} type
+ * @property {(HTMLAnchorElement|null)} subjLink
+ * @property {Array<HTMLElement>} trans
+ */
+/**
+ * @param {Element} tr
+ */
 function getTranslationsFromRow(tr) {
+    /** @type MtGroupTrans */
     const result = {
         type: 'translation',
         subjLink: null,
@@ -72,11 +93,13 @@ function getTranslationsFromRow(tr) {
 }
 
 /**
+ * @typedef {(MtGroupTrans|MtGroupHeader)} MtGroup
+ *
  * @typedef {Object} ParsedPage
- * @property {Array} parsedPage.data - translations
- * @property {string} [parsedPage.l1] - "from" language
- * @property {string} [parsedPage.l2] - "to" language
- * @property {Array} [parsedPage.otherLang] - translation in other language pairs
+ * @property {Array<MtGroup>} data - translations
+ * @property {string} [l1] - "from" language
+ * @property {string} [l2] - "to" language
+ * @property {Array<HTMLAnchorElement>} [otherLang] - translation in other language pairs
  */
 
 /**

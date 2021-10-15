@@ -6,7 +6,7 @@
     "scripts": {
         "prepare": "esno scripts/prepare.js",
         "js": "esno scripts/esbuild.config.js",
-        "styles:watch": "tailwind -o extension/styles.css -w",
+        "styles:watch": "tailwind -i src/styles/content-popup.css -o extension/styles.css -w",
         "styles:build": "tailwind -o extension/styles.css -m",
         "web-ext:ff": "web-ext run --source-dir extension",
         "web-ext:chrome": "web-ext run --target chromium --source-dir extension",

@@ -10,7 +10,7 @@ import { addAudioElements } from '../audio.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 
 async function renderTranslation(text) {
-    const prevTranslation = document.querySelector('#translate-popup');
+    const prevTranslation = document.querySelector('#translate-popup-container');
     const loadingElem = document.querySelector('.loading');
     const errorElem = document.querySelector('.error');
     errorElem.hidden = true;
@@ -27,7 +27,8 @@ async function renderTranslation(text) {
         errorElem.textContent = error.message;
     }
     if (data && data.length) {
-        const translationElem = popupMarkup(data, text, l1_, l2_);
+        const translationElem = await popupMarkup(data, text, l1_, l2_);
+        translationElem.style = 'border:0;position:relative;';
         if (fetchAudio) {
             const container = translationElem.querySelector('#pronunciation');
             container.textContent = 'fetching audio...';
@@ -42,7 +43,8 @@ async function renderTranslation(text) {
     }
 
     if (otherLang && otherLang.length) {
-        const translationElem = otherLangsPopupMarkup(otherLang);
+        const translationElem = await otherLangsPopupMarkup(otherLang);
+        translationElem.style = 'border:0;position:relative;';
         document.body.appendChild(translationElem);
         return translationElem;
     }
