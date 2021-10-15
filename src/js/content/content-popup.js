@@ -6,6 +6,7 @@ import { parser } from '../translate-engine/multitran-parser.js';
 import { idToLangMap } from '../configs.js';
 import { addAudioElements } from '../audio.js';
 import { getTemplate } from '../templates.js';
+import { composeURL } from '../translate-engine/multitran.js';
 
 /**
  * @typedef { import("../translate-engine/multitran-parser").MtGroup } MtGroup
@@ -23,7 +24,10 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
 
     // Header
     const spans = rootElement.querySelectorAll('article > header > span');
-    spans[0].innerText = text;
+    const link = spans[0].querySelector('a');
+    link.innerText = text;
+    link.href = composeURL(text, l1Code, l2Code, '1');
+
     if (l1Code && l2Code) {
         spans[2].textContent = `${idToLangMap[l1Code]}-${idToLangMap[l2Code]}`;
     }

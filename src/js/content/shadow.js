@@ -15,7 +15,7 @@ window.requestIdleCallback(() => {
 
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('href', browser.runtime.getURL('styles.css'));
+    link.setAttribute('href', browser.runtime.getURL('dist/styles.css'));
     shadowElem.appendChild(link);
 
     shadow.shadowHost = shadowHost;
