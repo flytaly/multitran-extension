@@ -11,16 +11,20 @@ import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 
 async function renderTranslation(text) {
     const prevTranslation = document.querySelector('#translate-popup-container');
-    const loadingElem = document.querySelector('.loading');
-    const errorElem = document.querySelector('.error');
+    const loadingText = document.getElementById('loading');
+    const loadingBar = document.getElementById('top-bar');
+    const errorElem = document.getElementById('error');
     errorElem.hidden = true;
-    loadingElem.hidden = false;
+
+    loadingText.hidden = false;
+    loadingBar.classList.add('animate-pulse');
 
     if (prevTranslation) document.body.removeChild(prevTranslation);
     const { l1, l2, multitranLang, fetchAudio } = await storage.getOptions();
     const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
 
-    loadingElem.hidden = true;
+    loadingText.hidden = true;
+    loadingBar.classList.remove('animate-pulse');
 
     if (error) {
         errorElem.hidden = false;
@@ -54,9 +58,9 @@ async function renderTranslation(text) {
 
 function setListeners() {
     setLangSelectorListeners();
-    const form = document.querySelector('.text-input');
-    const input = document.querySelector('.text-input input');
-    const optionButton = document.querySelector('button.header-icon');
+    const form = document.getElementById('input-form');
+    const input = form.querySelector('input');
+    const optionButton = document.getElementById('optionsButton');
 
     optionButton.addEventListener('click', async () => {
         await browser.runtime.openOptionsPage();
