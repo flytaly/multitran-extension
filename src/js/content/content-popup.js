@@ -18,7 +18,6 @@ import { composeURL } from '../translate-engine/multitran.js';
  */
 export async function popupMarkup(data, text, l1Code, l2Code) {
     const rootElement = await getTemplate('translate-popup');
-
     const elementsList = [];
     let prevRowType = null;
 
@@ -34,8 +33,8 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
     for (const row of data) {
         // const rowContainer = document.createElement('div');
         if (row.type === 'header') {
-            const header = await getTemplate('row-header');
-            header.append(...row.content);
+            const header = await getTemplate('translation-list-header');
+            header.querySelector('div').append(...row.content);
             elementsList.push(header);
         }
         if (row.type === 'translation') {
@@ -43,8 +42,7 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
             if (prevRowType === 'translation') {
                 ol = elementsList[elementsList.length - 1];
             } else {
-                // ol = document.createElement('ol');
-                ol = await getTemplate('row-translations');
+                ol = await getTemplate('translation-list');
                 elementsList.push(ol);
             }
             const li = document.createElement('li');
@@ -59,6 +57,42 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
         prevRowType = row.type;
     }
     rootElement.append(...elementsList);
+
+    const selector = '[data-type="list-header"]';
+
+    // Arrow buttons for scrolling to the next group
+    rootElement.onclick = (ev) => {
+        const parentHeader = ev.target?.closest(selector);
+        if (parentHeader) {
+            const list = Array.from(rootElement.querySelectorAll(selector));
+            const idx = list.findIndex((el) => el === parentHeader);
+            const nextEl = list[(idx + 1) % list.length];
+            rootElement.scroll({
+                behavior: 'smooth',
+                top: nextEl.offsetTop,
+            });
+        }
+    };
+
+    // Don't show scroll buttons in the groups that close to the bottom
+    const resizeObserver = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+            if (entry.target === rootElement) {
+                const rect = rootElement.getBoundingClientRect();
+                const bottomOffset = rootElement.scrollHeight - rect.height + rect.top;
+                const elems = rootElement.querySelectorAll(selector);
+                elems.forEach((el) => {
+                    const { top } = el.getBoundingClientRect();
+                    if (top < bottomOffset) {
+                        el.querySelector('button').classList.remove('invisible');
+                    }
+                });
+            }
+        }
+    });
+
+    resizeObserver.observe(rootElement);
+
     return rootElement;
 }
 

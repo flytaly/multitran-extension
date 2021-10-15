@@ -117,7 +117,8 @@ export function parser(text) {
         const tds = Array.from(row.querySelectorAll(':scope > td'));
         if (!tds.length) return;
         if (tds.length === 1 && tds[0].getAttribute('colspan') === '2') {
-            data.push(getGroupHeader(tds[0]));
+            const gH = getGroupHeader(tds[0]);
+            if (gH.content.length) data.push(gH);
         }
         if (tds.length === 2) {
             const translations = getTranslationsFromRow(row);

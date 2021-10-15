@@ -4,7 +4,7 @@ import { browser } from 'webextension-polyfill-ts';
 let parsed;
 
 /**
- * @param {'translate-popup'|'flag-button'|'row-header'|'row-translations'} templateId
+ * @param {'translate-popup'|'flag-button'|'translation-list-header'|'translation-list'} templateId
  */
 export async function getTemplate(templateId) {
     if (!parsed) {
@@ -18,7 +18,7 @@ export async function getTemplate(templateId) {
     switch (templateId) {
         case 'translate-popup':
             return fragment.querySelector('article');
-        case 'row-translations':
+        case 'translation-list':
             return fragment.querySelector('ol');
         case 'flag-button':
             return fragment.querySelector('button');

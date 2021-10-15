@@ -36,10 +36,26 @@
     </button>
 </template>
 
-<template id="row-header">
-    <div class="text-base space-x-6 text-gray-500"></div>
+<template id="translation-list-header">
+    <div class="flex justify-between" data-type="list-header">
+        <div class="text-base space-x-6 text-gray-500 mr-2"></div>
+        <button
+            class="ml-auto flex items-center text-gray-500 hover:text-gray-800 invisible"
+            title="scroll to the next group"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 fill-none hover:fill-current stroke-current"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+                />
+            </svg>
+        </button>
+    </div>
 </template>
 
-<template id="row-translations">
+<template id="translation-list">
     <ol class="list-decimal p-2 pl-10 text-gray-500 text-[13px]"></ol>
 </template>

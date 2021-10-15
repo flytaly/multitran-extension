@@ -3,6 +3,10 @@ module.exports = {
     purge: ['./src/**/*.html', './src/**/*.js', './extension/**/*.html'],
     darkMode: false, // or 'media' or 'class'
     theme: {
+        fill: {
+            current: 'currentColor',
+            none: 'none',
+        },
         spacing: {
             px: '1px',
             0: '0',
