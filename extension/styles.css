@@ -807,6 +807,10 @@ video {
   padding: 8px;
 }
 
+.p-3 {
+  padding: 12px;
+}
+
 .pt-2 {
   padding-top: 8px;
 }
@@ -843,6 +847,10 @@ video {
   line-height: 1.5rem;
 }
 
+.text-\[13px\] {
+  font-size: 13px;
+}
+
 .font-normal {
   font-weight: 400;
 }
@@ -877,7 +885,7 @@ video {
 
 a {
   --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
 a:hover {

@@ -83,6 +83,8 @@ export async function otherLangsPopupMarkup(otherLangs = []) {
 function addPronunciation(word, lang, popupElement) {
     const container = popupElement.querySelector('#pronunciation');
     container.textContent = 'fetching audio...';
+
+    /** @param {import('../background/background').PRONUNCIATION_RESPONSE} message */
     async function handleResponse(message) {
         container.textContent = '';
         if (message.type === 'PRONUNCIATION_LIST') {

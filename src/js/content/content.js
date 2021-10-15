@@ -3,7 +3,6 @@ import { state, setStateFromStorage } from './state.js';
 import { showPopup } from './content-popup.js';
 import { shadow } from './shadow.js';
 import { getSelection } from './selection.js';
-import { getTemplate } from '../templates.js';
 
 let lastFetchTS = 0;
 const throttleDuration = 600;
@@ -34,7 +33,9 @@ async function processSelection(target) {
     if (timestamp - lastFetchTS < throttleDuration) return;
     lastFetchTS = timestamp;
 
+    /** @param {import('../background/background').MT_DATA_RESPONSE} message */
     async function handleResponse(message) {
+        if (!message) return;
         if (message.type === 'MULTITRAN_DATA') {
             const { shadowElem, shadowHost } = shadow;
             const { translationPage, text, l1, l2 } = message;

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-    @apply text-gray-900 hover:text-blue-600 hover:underline;
+    @apply text-black hover:text-blue-600 hover:underline;
 }
 
 .translation-subject {

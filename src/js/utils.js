@@ -1,3 +1,8 @@
+/**
+ * @param {Function} func
+ * @param {number} ms
+ * @returns {Function}
+ */
 export function throttle(func, ms) {
     let timeoutId;
     let lastCallTs = 0;
@@ -12,6 +17,11 @@ export function throttle(func, ms) {
     };
 }
 
+/**
+ * @param {Function} func
+ * @param {number} ms
+ * @returns {Function}
+ */
 export function debounce(func, ms) {
     let waiting = false;
     let tmId;

@@ -1,6 +1,16 @@
 import { debounce } from '../utils.js';
 import { storage } from '../storage.js';
 
+/**
+ * @typedef {Object} ShortcutKeys
+ * @property {boolean} [altKey]
+ * @property {boolean} [ctrlKey]
+ * @property {boolean} [metaKey]
+ * @property {boolean} [shiftKey]
+ * @property {string|null} [additionalKey]
+ */
+
+/** @type {ShortcutKeys} */
 const defaultValues = {
     altKey: false,
     ctrlKey: false,
@@ -9,6 +19,9 @@ const defaultValues = {
     additionalKey: null,
 };
 
+/**
+ * @param {ShortcutKeys} keys
+ */
 function mapKeysToString(keys) {
     const result = [];
     if (keys.altKey) result.push('Alt');
@@ -23,15 +36,14 @@ function mapKeysToString(keys) {
         );
     return result.join('+');
 }
-
+/** @param {ShortcutKeys} key  */
 const isModifierKey = (key) => key === 'Shift' || key === 'Control' || key === 'Alt' || key === 'Meta';
 
+/** @param {string} */
 const isAllowedCode = (code) => /Key[A-Z]|Digit[0-9]|F[1-12]/.test(code);
 
 /**
- *
- * @param {HTMLInputElement} shortcutInput
- * @param {object} prevShortcut
+ * @param {ShortcutKeys} prevShortcut
  */
 export function setShortcut(prevShortcut = {}) {
     const shortcutInput = document.getElementById('shortcutInput');

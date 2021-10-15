@@ -1,22 +1,32 @@
 import { baseURL } from '../configs.js';
 import { parser } from './multitran-parser.js';
 
-export async function fetchPage(text, langFrom, langTo, interfaceLang) {
-    const url = `${baseURL}/m.exe?l1=${langFrom}&l2=${langTo}&SHL=${interfaceLang}&s=${text}`;
+export function composeURL(text, langFrom, langTo, interfaceLang) {
+    return `${baseURL}/m.exe?l1=${langFrom}&l2=${langTo}&SHL=${interfaceLang}&s=${text}`;
+}
+
+/**
+ * @param {string} url
+ */
+export async function fetchPage(url) {
+    /** @type {{textData:string, error: Error|null }} */
+    const result = { textData: '', error: null };
     try {
         const response = await fetch(url);
         if (response.status === 200) {
             const textData = await response.text();
-            return { textData };
+            result.textData = textData;
+            return result;
         }
         throw new Error(`Couldn't connect to server: ${response.status} ${response.statusText}`);
     } catch (error) {
-        return { error };
+        result.error = error;
+        return result;
     }
 }
 
-async function getParsedData(text, langFrom, langTo, interfaceLang = 1) {
-    const page = await fetchPage(text, langFrom, langTo, interfaceLang);
+async function getParsedData(url) {
+    const page = await fetchPage(url);
     if (page.error) return { error: page.error };
     if (!page || !page.textData) return { data: [] };
 
@@ -27,9 +37,13 @@ async function getParsedData(text, langFrom, langTo, interfaceLang = 1) {
 /**
  * Get translation data. If there is translation in reverse order
  * (e.g. English-Spanish -> Spanish-English) make another request.
+ * @param {string} text
+ * @param {string} langFrom
+ * @param {string} langTo
+ * @param {string} interfaceLang
  */
 export async function multitranData(text, langFrom, langTo, interfaceLang = 1) {
-    const parsed = await getParsedData(text, langFrom, langTo, interfaceLang);
+    const parsed = await getParsedData(composeURL(text, langFrom, langTo, interfaceLang));
     const { otherLang } = parsed;
     const hasReverseTranslation =
         otherLang &&
@@ -40,7 +54,7 @@ export async function multitranData(text, langFrom, langTo, interfaceLang = 1) {
         });
 
     if (hasReverseTranslation) {
-        return getParsedData(text, langTo, langFrom, interfaceLang);
+        return getParsedData(composeURL(text, langTo, langFrom, interfaceLang));
     }
     return parsed;
 }

@@ -2,21 +2,22 @@
 import { browser } from 'webextension-polyfill-ts';
 import { langIds } from './configs.js';
 /**
+ * @typedef {import("./options/shortcuts.js").ShortcutKeys} ShortcutKeys
+ *
  * @typedef {Object} Options
- * @property {string} l1 - "from" language
- * @property {string} l2 - "to" language
- * @property {string} multitranLang - multitran interface language
- * @property {boolean} doubleClick - double click to show translation
- * @property {boolean} select - select text to translate
- * @property {boolean} withKey - translate selected text only if key is pressed
- * @property {boolean} fetchAudio
- * @property {object} keys - keys that should be pressed to show selected text translation
+ * @property {string} [l1] - "from" language
+ * @property {string} [l2] - "to" language
+ * @property {string} [multitranLang] - multitran interface language
+ * @property {boolean} [doubleClick] - double click to show translation
+ * @property {boolean} [select] - select text to translate
+ * @property {boolean} [withKey] - translate selected text only if key is pressed
+ * @property {boolean} [contextMenuItem] - add item to the context menu
+ * @property {boolean} [fetchAudio]
+ * @property {ShortcutKeys} [keys] - keys that should be pressed to show selected text translation
  */
 
 export const storage = {
-    /**
-     * @param {Options} options
-     */
+    /** @param {Options} options */
     async saveOptions(options = {}) {
         const prevOptions = await this.getOptions();
         await browser.storage.local.set({
@@ -27,6 +28,7 @@ export const storage = {
         });
     },
 
+    /** @param {ShortcutKeys} keys */
     async saveKeys(keys = {}) {
         const prevOptions = await this.getOptions();
         const newKeys = {
@@ -48,10 +50,9 @@ export const storage = {
         });
     },
 
-    /**
-     * @returns {Promise<Options>} options
-     */
+    /** @returns {Promise<Options>} options */
     async getOptions() {
+        /** @type {{options: Options}} */
         const { options = {} } = await browser.storage.local.get('options');
         if (!options.l1) options.l1 = langIds.English;
         if (!options.l2) options.l2 = langIds.Russian;
