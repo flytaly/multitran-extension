@@ -1,7 +1,7 @@
 {
     "name": "multitran-extension",
-    "version": "1.5.0",
-    "description": "Multitran Firefox extension",
+    "version": "1.6.0",
+    "description": "Multitran Browser extension",
     "main": "manifest.json",
     "scripts": {
         "prepare": "esno scripts/prepare.js",
@@ -27,8 +27,9 @@
     "dependencies": {
         "@babel/preset-env": "^7.15.8",
         "autoprefixer": "^10.3.7",
+        "chokidar": "^3.5.2",
         "cross-env": "^7.0.3",
-        "esbuild": "^0.13.5",
+        "esbuild": "^0.13.7",
         "eslint": "^7.9.0",
         "eslint-config-airbnb": "^18.2.1",
         "eslint-config-prettier": "^8.3.0",
@@ -55,8 +56,5 @@
             "^.+\\.js$": "babel-jest",
             "^.+\\.html?$": "html-loader-jest"
         }
-    },
-    "devDependencies": {
-        "chokidar": "^3.5.2"
     }
 }
