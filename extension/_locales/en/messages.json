@@ -19,6 +19,9 @@
         "message": "Options",
         "description": "Options button"
     },
+    "settingsPageSubHeader": {
+        "message": "Browser extension for"
+    },
     "settingTranslationHeader": {
         "message": "Translation settings",
         "description": "Settings: translation settings block header"
@@ -30,6 +33,10 @@
     "settingMultitranLang": {
         "message": "Multitran interface language",
         "description": "Settings: multitran language"
+    },
+    "settingMultitranLangDesc": {
+        "message": "The website interface language. It affects abbreviations like \"gen\" (general), \"n\" (noun), e.t.c.",
+        "description": "Settings: multitran language description"
     },
     "settingWebPageHeader": {
         "message": "Web page words translation",
@@ -47,8 +54,8 @@
         "message": "and pressing following keys:",
         "description": "Settings: shortcut label"
     },
-    "settingPressKey_title": {
-        "message": "Allowed: Shift, Alt, Control, Cmd plus 1 Letter, Number or F1-F12 key",
+    "settingPressKeyDesc": {
+        "message": "Allowed keys: Shift, Alt, Control, Cmd plus 1 Letter, Number or F2 key",
         "description": "Attribute title of shortcuts"
     },
     "settingPressKey_placeholder": {
@@ -72,11 +79,11 @@
         "description": "Settings: context menu block header"
     },
     "settingContextMenu": {
-        "message": "Add item to context menu",
+        "message": "Add item to the context menu",
         "description": "Settings: context menu block header"
     },
     "settingLinkGithub": {
-        "message": "github",
+        "message": "GitHub",
         "description": "Settings page: Link to github"
     },
     "settingLinkStore": {

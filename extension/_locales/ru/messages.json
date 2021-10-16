@@ -19,6 +19,9 @@
         "message": "Настройки",
         "description": "Options button"
     },
+    "settingsPageSubHeader": {
+        "message": "Браузерное расширение для"
+    },
     "settingTranslationHeader": {
         "message": "Настройки перевода",
         "description": "Settings: translation settings block header"
@@ -30,6 +33,10 @@
     "settingMultitranLang": {
         "message": "Язык интерфейса мультитрана",
         "description": "Settings: multitran language"
+    },
+    "settingMultitranLangDesc": {
+        "message": "Язык интерфейса вебсайта. В расширении влияет на аббревиатуры, например, \"сущ.\", \"общ.\" и т.д.",
+        "description": "Settings: multitran language description"
     },
     "settingWebPageHeader": {
         "message": "Перевод слов на веб-страницах",
@@ -48,7 +55,7 @@
         "description": "Settings: shortcuts"
     },
     "settingPressKey_title": {
-        "message": "Доступны: Shift, Alt, Control, Cmd плюс 1 буква, число или F1-F12 клавиша",
+        "message": "Доступны: Shift, Alt, Control, Cmd плюс 1 буква, число или F2 клавиша",
         "description": "Attribute title of shortcuts"
     },
     "settingPressKey_placeholder": {
@@ -76,7 +83,7 @@
         "description": "Settings: context menu block header"
     },
     "settingLinkGithub": {
-        "message": "github",
+        "message": "GitHub",
         "description": "Settings page: Link to github"
     },
     "settingLinkStore": {

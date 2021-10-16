@@ -8,179 +8,268 @@
         <title>Multitran Popup options</title>
     </head>
 
-    <body>
-        <section class="browser-style">
-            <h2 data-l10n-id="settingTranslationHeader">Translation settings</h2>
-            <label for="l1" class="browser-style-label" data-l10n-id="settingLangPair">Language pair</label>
-            <select id="l1" class="browser-style">
-                <option value="10">Arabic</option>
-                <option value="68">Basque</option>
-                <option value="15">Bulgarian</option>
-                <option value="53">Catalan</option>
-                <option value="17">Chinese</option>
-                <option value="98">Chinese Taiwan</option>
-                <option value="97">Chinese simplified</option>
-                <option value="8">Croatian</option>
-                <option value="16">Czech</option>
-                <option value="22">Danish</option>
-                <option value="1" selected>English</option>
-                <option value="26">Estonian</option>
-                <option value="36">Finnish</option>
-                <option value="4">French</option>
-                <option value="3">German</option>
-                <option value="38">Greek</option>
-                <option value="42">Hungarian</option>
-                <option value="49">Irish</option>
-                <option value="23">Italian</option>
-                <option value="28">Japanese</option>
-                <option value="39">Korean</option>
-                <option value="37">Latin</option>
-                <option value="27">Latvian</option>
-                <option value="12">Lithuanian</option>
-                <option value="78">Maltese</option>
-                <option value="30">Norwegian Bokmål</option>
-                <option value="14">Polish</option>
-                <option value="11">Portuguese</option>
-                <option value="13">Romanian</option>
-                <option value="2">Russian</option>
-                <option value="60">Slovak</option>
-                <option value="67">Slovenian</option>
-                <option value="5">Spanish</option>
-                <option value="29">Swedish</option>
-                <option value="32">Turkish</option>
-                <option value="33">Ukrainian</option>
-                <option value="24">Verklaren op eer</option>
-            </select>
-            <button id="lang-swap" class="browser-style">⇄</button>
-            <select id="l2" class="browser-style">
-                <option value="10">Arabic</option>
-                <option value="68">Basque</option>
-                <option value="15">Bulgarian</option>
-                <option value="53">Catalan</option>
-                <option value="17">Chinese</option>
-                <option value="98">Chinese Taiwan</option>
-                <option value="97">Chinese simplified</option>
-                <option value="8">Croatian</option>
-                <option value="16">Czech</option>
-                <option value="22">Danish</option>
-                <option value="1">English</option>
-                <option value="26">Estonian</option>
-                <option value="36">Finnish</option>
-                <option value="4">French</option>
-                <option value="3">German</option>
-                <option value="38">Greek</option>
-                <option value="42">Hungarian</option>
-                <option value="49">Irish</option>
-                <option value="23">Italian</option>
-                <option value="28">Japanese</option>
-                <option value="39">Korean</option>
-                <option value="37">Latin</option>
-                <option value="27">Latvian</option>
-                <option value="12">Lithuanian</option>
-                <option value="78">Maltese</option>
-                <option value="30">Norwegian Bokmål</option>
-                <option value="14">Polish</option>
-                <option value="11">Portuguese</option>
-                <option value="13">Romanian</option>
-                <option value="2" selected>Russian</option>
-                <option value="60">Slovak</option>
-                <option value="67">Slovenian</option>
-                <option value="5">Spanish</option>
-                <option value="29">Swedish</option>
-                <option value="32">Turkish</option>
-                <option value="33">Ukrainian</option>
-                <option value="24">Verklaren op eer</option>
-            </select>
-            <br />
-            <br />
-            <label for="mtLang" class="browser-style-label" data-l10n-id="settingMultitranLang"
-                >Multitran language</label
-            >
-            <select id="mtLang" class="browser-style">
-                <option value="1">English</option>
-                <option value="2">Russian</option>
-                <option value="3">German</option>
-                <option value="33">Ukrainian</option>
-            </select>
-        </section>
-
-        <section class="browser-style">
-            <h2 data-l10n-id="settingWebPageHeader">Web page translation</h2>
-            <br />
-            <div id="tranAfter" class="browser-style">
-                <div class="browser-style">
-                    <input type="checkbox" id="doubleClick" name="doubleClick" />
-                    <label for="doubleClick" data-l10n-id="settingDoubleClick">Double clicking </label>
+    <body class="bg-opacity-10 bg-blue-200">
+        <div class="h-2 bg-blue-600"></div>
+        <div class="mx-auto max-w-3xl w-full">
+            <!-- EXTENSION TITLE -->
+            <div class="flex my-3">
+                <!-- ICON -->
+                <div class="text-blue-500">
+                    <svg class="h-[50px] w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                        <g class="fill-current stroke-current">
+                            <path
+                                style="fill: none; stroke-miterlimit: 10; stroke-width: 6px"
+                                d="M11.33,110.75l.86-93.89A9.76,9.76,0,0,1,14.78,10a12.64,12.64,0,0,1,7.76-3.82h94.83l-.86,93.91H20.65c-5.27,1.39-9,5.71-9.32,10.67-.32,5.4,3.54,10.45,9.32,12H119.7"
+                            />
+                            <path
+                                d="M56.94,79.94,44.7,39.61h-.37q.86,10.3.86,16V79.94H30.85V24H52.4L64.89,63.7h.33L77.47,24H99.06v56H84.19V55.39c0-1.27,0-2.69.06-4.25s.22-5.37.55-11.45h-.37L72.35,79.94Z"
+                            />
+                        </g>
+                    </svg>
                 </div>
-                <br />
-                <br />
-                <div class="browser-style">
-                    <input type="checkbox" id="selecting" name="selecting" />
-                    <label for="selecting" data-l10n-id="settingSelectingText">Translate text by Selecting</label>
+                <!-- TITLE  -->
+                <div class="ml-2">
+                    <div class="text-xl font-bold capitalize text-blue-500" data-l10n-id="name">Multitran Popup</div>
+                    <div class="text-xs">
+                        <span data-l10n-id="settingsPageSubHeader">Browser extension for</span>
+                        <span> </span>
+                        <a href="https://multitran.com">multitran.com</a>
+                    </div>
                 </div>
-                <label
-                    for="shortcutInput"
-                    class="browser-style shortcutLabel"
-                    data-l10n-id="settingPressKey"
-                    data-l10n-attrs="title"
-                >
-                    and pressing following keys:
-                </label>
-                <span class="browser-style shortcutInputRow">
-                    <input
-                        id="shortcutInput"
-                        type="text"
-                        data-l10n-id="settingPressKey"
-                        data-l10n-attrs="title,placeholder"
-                        data-l10n-nocontent="true"
-                    />
-                    <button
-                        class="clear"
-                        id="shortcutClear"
-                        data-l10n-id="settingClearShortcut"
-                        data-l10n-attrs="title"
-                        data-l10n-nocontent="true"
+            </div>
+            <main class="text-base space-y-10">
+                <!-- EXTERNAL LINKS -->
+                <div class="flex items-center justify-center space-x-4 font-semibold">
+                    <a class="inline-flex items-center capitalize space-x-1" id="storeLink" href="#" target="_blank">
+                        <svg
+                            class="w-4 h-5 text-blue-600"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true"
+                            role="img"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                        <span data-l10n-id="settingLinkStore"></span>
+                    </a>
+                    <span>|</span>
+                    <a
+                        class="inline-flex items-center capitalize space-x-1"
+                        href="https://github.com/flytaly/multitran-extension"
+                        target="_blank"
                     >
                         <svg
+                            class="w-4 h-4 text-blue-600"
                             xmlns="http://www.w3.org/2000/svg"
-                            height="100%"
-                            width="100%"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true"
+                            role="img"
                             viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
                         >
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="15" y1="9" x2="9" y2="15"></line>
-                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <g stroke-width="1.5" fill="none">
+                                <path
+                                    d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M9 20.027c-3 .973-5.5 0-7-3"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </g>
                         </svg>
-                    </button>
-                </span>
-            </div>
-        </section>
-        <section class="browser-style">
-            <h2 data-l10n-id="settingAudioHeader">Audio</h2>
-            <input type="checkbox" id="audio" name="audio" />
-            <label for="audio" data-l10n-id="settingAudio">Fetch audio pronunciation</label>
-        </section>
-        <section class="browser-style">
-            <h2 data-l10n-id="settingContextMenuHeader">Context menu</h2>
-            <input type="checkbox" id="contextMenu" name="audio" />
-            <label for="contextMenu" data-l10n-id="settingContextMenu">Add item to the context menu</label>
-        </section>
-        <section class="browser-style">
-            <footer>
-                <a
-                    href="https://github.com/flytaly/multitran-extension"
-                    data-l10n-id="settingLinkGithub"
-                    target="_blank"
-                    >github</a
-                >
-                <span>|</span>
-                <a id="storeLink" href="#" target="_blank" data-l10n-id="settingLinkStore"></a>
-            </footer>
-        </section>
+                        <span data-l10n-id="settingLinkGithub">GitHub</span>
+                    </a>
+                </div>
+
+                <section>
+                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingTranslationHeader">
+                        Translation settings
+                    </h2>
+                    <div class="ml-8 grid grid-cols-[auto,1fr] gap-x-4 gap-y-6 items-start">
+                        <label for="l1" class="font-medium" data-l10n-id="settingLangPair">Language pair</label>
+                        <div class="flex space-x-2 items-center">
+                            <select id="l1" class="border border-gray-700 px-3 rounded-sm">
+                                <option value="10">Arabic</option>
+                                <option value="68">Basque</option>
+                                <option value="15">Bulgarian</option>
+                                <option value="53">Catalan</option>
+                                <option value="17">Chinese</option>
+                                <option value="98">Chinese Taiwan</option>
+                                <option value="97">Chinese simplified</option>
+                                <option value="8">Croatian</option>
+                                <option value="16">Czech</option>
+                                <option value="22">Danish</option>
+                                <option value="1" selected>English</option>
+                                <option value="26">Estonian</option>
+                                <option value="36">Finnish</option>
+                                <option value="4">French</option>
+                                <option value="3">German</option>
+                                <option value="38">Greek</option>
+                                <option value="42">Hungarian</option>
+                                <option value="49">Irish</option>
+                                <option value="23">Italian</option>
+                                <option value="28">Japanese</option>
+                                <option value="39">Korean</option>
+                                <option value="37">Latin</option>
+                                <option value="27">Latvian</option>
+                                <option value="12">Lithuanian</option>
+                                <option value="78">Maltese</option>
+                                <option value="30">Norwegian Bokmål</option>
+                                <option value="14">Polish</option>
+                                <option value="11">Portuguese</option>
+                                <option value="13">Romanian</option>
+                                <option value="2">Russian</option>
+                                <option value="60">Slovak</option>
+                                <option value="67">Slovenian</option>
+                                <option value="5">Spanish</option>
+                                <option value="29">Swedish</option>
+                                <option value="32">Turkish</option>
+                                <option value="33">Ukrainian</option>
+                                <option value="24">Verklaren op eer</option>
+                            </select>
+                            <button id="lang-swap" class="px-3 rounded-sm">⇄</button>
+                            <select id="l2" class="border border-gray-700 px-3 rounded-sm">
+                                <option value="10">Arabic</option>
+                                <option value="68">Basque</option>
+                                <option value="15">Bulgarian</option>
+                                <option value="53">Catalan</option>
+                                <option value="17">Chinese</option>
+                                <option value="98">Chinese Taiwan</option>
+                                <option value="97">Chinese simplified</option>
+                                <option value="8">Croatian</option>
+                                <option value="16">Czech</option>
+                                <option value="22">Danish</option>
+                                <option value="1">English</option>
+                                <option value="26">Estonian</option>
+                                <option value="36">Finnish</option>
+                                <option value="4">French</option>
+                                <option value="3">German</option>
+                                <option value="38">Greek</option>
+                                <option value="42">Hungarian</option>
+                                <option value="49">Irish</option>
+                                <option value="23">Italian</option>
+                                <option value="28">Japanese</option>
+                                <option value="39">Korean</option>
+                                <option value="37">Latin</option>
+                                <option value="27">Latvian</option>
+                                <option value="12">Lithuanian</option>
+                                <option value="78">Maltese</option>
+                                <option value="30">Norwegian Bokmål</option>
+                                <option value="14">Polish</option>
+                                <option value="11">Portuguese</option>
+                                <option value="13">Romanian</option>
+                                <option value="2" selected>Russian</option>
+                                <option value="60">Slovak</option>
+                                <option value="67">Slovenian</option>
+                                <option value="5">Spanish</option>
+                                <option value="29">Swedish</option>
+                                <option value="32">Turkish</option>
+                                <option value="33">Ukrainian</option>
+                                <option value="24">Verklaren op eer</option>
+                            </select>
+                        </div>
+                        <label for="mtLang">
+                            <div class="font-medium" data-l10n-id="settingMultitranLang">Multitran language</div>
+                            <div class="text-sm" data-l10n-id="settingMultitranLangDesc"></div>
+                        </label>
+                        <select id="mtLang" class="border border-gray-700 px-3 w-max rounded-sm">
+                            <option value="1">English</option>
+                            <option value="2">Russian</option>
+                            <option value="3">German</option>
+                            <option value="33">Ukrainian</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingWebPageHeader">
+                        Web page translation
+                    </h2>
+                    <div id="tranAfter" class="ml-8 space-y-4">
+                        <div class="space-x-1">
+                            <input type="checkbox" id="doubleClick" name="doubleClick" />
+                            <label for="doubleClick" data-l10n-id="settingDoubleClick">Double clicking </label>
+                        </div>
+                        <div>
+                            <div class="space-x-1">
+                                <input type="checkbox" id="selecting" name="selecting" />
+                                <label for="selecting" data-l10n-id="settingSelectingText"
+                                    >Translate text by Selecting</label
+                                >
+                            </div>
+                            <div class="flex space-x-3 items-start">
+                                <label for="shortcutInput" class="ml-[1.5rem] w-1/2">
+                                    <div data-l10n-id="settingPressKey" data-l10n-attrs="title">
+                                        and pressing following keys:
+                                    </div>
+                                </label>
+                                <span class="relative">
+                                    <input
+                                        class="border border-gray-700 pl-3 pr-8 rounded-sm disabled:cursor-not-allowed"
+                                        id="shortcutInput"
+                                        type="text"
+                                        data-l10n-id="settingPressKey"
+                                        data-l10n-attrs="placeholder"
+                                        data-l10n-nocontent="true"
+                                    />
+                                    <button
+                                        class="absolute -translate-y-1/2 top-1/2 right-1 w-4 h-4"
+                                        id="shortcutClear"
+                                        data-l10n-id="settingClearShortcut"
+                                        data-l10n-attrs="title"
+                                        data-l10n-nocontent="true"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            height="100%"
+                                            width="100%"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                                        </svg>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="ml-[1.5rem] text-xs italic" data-l10n-id="settingPressKeyDesc">
+                                Allowed keys: Shift, Alt, Control, Cmd plus 1 Letter, Number or F2 key
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingAudioHeader">Audio</h2>
+                    <div class="ml-8 space-x-1">
+                        <input type="checkbox" id="audio" name="audio" />
+                        <label for="audio" data-l10n-id="settingAudio">Fetch audio pronunciation</label>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingContextMenuHeader">
+                        Context menu
+                    </h2>
+                    <div class="ml-8 space-x-1">
+                        <input type="checkbox" id="contextMenu" name="audio" />
+                        <label for="contextMenu" data-l10n-id="settingContextMenu">Add item to the context menu</label>
+                    </div>
+                </section>
+            </main>
+        </div>
     </body>
 </html>
