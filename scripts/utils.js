@@ -19,4 +19,4 @@ export function log(name, message) {
  */
 export const r = (...args) => resolve(__dirname, '..', ...args);
 
-export const replaceConstants = () => ({ TARGET });
+export const replaceConstants = () => ({ TARGET: `"${TARGET}"` });

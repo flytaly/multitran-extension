@@ -44,12 +44,6 @@ async function handleMessage(request) {
 async function run() {
     browser.runtime.onMessage.addListener(handleMessage);
 
-    if (process.env.NODE_ENV === 'development') {
-        setTimeout(() => {
-            browser.runtime.openOptionsPage();
-        }, 300);
-    }
-
     const { contextMenuItem } = await storage.getOptions();
     if (contextMenuItem) addToContextMenu();
 
