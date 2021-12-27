@@ -4,14 +4,26 @@ import { multitranData } from '../translate-engine/multitran.js';
 import { otherLangsPopupMarkup, popupMarkup } from '../content/content-popup.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
-
 import { throttle } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 import { addLinkToBrowserStore } from '../store-link.js';
 
+/** @param {HTMLElement} el */
+function addNewTranslation(el) {
+    document.querySelector('#translation-container')?.appendChild(el)
+}
+
+/** @returns {HTMLElement} translation element */
+function removePrevTranslation() {
+    const prevRenderElem = document.querySelector('#translate-popup-content');
+    if (!prevRenderElem?.parentNode) return;
+    prevRenderElem.parentNode.removeChild(prevRenderElem);
+}
+
+/** @param {string} text */
 async function renderTranslation(text) {
-    const prevTranslation = document.querySelector('#translate-popup-container');
+    removePrevTranslation();
     const loadingText = document.getElementById('loading');
     const loadingBar = document.getElementById('top-bar');
     const errorElem = document.getElementById('error');
@@ -20,7 +32,6 @@ async function renderTranslation(text) {
     loadingText.hidden = false;
     loadingBar.classList.add('animate-pulse');
 
-    if (prevTranslation) document.body.removeChild(prevTranslation);
     const { l1, l2, multitranLang, fetchAudio } = await storage.getOptions();
     const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
 
@@ -43,14 +54,14 @@ async function renderTranslation(text) {
                 addAudioElements(container, audioFiles);
             });
         }
-        document.body.appendChild(translationElem);
+        addNewTranslation(translationElem);
         return translationElem;
     }
 
     if (otherLang && otherLang.length) {
         const translationElem = await otherLangsPopupMarkup(otherLang);
         translationElem.style = 'border:0;position:relative;';
-        document.body.appendChild(translationElem);
+        addNewTranslation(translationElem);
         return translationElem;
     }
 
