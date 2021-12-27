@@ -3,7 +3,7 @@
  * if you add them right away. Even if there is "run_at": "document_end" in manifest.
  * One way to fix it is to create shadow element inside requestIdleCallback.
  */
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 
 export const shadow = {};
 

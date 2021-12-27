@@ -1,7 +1,5 @@
 module.exports = {
-    mode: 'jit',
-    purge: ['./src/**/*.html', './src/**/*.js', './extension/**/*.html'],
-    darkMode: false, // or 'media' or 'class'
+    content: ['./src/**/*.html', './src/**/*.js', './extension/**/*.html'],
     theme: {
         fill: {
             current: 'currentColor',

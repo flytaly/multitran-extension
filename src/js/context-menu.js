@@ -1,4 +1,4 @@
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 
 export const CONTEXT_ID = 'multitran-translate-selected';
 

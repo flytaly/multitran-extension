@@ -1,4 +1,4 @@
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 import { composeURL, fetchPage } from '../translate-engine/multitran.js';
 import { storage } from '../storage.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
