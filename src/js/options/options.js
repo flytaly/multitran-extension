@@ -4,16 +4,7 @@ import '../l10n.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
 import { setShortcut } from './shortcuts.js';
-
-function addLinkToBrowserStore() {
-    const storeLink = document.getElementById('storeLink');
-    if (!storeLink) return;
-    if (TARGET === 'firefox') {
-        storeLink.href = 'https://addons.mozilla.org/firefox/addon/multitran/';
-    } else {
-        storeLink.href = 'https://chrome.google.com/webstore/detail/multitran-popup/fbncpmcdhgdolipfkpeckjajpgjdpehj';
-    }
-}
+import { addLinkToBrowserStore } from '../store-link.js';
 
 async function init() {
     setLangSelectorListeners();

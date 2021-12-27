@@ -54,8 +54,8 @@
         "message": "и нажатия следующих клавиш:",
         "description": "Settings: shortcuts"
     },
-    "settingPressKey_title": {
-        "message": "Доступны: Shift, Alt, Control, Cmd плюс 1 буква, число или F2 клавиша",
+    "settingPressKeyDesc": {
+        "message": "Доступны: Shift, Alt, Control, Cmd плюс 1 буква, число или клавиша F2",
         "description": "Attribute title of shortcuts"
     },
     "settingPressKey_placeholder": {
@@ -85,6 +85,9 @@
     "settingLinkGithub": {
         "message": "GitHub",
         "description": "Settings page: Link to github"
+    },
+    "settingLinkKofi": {
+        "message": "Поддержать на Ko-Fi"
     },
     "settingLinkStore": {
         "message": "поставить оценку",

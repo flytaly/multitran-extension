@@ -86,6 +86,9 @@
         "message": "GitHub",
         "description": "Settings page: Link to github"
     },
+    "settingLinkKofi": {
+        "message": "Support me on Ko-Fi"
+    },
     "settingLinkStore": {
         "message": "rate extension",
         "description": "Settings page: Link to browser's store"

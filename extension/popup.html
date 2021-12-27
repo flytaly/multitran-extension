@@ -7,7 +7,9 @@
         <script src="dist/popup/popup.js" defer></script>
     </head>
 
-    <body class="bg-gray-100 w-[400px] min-h-[150px] text-black text-sm font-sans overflow-x-hidden overflow-y-auto">
+    <body
+        class="flex flex-col bg-gray-100 w-[400px] min-h-[150px] text-black text-sm font-sans overflow-x-hidden overflow-y-auto"
+    >
         <div id="top-bar" class="h-1 bg-blue-600"></div>
         <div class="p-2">
             <header class="flex items-center justify-between mb-2">
@@ -121,7 +123,7 @@
                 </button>
             </header>
             <form
-                class="flex w-full border bg-white ring-1 ring-gray-500 focus-within:ring-2 focus-within:ring-gray-600"
+                class="flex w-full border bg-white ring-1 ring-gray-500 focus-within:ring-2 focus-within:ring-gray-600 rounded-sm"
                 id="input-form"
                 method="post"
             >
@@ -132,15 +134,7 @@
                     autofocus
                 />
                 <button
-                    class="
-                        flex
-                        items-center
-                        ml-2
-                        px-2
-                        border border-solid border-gray-500
-                        bg-gray-100
-                        hover:bg-gray-200
-                    "
+                    class="flex items-center ml-2 px-2 border border-solid border-gray-500 bg-gray-100 hover:bg-gray-200"
                     type="submit"
                 >
                     <img class="h-4" src="images/Search.svg" />
@@ -149,5 +143,12 @@
             <div id="loading" class="text-center" hidden>Loading...</div>
             <div id="error" class="text-center text-red-700 font-bold" hidden></div>
         </div>
+        <footer class="mt-auto mb-1 mr-4 text-xs text-right font-normal">
+            <a class="inline-flex items-center capitalize space-x-1" id="storeLink" href="#" target="_blank">Rating</a>
+            |
+            <a href="https://github.com/flytaly/multitran-extension" target="_blank">GitHub</a>
+            |
+            <a href="https://ko-fi.com/flytaly" target="_blank">Ko-Fi</a>
+        </footer>
     </body>
 </html>

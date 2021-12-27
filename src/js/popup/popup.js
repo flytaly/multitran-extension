@@ -8,6 +8,7 @@ import { storage } from '../storage.js';
 import { throttle } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
+import { addLinkToBrowserStore } from '../store-link.js';
 
 async function renderTranslation(text) {
     const prevTranslation = document.querySelector('#translate-popup-container');
@@ -58,6 +59,7 @@ async function renderTranslation(text) {
 
 function setListeners() {
     setLangSelectorListeners();
+    addLinkToBrowserStore();
     const form = document.getElementById('input-form');
     const input = form.querySelector('input');
     const optionButton = document.getElementById('optionsButton');
