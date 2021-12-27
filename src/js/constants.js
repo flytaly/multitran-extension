@@ -1,3 +1,5 @@
+export const IS_DEV = process.env.NODE_ENV === 'development';
+
 export const baseURL = 'https://www.multitran.com';
 
 export const langIds = {
@@ -39,14 +41,5 @@ export const langIds = {
     Ukrainian: '33',
     'Verklaren op eer': '24',
 };
-
-/** @type {Record<string,string>} */
-export const idToLangMap = Object.entries(langIds).reduce(
-    (prev, curr) => ({
-        ...prev,
-        [curr[1]]: curr[0],
-    }),
-    {},
-);
 
 export const interfaceLangs = ['English', 'Russian', 'German', 'Ukrainian'];

@@ -1,4 +1,4 @@
-import { baseURL } from '../configs.js';
+import { baseURL } from '../constants.js';
 import { parser } from './multitran-parser.js';
 
 export function composeURL(text, langFrom, langTo, interfaceLang) {

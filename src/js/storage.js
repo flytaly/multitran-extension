@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import browser from 'webextension-polyfill';
-import { langIds } from './configs.js';
+import { langIds } from './constants.js';
 /**
  * @typedef {import("./options/shortcuts.js").ShortcutKeys} ShortcutKeys
  *

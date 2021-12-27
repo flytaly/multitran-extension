@@ -1,4 +1,4 @@
-import { langIds } from '../configs.js';
+import { langIds } from '../constants.js';
 
 /**
  * @typedef {Object} AudioFile

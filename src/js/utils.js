@@ -1,3 +1,5 @@
+import { langIds } from './constants.js';
+
 /**
  * @param {Function} func
  * @param {number} ms
@@ -34,3 +36,12 @@ export function debounce(func, ms) {
         }, ms);
     };
 }
+
+/** @type {Record<string,string>} */
+export const idToLangMap = Object.entries(langIds).reduce(
+    (prev, curr) => ({
+        ...prev,
+        [curr[1]]: curr[0],
+    }),
+    {},
+);

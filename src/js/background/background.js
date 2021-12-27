@@ -3,6 +3,8 @@ import { composeURL, fetchPage } from '../translate-engine/multitran.js';
 import { storage } from '../storage.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 import { CONTEXT_ID, addToContextMenu } from '../context-menu.js';
+import { IS_DEV } from '../constants.js';
+
 /**
  * @typedef {Object} MT_DATA_RESPONSE
  * @property {'MULTITRAN_DATA'} type
@@ -42,6 +44,8 @@ async function handleMessage(request) {
 }
 
 async function run() {
+    if (IS_DEV) browser.runtime.openOptionsPage();
+
     browser.runtime.onMessage.addListener(handleMessage);
 
     const { contextMenuItem } = await storage.getOptions();

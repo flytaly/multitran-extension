@@ -2,7 +2,7 @@
 import browser from 'webextension-polyfill';
 import { state } from './state.js';
 import { parser } from '../translate-engine/multitran-parser.js';
-import { idToLangMap } from '../configs.js';
+import { idToLangMap } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getTemplate } from '../templates.js';
 import { composeURL } from '../translate-engine/multitran.js';

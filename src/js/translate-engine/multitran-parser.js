@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { baseURL } from '../configs.js';
+import { baseURL } from '../constants.js';
 
 function fixURL(relativeURL) {
     if (relativeURL.startsWith('/m.exe')) return baseURL + relativeURL;
