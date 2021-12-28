@@ -8,10 +8,11 @@ import { throttle } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 import { addLinkToBrowserStore } from '../store-link.js';
+import { addKeyboardListener } from './keys.js';
 
 /** @param {HTMLElement} el */
 function addNewTranslation(el) {
-    document.querySelector('#translation-container')?.appendChild(el)
+    document.querySelector('#translation-container')?.appendChild(el);
 }
 
 /** @returns {HTMLElement} translation element */
@@ -71,6 +72,8 @@ async function renderTranslation(text) {
 function setListeners() {
     setLangSelectorListeners();
     addLinkToBrowserStore();
+    addKeyboardListener();
+
     const form = document.getElementById('input-form');
     const input = form.querySelector('input');
     const optionButton = document.getElementById('optionsButton');

@@ -15,6 +15,9 @@
         "message": "перевод с других языков",
         "description": "Other languages header"
     },
+    "popupScrollIcon_title": {
+        "message": "прокрутить до следующей группы (Ctrl + Стрелка вниз ↓)"
+    },
     "optionsButton_title": {
         "message": "Настройки",
         "description": "Options button"

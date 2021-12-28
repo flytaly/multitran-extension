@@ -6,6 +6,7 @@ import { idToLangMap } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getTemplate } from '../templates.js';
 import { composeURL } from '../translate-engine/multitran.js';
+import { addKeyboardListener } from '../popup/keys.js';
 
 /**
  * @typedef { import("../translate-engine/multitran-parser").MtGroup } MtGroup
@@ -57,13 +58,13 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
     }
     rootElement.append(...elementsList);
 
-    const selector = '[data-type="list-header"]';
+    const scrollTagSelector = '[data-type="scroll-next"]';
 
     // Arrow buttons for scrolling to the next group
     rootElement.onclick = (ev) => {
-        const parentHeader = ev.target?.closest(selector);
+        const parentHeader = ev.target?.closest(scrollTagSelector);
         if (parentHeader) {
-            const list = Array.from(rootElement.querySelectorAll(selector));
+            const list = Array.from(rootElement.querySelectorAll(scrollTagSelector));
             const idx = list.findIndex((el) => el === parentHeader);
             const nextEl = list[(idx + 1) % list.length];
             rootElement.scroll({
@@ -79,11 +80,11 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
             if (entry.target === rootElement) {
                 const rect = rootElement.getBoundingClientRect();
                 const bottomOffset = rootElement.scrollHeight - rect.height + rect.top;
-                const elems = rootElement.querySelectorAll(selector);
+                const elems = rootElement.querySelectorAll(scrollTagSelector);
                 elems.forEach((el) => {
                     const { top } = el.getBoundingClientRect();
                     if (top < bottomOffset) {
-                        el.querySelector('button').classList.remove('invisible');
+                        el.classList.remove('invisible');
                     }
                 });
             }
@@ -178,10 +179,13 @@ export async function showPopup({
         }
     }
 
+    const removeKeyListener = addKeyboardListener(popupElement);
+
     function removePopup() {
         parent.removeChild(popupElement);
         document.removeEventListener('mousedown', hidePopupMouse);
         document.removeEventListener('keydown', hidePopupKeyDown);
+        removeKeyListener();
         state.isPopupOpened = false;
     }
 

@@ -15,6 +15,9 @@
         "message": "translation from other languages",
         "description": "Other languages header"
     },
+    "popupScrollIcon_title": {
+        "message": "scroll to the next group (Ctrl + ArrowDown ↓)"
+    },
     "optionsButton_title": {
         "message": "Options",
         "description": "Options button"

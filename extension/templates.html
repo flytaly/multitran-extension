@@ -1,24 +1,7 @@
 <template id="translate-popup">
     <article
         id="translate-popup-content"
-        class="
-            absolute
-            block
-            text-black
-            font-normal
-            text-sm
-            font-sans
-            break-words
-            overflow-auto
-            z-50
-            min-h-[40px] min-w-[100px]
-            max-h-[380px] max-w-[400px]
-            border border-gray-400
-            bg-gray-100
-            p-3
-            pt-2
-            rounded-md
-        "
+        class="absolute block text-black font-normal text-sm font-sans break-words overflow-auto z-50 min-h-[40px] min-w-[100px] max-h-[380px] max-w-[400px] border border-gray-400 bg-gray-100 p-3 pt-2 rounded-md"
     >
         <header class="flex items-center mb-2 text-lg">
             <span class="font-bold mr-4 max-w-[200px] overflow-hidden whitespace-nowrap overflow-ellipsis"
@@ -41,7 +24,11 @@
         <div class="text-base space-x-6 text-gray-500 mr-2"></div>
         <button
             class="ml-auto flex items-center text-blue-700 invisible"
-            title="scroll to the next group"
+            data-l10n-id="popupScrollIcon"
+            data-l10n-nocontent="true"
+            data-l10n-attrs="title"
+            title="scroll to the next group (Ctrl+ArrowDown)"
+            data-type="scroll-next"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,5 @@
 import browser from 'webextension-polyfill';
+import { translateElement } from './l10n.js';
 
 /**  @type Document */
 let parsed;
@@ -15,6 +16,7 @@ export async function getTemplate(templateId) {
     const tmp = parsed.getElementById(templateId);
     /** @type DocumentFragment */
     const fragment = tmp?.content.cloneNode(true);
+    translateElement(fragment);
     switch (templateId) {
         case 'translate-popup':
             return fragment.querySelector('article');
