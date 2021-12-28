@@ -99,5 +99,11 @@
     "contextMenuTranslateSelection": {
         "message": "Перевести используя Multitran",
         "description": "Context menu text"
+    },
+    "tipsBlock": {
+        "message": "Советы"
+    },
+    "tipUseArrows": {
+        "message": "нажатие Ctrl + стрелка вниз/вверх перематывает к следующему/предыдущему блоку с переводом"
     }
 }
