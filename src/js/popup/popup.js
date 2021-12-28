@@ -28,21 +28,24 @@ async function renderTranslation(text) {
     const loadingText = document.getElementById('loading');
     const loadingBar = document.getElementById('top-bar');
     const errorElem = document.getElementById('error');
+    const notFoundElem = document.getElementById('not-found');
     errorElem.hidden = true;
+    notFoundElem.hidden = true;
 
     loadingText.hidden = false;
     loadingBar.classList.add('animate-pulse');
 
     const { l1, l2, multitranLang, fetchAudio } = await storage.getOptions();
     const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
-
     loadingText.hidden = true;
     loadingBar.classList.remove('animate-pulse');
 
     if (error) {
         errorElem.hidden = false;
         errorElem.textContent = error.message;
+        return;
     }
+
     if (data && data.length) {
         const translationElem = await popupMarkup(data, text, l1_, l2_);
         translationElem.style = 'border:0;position:relative;';
@@ -64,6 +67,10 @@ async function renderTranslation(text) {
         translationElem.style = 'border:0;position:relative;';
         addNewTranslation(translationElem);
         return translationElem;
+    }
+    
+    if (data?.length === 0) {
+      notFoundElem.hidden = false; 
     }
 
     return null;

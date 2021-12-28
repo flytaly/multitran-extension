@@ -2,8 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply focus-visible:outline-blue-700;
+}
+
+body {
+    @apply bg-slate-100;
+}
+
 a {
-    @apply text-black hover:text-blue-600 hover:underline;
+    @apply text-slate-900 hover:text-blue-600 hover:underline;
+}
+
+select,
+input {
+    @apply border border-slate-700 bg-slate-50 hover:bg-white;
+}
+
+input {
+    @apply bg-slate-50 hover:bg-white hover:border-blue-800;
 }
 
 .translation-subject {

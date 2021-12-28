@@ -8,7 +8,7 @@
         <title>Multitran Popup options</title>
     </head>
 
-    <body class="bg-slate-100 accent-blue-600">
+    <body class="bg-slate-100 accent-blue-600 text-slate-900">
         <div class="h-2 bg-blue-600"></div>
         <div class="mx-auto max-w-4xl w-full px-2">
             <!-- EXTENSION TITLE -->
@@ -40,7 +40,12 @@
             <main class="text-base space-y-10">
                 <!-- EXTERNAL LINKS -->
                 <div class="flex items-center justify-center space-x-4 font-semibold text-sm">
-                    <a class="inline-flex items-center capitalize space-x-1" id="storeLink" href="#" target="_blank">
+                    <a
+                        class="inline-flex items-center capitalize space-x-1 text-slate-700"
+                        id="storeLink"
+                        href="#"
+                        target="_blank"
+                    >
                         <svg
                             class="w-4 h-5 text-blue-600"
                             xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +99,7 @@
                         target="_blank"
                     >
                         <svg
-                            class="w-7 h-5 text-blue-600 group-hover:text-red-600 stroke-blue-600 group-hover:stroke-black"
+                            class="w-7 h-5 text-red-200 group-hover:text-red-600 stroke-blue-600 group-hover:stroke-black"
                             width="49"
                             height="32"
                             viewBox="0 0 49 32"
@@ -222,13 +227,15 @@
                     <div id="tranAfter" class="ml-8 space-y-4">
                         <div class="space-x-1">
                             <input type="checkbox" id="doubleClick" name="doubleClick" />
-                            <label for="doubleClick" data-l10n-id="settingDoubleClick">Double clicking </label>
+                            <label class="font-medium" for="doubleClick" data-l10n-id="settingDoubleClick"
+                                >Double clicking
+                            </label>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 items-center gap-y-1">
                             <div>
                                 <div class="space-x-1">
                                     <input type="checkbox" id="selecting" name="selecting" />
-                                    <label for="selecting" data-l10n-id="settingSelectingText">
+                                    <label class="font-medium" for="selecting" data-l10n-id="settingSelectingText">
                                         Translate text by Selecting
                                     </label>
                                 </div>
@@ -242,7 +249,7 @@
                             </div>
                             <span class="relative bg-red-100 ml-[1.5rem] w-[15rem]">
                                 <input
-                                    class="border border-gray-700 pl-3 pr-8 rounded-sm disabled:cursor-not-allowed w-full"
+                                    class="pl-3 pr-8 rounded-sm disabled:cursor-not-allowed w-full"
                                     id="shortcutInput"
                                     type="text"
                                     data-l10n-id="settingPressKey"
