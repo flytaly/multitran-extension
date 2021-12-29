@@ -19,4 +19,9 @@ export function log(name, message) {
  */
 export const r = (...args) => resolve(__dirname, '..', ...args);
 
-export const replaceConstants = () => ({ TARGET: `"${TARGET}"` });
+export function replaceConstants() {
+    return {
+        TARGET: `"${TARGET}"`,
+        'process.env.NODE_ENV': IS_DEV ? "'development'" : "'production'",
+    };
+}
