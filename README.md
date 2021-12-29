@@ -22,7 +22,7 @@ Build production build in the **extension** folder.
     npm run build:chrome
     npm run build:ff
 
-The extension uses **TailwindCSS** for styles and **esbuld** for bundling.
+The extension uses **TailwindCSS** for styles and **esbuild** for bundling.
 
 ## License
 
