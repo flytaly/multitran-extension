@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['./src/**/*.html', './src/**/*.js', './extension/**/*.html'],
+    content: ['./src/**/*.{html,js,css}', './extension/**/*.html'],
     theme: {
         fill: {
             current: 'currentColor',
