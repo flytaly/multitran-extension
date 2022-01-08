@@ -96,5 +96,13 @@ export async function getManifest() {
             page: 'options.html',
             open_in_tab: true,
         },
+        commands: {
+            // @ts-ignore
+            _execute_browser_action: {
+                suggested_key: {
+                    default: 'Alt+M',
+                },
+            },
+        },
     };
 }
