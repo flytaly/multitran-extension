@@ -1,10 +1,9 @@
-import prescriptionEN from './mocks/prescription.en.html';
-import prescriptionRU from './mocks/prescription.html';
-import notFound from './mocks/not-found.html';
-import otherLangs from './mocks/other-lang.html';
+import { testFiles } from './mocks/index.js';
 import { langIds } from '../js/constants.js';
 import { parser } from '../js/translate-engine/multitran-parser.js';
 import { multitranData } from '../js/translate-engine/multitran.js';
+
+const { notFound, prescriptionRU, prescriptionEN, otherLangs } = testFiles;
 
 describe('Parser', () => {
     test('should match snapshot', async () => {
