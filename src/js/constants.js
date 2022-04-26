@@ -2,6 +2,12 @@ export const IS_DEV = process.env.NODE_ENV === 'development';
 
 export const baseURL = 'https://www.multitran.com';
 
+export const defaultSizes = {
+    fontSize: 16,
+    width: 400,
+    height: 400,
+};
+
 export const langIds = {
     Arabic: '10',
     Basque: '68',

@@ -1,4 +1,4 @@
-import { langIds } from './constants.js';
+import { defaultSizes, langIds } from './constants.js';
 
 /**
  * @param {Function} func
@@ -46,10 +46,17 @@ export const idToLangMap = Object.entries(langIds).reduce(
     {},
 );
 
+export const clamp = (v, min, max) => Math.max(Math.min(v, max), min);
+
 /**
  * @param {HTMLElement} container
- * @param {number} [fontSize]
+ * @param {Object} sizes
+ * @param {number} [sizes.fontSize]
+ * @param {number} [sizes.width]
+ * @param {number} [sizes.height]
  */
-export function applyFontSize(container, fontSize = 16) {
-    container.style.setProperty('--font-size', `${fontSize}px`);
+export function applySizeVariables(container, { fontSize, width, height }) {
+    container.style.setProperty('--font-size', `${fontSize || defaultSizes.fontSize}px`);
+    container.style.setProperty('--popup-max-width', `${width || defaultSizes.width}px`);
+    container.style.setProperty('--popup-max-height', `${height || defaultSizes.height}px`);
 }

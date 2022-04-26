@@ -92,6 +92,15 @@
     "settingSizesFont": {
         "message": "Base font size"
     },
+    "settingSizesWidth": {
+        "message": "Width"
+    },
+    "settingSizesHeight": {
+        "message": "Height"
+    },
+    "settingSizesReset": {
+        "message": "reset"
+    },
     "settingLinkGithub": {
         "message": "GitHub",
         "description": "Settings page: Link to github"

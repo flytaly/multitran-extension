@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import browser from 'webextension-polyfill';
-import { langIds } from './constants.js';
+import { defaultSizes, langIds } from './constants.js';
 /**
  * @typedef {import("./options/shortcuts.js").ShortcutKeys} ShortcutKeys
  *
@@ -9,6 +9,8 @@ import { langIds } from './constants.js';
  * @property {string} [l2] - "to" language
  * @property {string} [multitranLang] - multitran interface language
  * @property {number} [fontSize] - base font size
+ * @property {number} [width] - popup max width
+ * @property {number} [height] - popup max height
  * @property {boolean} [doubleClick] - double click to show translation
  * @property {boolean} [select] - select text to translate
  * @property {boolean} [withKey] - translate selected text only if key is pressed
@@ -63,7 +65,9 @@ export const storage = {
         if (options.withKey === undefined) options.withKey = true;
         if (options.fetchAudio === undefined) options.fetchAudio = true;
         if (options.contextMenuItem === undefined) options.contextMenuItem = true;
-        if (!options.fontSize) options.fontSize = 16;
+        if (!options.fontSize) options.fontSize = defaultSizes.fontSize;
+        if (!options.width) options.width = defaultSizes.width;
+        if (!options.height) options.height = defaultSizes.height;
         if (!options.keys)
             options.keys = {
                 altKey: false,

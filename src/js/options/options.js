@@ -5,11 +5,13 @@ import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
 import { setShortcut } from './shortcuts.js';
 import { addLinkToBrowserStore } from '../store-link.js';
+import { clamp } from '../utils.js';
+import { defaultSizes } from '../constants.js';
 
 async function init() {
     setLangSelectorListeners();
     addLinkToBrowserStore();
-    const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize } =
+    const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize, width, height } =
         await storage.getOptions();
     // multitran interface language
     const mtLang = document.getElementById('mtLang');
@@ -53,7 +55,7 @@ async function init() {
         }
     });
 
-    // Sizes
+    // Font Size
     const fontSizeInput = document.getElementById('fsize');
     fontSizeInput.value = fontSize;
     const showFSize = (s) => {
@@ -61,9 +63,27 @@ async function init() {
     };
     showFSize(fontSize);
     fontSizeInput.addEventListener('input', (e) => {
-        const value = Math.min(Math.max(e.currentTarget.value, 10), 25);
+        const value = clamp(e.currentTarget.value, 10, 25);
         showFSize(value);
         storage.saveOptions({ fontSize: value });
+    });
+
+    // Width
+    const wInput = document.getElementById('popupWidth');
+    wInput.value = width;
+    wInput.addEventListener('input', (e) => storage.saveOptions({ width: clamp(e.currentTarget.value, 300, 1000) }));
+
+    // Height
+    const hInput = document.getElementById('popupHeight');
+    hInput.value = height;
+    hInput.addEventListener('input', (e) => storage.saveOptions({ height: clamp(e.currentTarget.value, 300, 1000) }));
+
+    // Reset
+    const resetBtn = document.getElementById('resetSizes');
+    resetBtn.addEventListener('click', () => {
+        storage.saveOptions({ height: defaultSizes.height, width: defaultSizes.width });
+        wInput.value = defaultSizes.width;
+        hInput.value = defaultSizes.height;
     });
 }
 

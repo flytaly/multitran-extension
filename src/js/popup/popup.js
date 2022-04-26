@@ -4,16 +4,13 @@ import { multitranData } from '../translate-engine/multitran.js';
 import { otherLangsPopupMarkup, popupMarkup } from '../content/content-popup.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
-import { applyFontSize, throttle } from '../utils.js';
+import { applySizeVariables, throttle, clamp } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 import { addLinkToBrowserStore } from '../store-link.js';
 import { addKeyboardListener } from './keys.js';
 
-/** @param {HTMLElement} el */
-function addNewTranslation(el) {
-    document.querySelector('#translation-container')?.appendChild(el);
-}
+const getContainer = () => document.querySelector('#translation-container');
 
 /** @returns {HTMLElement} translation element */
 function removePrevTranslation() {
@@ -35,7 +32,7 @@ async function renderTranslation(text) {
     loadingText.hidden = false;
     loadingBar.classList.add('animate-pulse');
 
-    const { l1, l2, multitranLang, fetchAudio, fontSize } = await storage.getOptions();
+    const { l1, l2, multitranLang, fetchAudio, fontSize, width } = await storage.getOptions();
     const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
     loadingText.hidden = true;
     loadingBar.classList.remove('animate-pulse');
@@ -50,7 +47,10 @@ async function renderTranslation(text) {
         const translationElem = await popupMarkup(data, text, l1_, l2_);
         translationElem.style.border = 0;
         translationElem.style.position = 'relative';
-        applyFontSize(translationElem, fontSize);
+        applySizeVariables(translationElem, {
+            fontSize,
+            width: clamp(width, 400, 800),
+        });
         if (fetchAudio) {
             const container = translationElem.querySelector('#pronunciation');
             container.textContent = 'fetching audio...';
@@ -60,14 +60,14 @@ async function renderTranslation(text) {
                 addAudioElements(container, audioFiles);
             });
         }
-        addNewTranslation(translationElem);
+        getContainer().appendChild(translationElem);
         return translationElem;
     }
 
     if (otherLang && otherLang.length) {
         const translationElem = await otherLangsPopupMarkup(otherLang);
         translationElem.style = 'border:0;position:relative;';
-        addNewTranslation(translationElem);
+        getContainer().appendChild(translationElem);
         return translationElem;
     }
 
@@ -86,6 +86,10 @@ function setListeners() {
     const form = document.getElementById('input-form');
     const input = form.querySelector('input');
     const optionButton = document.getElementById('optionsButton');
+
+    storage.getOptions().then(({ width }) => {
+        getContainer().style.width = `${clamp(width, 400, 800)}px`;
+    });
 
     optionButton.addEventListener('click', async () => {
         await browser.runtime.openOptionsPage();

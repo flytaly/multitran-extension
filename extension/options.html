@@ -8,7 +8,7 @@
         <title>Multitran Popup options</title>
     </head>
 
-    <body class="bg-slate-100 accent-blue-600 text-slate-900">
+    <body class="bg-slate-100 accent-blue-600 text-slate-900 pb-10">
         <div class="h-2 bg-blue-600"></div>
         <div class="mx-auto max-w-4xl w-full px-2">
             <!-- EXTENSION TITLE -->
@@ -307,6 +307,8 @@
 
                 <section>
                     <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingSizesHeader">Sizes</h2>
+
+                    <!--Font size-->
                     <div class="ml-8 flex items-start">
                         <label for="fsize" class="font-medium" data-l10n-id="settingSizesFont">Font size</label>
                         <div class="ml-10">
@@ -322,6 +324,59 @@
                             <span>px</span>
                         </div>
                         <div id="fontSizeDemo" class="px-1 ml-auto mr-8">aA</div>
+                    </div>
+
+                    <!--Width-->
+                    <div class="ml-8 mt-4 flex items-center">
+                        <label for="popupWidth" class="font-medium" data-l10n-id="settingSizesWidth">Width</label>
+                        <input
+                            id="popupWidth"
+                            class="px-1 ml-1 mr-0.5"
+                            type="number"
+                            name="width"
+                            min="300"
+                            max="1000"
+                            step="20"
+                        />
+                        <span>px</span>
+
+                        <span class="mx-4">✕</span>
+
+                        <label for="popupHeigth" class="font-medium" data-l10n-id="settingSizesHeight">Height</label>
+                        <input
+                            id="popupHeight"
+                            class="px-1 ml-1 mr-0.5"
+                            type="number"
+                            name="height"
+                            min="300"
+                            max="1000"
+                            step="20"
+                        />
+                        <span>px</span>
+
+                        <button
+                            id="resetSizes"
+                            class="ml-6 px-1 flex items-center space-x-1 hover:text-blue-900"
+                            type="button"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                                role="img"
+                                width="1em"
+                                height="1em"
+                                preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 15 15"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    fill-rule="evenodd"
+                                    d="M4.854 2.146a.5.5 0 0 1 0 .708L3.707 4H9a4.5 4.5 0 1 1 0 9H5a.5.5 0 0 1 0-1h4a3.5 3.5 0 1 0 0-7H3.707l1.147 1.146a.5.5 0 1 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2a.5.5 0 0 1 .708 0Z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                            <span data-l10n-id="settingSizesReset">reset</span>
+                        </button>
                     </div>
                 </section>
 

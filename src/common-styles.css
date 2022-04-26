@@ -10,6 +10,8 @@
 .root {
     --base-spacing: 16px;
     --font-size: 16px;
+    --popup-max-width: 400px;
+    --popup-max-height: 400px;
 }
 
 body {
