@@ -9,7 +9,8 @@ import { addLinkToBrowserStore } from '../store-link.js';
 async function init() {
     setLangSelectorListeners();
     addLinkToBrowserStore();
-    const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem } = await storage.getOptions();
+    const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize } =
+        await storage.getOptions();
     // multitran interface language
     const mtLang = document.getElementById('mtLang');
     mtLang.value = multitranLang;
@@ -50,6 +51,19 @@ async function init() {
         } else {
             removeFromContextMenu();
         }
+    });
+
+    // Sizes
+    const fontSizeInput = document.getElementById('fsize');
+    fontSizeInput.value = fontSize;
+    const showFSize = (s) => {
+        document.getElementById('fontSizeDemo').style.fontSize = `${s}px`;
+    };
+    showFSize(fontSize);
+    fontSizeInput.addEventListener('input', (e) => {
+        const value = Math.min(Math.max(e.currentTarget.value, 10), 25);
+        showFSize(value);
+        storage.saveOptions({ fontSize: value });
     });
 }
 

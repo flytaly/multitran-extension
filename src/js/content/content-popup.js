@@ -2,7 +2,7 @@
 import browser from 'webextension-polyfill';
 import { state } from './state.js';
 import { parser } from '../translate-engine/multitran-parser.js';
-import { idToLangMap } from '../utils.js';
+import { applyFontSize, idToLangMap } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getTemplate } from '../templates.js';
 import { composeURL } from '../translate-engine/multitran.js';
@@ -156,6 +156,7 @@ export async function showPopup({
     const parsed = parser(translationPage);
     if (!parsed.data || !parsed.data.length) return null;
     const popupElement = await popupMarkup(parsed.data, text, l1, l2);
+    applyFontSize(popupElement, state.fontSize);
     if (state.fetchAudio) addPronunciation(text, parsed.l1 || l1, popupElement);
     parent.appendChild(popupElement);
     state.isPopupOpened = true;

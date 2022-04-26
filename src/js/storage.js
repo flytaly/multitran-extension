@@ -8,6 +8,7 @@ import { langIds } from './constants.js';
  * @property {string} [l1] - "from" language
  * @property {string} [l2] - "to" language
  * @property {string} [multitranLang] - multitran interface language
+ * @property {number} [fontSize] - base font size
  * @property {boolean} [doubleClick] - double click to show translation
  * @property {boolean} [select] - select text to translate
  * @property {boolean} [withKey] - translate selected text only if key is pressed
@@ -62,6 +63,7 @@ export const storage = {
         if (options.withKey === undefined) options.withKey = true;
         if (options.fetchAudio === undefined) options.fetchAudio = true;
         if (options.contextMenuItem === undefined) options.contextMenuItem = true;
+        if (!options.fontSize) options.fontSize = 16;
         if (!options.keys)
             options.keys = {
                 altKey: false,

@@ -85,6 +85,13 @@
         "message": "Добавить ссылку на вызов перевода в контекстное меню",
         "description": "Settings: context menu block header"
     },
+    "settingSizesHeader": {
+        "message": "Размеры всплывающего окна",
+        "description": "Settings: sizes block header"
+    },
+    "settingSizesFont": {
+        "message": "Базовый размер шрифта"
+    },
     "settingLinkGithub": {
         "message": "GitHub",
         "description": "Settings page: Link to github"

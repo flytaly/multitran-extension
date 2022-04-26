@@ -85,6 +85,13 @@
         "message": "Add item to the context menu",
         "description": "Settings: context menu block header"
     },
+    "settingSizesHeader": {
+        "message": "Popup sizes",
+        "description": "Settings: sizes block header"
+    },
+    "settingSizesFont": {
+        "message": "Base font size"
+    },
     "settingLinkGithub": {
         "message": "GitHub",
         "description": "Settings page: Link to github"

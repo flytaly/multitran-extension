@@ -45,3 +45,11 @@ export const idToLangMap = Object.entries(langIds).reduce(
     }),
     {},
 );
+
+/**
+ * @param {HTMLElement} container
+ * @param {number} [fontSize]
+ */
+export function applyFontSize(container, fontSize = 16) {
+    container.style.setProperty('--font-size', `${fontSize}px`);
+}

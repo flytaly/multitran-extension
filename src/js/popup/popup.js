@@ -4,7 +4,7 @@ import { multitranData } from '../translate-engine/multitran.js';
 import { otherLangsPopupMarkup, popupMarkup } from '../content/content-popup.js';
 import { setLangSelectorListeners } from '../lang-selector.js';
 import { storage } from '../storage.js';
-import { throttle } from '../utils.js';
+import { applyFontSize, throttle } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 import { addLinkToBrowserStore } from '../store-link.js';
@@ -35,7 +35,7 @@ async function renderTranslation(text) {
     loadingText.hidden = false;
     loadingBar.classList.add('animate-pulse');
 
-    const { l1, l2, multitranLang, fetchAudio } = await storage.getOptions();
+    const { l1, l2, multitranLang, fetchAudio, fontSize } = await storage.getOptions();
     const { data, error, otherLang, l1: l1_, l2: l2_ } = await multitranData(text, l1, l2, multitranLang);
     loadingText.hidden = true;
     loadingBar.classList.remove('animate-pulse');
@@ -48,7 +48,9 @@ async function renderTranslation(text) {
 
     if (data && data.length) {
         const translationElem = await popupMarkup(data, text, l1_, l2_);
-        translationElem.style = 'border:0;position:relative;';
+        translationElem.style.border = 0;
+        translationElem.style.position = 'relative';
+        applyFontSize(translationElem, fontSize);
         if (fetchAudio) {
             const container = translationElem.querySelector('#pronunciation');
             container.textContent = 'fetching audio...';
@@ -68,9 +70,9 @@ async function renderTranslation(text) {
         addNewTranslation(translationElem);
         return translationElem;
     }
-    
+
     if (data?.length === 0) {
-      notFoundElem.hidden = false; 
+        notFoundElem.hidden = false;
     }
 
     return null;
