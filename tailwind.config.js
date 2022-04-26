@@ -1,3 +1,6 @@
+const spacing = (n) => `calc(${n / 4}*var(--base-spacing))`;
+const fontSize = (n) => `calc(${n}*var(--font-size))`;
+
 module.exports = {
     content: ['./src/**/*.{html,js,css}', './extension/**/*.html'],
     theme: {
@@ -8,20 +11,28 @@ module.exports = {
         spacing: {
             px: '1px',
             0: '0',
-            0.5: '2px',
-            1: '4px',
-            1.5: '6px',
-            2: '8px',
-            2.5: '10px',
-            3: '12px',
-            3.5: '14px',
-            4: '16px',
-            5: '18px',
-            6: '20px',
-            7: '22px',
-            8: '24px',
-            9: '26px',
-            10: '28px',
+            0.5: spacing(0.5),
+            1: spacing(1),
+            1.5: spacing(1.5),
+            2: spacing(2),
+            2.5: spacing(2.5),
+            3: spacing(3),
+            3.5: spacing(3.5),
+            4: spacing(4),
+            5: spacing(5),
+            6: spacing(6),
+            7: spacing(7),
+            8: spacing(8),
+            9: spacing(9),
+            10: spacing(10),
+        },
+        fontSize: {
+            xs: fontSize(0.75),
+            sm: fontSize(0.875),
+            base: fontSize(1),
+            lg: fontSize(1.125),
+            xl: fontSize(1.25),
+            '2xl': fontSize(1.5),
         },
     },
     variants: {
