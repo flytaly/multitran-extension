@@ -105,8 +105,14 @@
         "message": "GitHub",
         "description": "Settings page: Link to github"
     },
-    "settingLinkKofi": {
-        "message": "Support me on Ko-Fi"
+    "settingLinkSupport": {
+        "message": "Support me"
+    },
+    "settingLinkSupportWith": {
+        "message": "with"
+    },
+    "settingLinkSupportOr": {
+        "message": "or"
     },
     "settingLinkStore": {
         "message": "rate extension",

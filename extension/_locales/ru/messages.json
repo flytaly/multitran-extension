@@ -105,8 +105,14 @@
         "message": "GitHub",
         "description": "Settings page: Link to github"
     },
-    "settingLinkKofi": {
-        "message": "Поддержать на Ko-Fi"
+    "settingLinkSupport": {
+        "message": "Поддержать"
+    },
+    "settingLinkSupportWith": {
+        "message": "с"
+    },
+    "settingLinkSupportOr": {
+        "message": "или"
     },
     "settingLinkStore": {
         "message": "поставить оценку",
