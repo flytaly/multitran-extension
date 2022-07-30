@@ -60,8 +60,8 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
 
     const scrollTagSelector = '[data-type="scroll-next"]';
 
-    // Arrow buttons for scrolling to the next group
     rootElement.onclick = (ev) => {
+        // Arrow buttons for scrolling to the next group
         const parentHeader = ev.target?.closest(scrollTagSelector);
         if (parentHeader) {
             const list = Array.from(rootElement.querySelectorAll(scrollTagSelector));
@@ -71,6 +71,21 @@ export async function popupMarkup(data, text, l1Code, l2Code) {
                 behavior: 'smooth',
                 top: nextEl.offsetTop,
             });
+            return;
+        }
+        // Links to other translation groups (nouns, verbs, etc)
+        const { target } = ev;
+        if (target?.tagName !== 'A') return;
+        const href = target.getAttribute('href') || '';
+        if (href.startsWith('#')) {
+            const id = href.slice(1);
+            const nextEl = rootElement.querySelector(`a[name=${id}]`);
+            if (nextEl) {
+                rootElement.scroll({
+                    behavior: 'smooth',
+                    top: nextEl.offsetTop,
+                });
+            }
         }
     };
 
