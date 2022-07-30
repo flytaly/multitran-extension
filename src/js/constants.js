@@ -4,7 +4,7 @@ export const baseURL = 'https://www.multitran.com';
 
 export const defaultSizes = {
     fontSize: 16,
-    width: 400,
+    width: 440,
     height: 400,
 };
 

@@ -36,6 +36,7 @@ describe('Parser', () => {
         expect(parser(notFound).data).toHaveLength(0);
         expect(parser(notFound).otherLang).toHaveLength(0);
     });
+
     test('should return links to other languages', () => {
         expect(parser(otherLangs).data).toHaveLength(0);
         const { otherLang } = parser(otherLangs);

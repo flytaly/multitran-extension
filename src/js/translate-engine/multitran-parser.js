@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 import { baseURL } from '../constants.js';
 
-function fixURL(relativeURL) {
-    if (relativeURL.startsWith('/m.exe')) return baseURL + relativeURL;
+function fixURL(relativeURL = '') {
+    if (relativeURL?.startsWith('/m.exe')) return baseURL + relativeURL;
     return relativeURL;
 }
 function getParsedHTML(text) {
@@ -23,8 +23,22 @@ function getGroupHeader(td) {
     td.querySelectorAll('a, span, em').forEach((elem) => {
         const resultElem = document.createElement(elem.tagName);
         if (elem.tagName === 'A') {
-            resultElem.setAttribute('href', fixURL(elem.getAttribute('href')));
-            resultElem.setAttribute('target', '_blank');
+            const url = fixURL(elem.getAttribute('href') || '');
+            if (url) {
+                resultElem.setAttribute('href', url);
+            }
+
+            if (url && !url.startsWith('#')) {
+                resultElem.classList.add("text-base")
+                resultElem.setAttribute('target', '_blank');
+            } else {
+                resultElem.classList.add("text-gray-500", "underline")
+            }
+
+            // Multitran uses empty links with attribute "name" as an anchor id for scrolling
+            const name = elem.getAttribute('name');
+            if (name) resultElem.setAttribute('name', name);
+
         }
         resultElem.textContent = elem.textContent;
         content.push(resultElem);
