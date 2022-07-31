@@ -17,7 +17,7 @@ Build and watch for changes in js and style files, then run corresponding browse
     npm run dev:chrome
     npm run dev:ff
 
-Build production build in the **extension** folder.
+Create production build in the **extension** folder.
 
     npm run build:chrome
     npm run build:ff
