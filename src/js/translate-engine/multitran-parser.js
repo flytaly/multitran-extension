@@ -29,16 +29,15 @@ function getGroupHeader(td) {
             }
 
             if (url && !url.startsWith('#')) {
-                resultElem.classList.add("text-base")
+                resultElem.classList.add('text-base');
                 resultElem.setAttribute('target', '_blank');
             } else {
-                resultElem.classList.add("text-gray-500", "underline")
+                resultElem.classList.add('text-gray-500', 'underline');
             }
 
             // Multitran uses empty links with attribute "name" as an anchor id for scrolling
             const name = elem.getAttribute('name');
             if (name) resultElem.setAttribute('name', name);
-
         }
         resultElem.textContent = elem.textContent;
         content.push(resultElem);
@@ -97,9 +96,11 @@ function getTranslationsFromRow(tr) {
                 result.trans.push(span);
             }
             if (node.tagName === 'A') {
-                node.setAttribute('href', fixURL(node.getAttribute('href')));
-                node.setAttribute('target', '_blank');
-                result.trans.push(node);
+                const link = document.createElement('a');
+                link.setAttribute('href', fixURL(node.getAttribute('href')));
+                link.setAttribute('target', '_blank');
+                link.textContent = node.textContent;
+                result.trans.push(link);
             }
         }
     }
