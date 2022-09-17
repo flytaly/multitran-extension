@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Parser should match snapshot 1`] = `
-Object {
-  "data": Array [
-    Object {
-      "content": Array [
+{
+  "data": [
+    {
+      "content": [
         <a
           class="text-gray-500 underline"
           name="noun"
@@ -25,7 +25,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
         target="_blank"
@@ -33,7 +33,7 @@ Object {
       >
         gen.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -154,7 +154,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
         target="_blank"
@@ -162,7 +162,7 @@ Object {
       >
         agric.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -191,7 +191,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
         target="_blank"
@@ -199,7 +199,7 @@ Object {
       >
         busin.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -221,7 +221,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
         target="_blank"
@@ -229,7 +229,7 @@ Object {
       >
         dentist.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -250,7 +250,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
         target="_blank"
@@ -258,7 +258,7 @@ Object {
       >
         econ.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -279,7 +279,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
         target="_blank"
@@ -287,7 +287,7 @@ Object {
       >
         forestr.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -301,7 +301,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
         target="_blank"
@@ -309,7 +309,7 @@ Object {
       >
         law
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -422,7 +422,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
         target="_blank"
@@ -430,7 +430,7 @@ Object {
       >
         Makarov.
       </a>,
-      "trans": Array [
+      "trans": [
         <a
           href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
           target="_blank"
@@ -440,7 +440,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
         target="_blank"
@@ -448,7 +448,7 @@ Object {
       >
         med.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -469,7 +469,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=176"
         target="_blank"
@@ -477,7 +477,7 @@ Object {
       >
         nephr.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -498,7 +498,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
         target="_blank"
@@ -506,7 +506,7 @@ Object {
       >
         notar.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -543,7 +543,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
         target="_blank"
@@ -551,7 +551,7 @@ Object {
       >
         offic.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -586,7 +586,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
         target="_blank"
@@ -594,7 +594,7 @@ Object {
       >
         patents.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -624,7 +624,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
         target="_blank"
@@ -632,7 +632,7 @@ Object {
       >
         psychol.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -646,7 +646,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
         target="_blank"
@@ -654,7 +654,7 @@ Object {
       >
         slang
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -668,7 +668,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
         target="_blank"
@@ -676,7 +676,7 @@ Object {
       >
         sport.
       </a>,
-      "trans": Array [
+      "trans": [
         <a
           href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
           target="_blank"
@@ -686,8 +686,8 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
-      "content": Array [
+    {
+      "content": [
         <span>
           time of
         </span>,
@@ -704,7 +704,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
         target="_blank"
@@ -712,7 +712,7 @@ Object {
       >
         econ.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -726,8 +726,8 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
-      "content": Array [
+    {
+      "content": [
         <a
           class="text-gray-500 underline"
           name="abbreviation"
@@ -757,7 +757,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=prescription&sc=120"
         target="_blank"
@@ -765,7 +765,7 @@ Object {
       >
         abbr., med.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -779,8 +779,8 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
-      "content": Array [
+    {
+      "content": [
         <a
           class="text-base"
           href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
@@ -797,7 +797,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=Prescription&sc=120"
         target="_blank"
@@ -805,7 +805,7 @@ Object {
       >
         abbr.
       </a>,
-      "trans": Array [
+      "trans": [
         <a
           href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
           target="_blank"
@@ -822,10 +822,10 @@ Object {
 `;
 
 exports[`Parser should match snapshot 2 1`] = `
-Object {
-  "data": Array [
-    Object {
-      "content": Array [
+{
+  "data": [
+    {
+      "content": [
         <a
           class="text-gray-500 underline"
           name="noun"
@@ -846,7 +846,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
         target="_blank"
@@ -854,7 +854,7 @@ Object {
       >
         общ.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -975,7 +975,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
         target="_blank"
@@ -983,7 +983,7 @@ Object {
       >
         бизн.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1005,7 +1005,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
         target="_blank"
@@ -1013,7 +1013,7 @@ Object {
       >
         канц.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1048,7 +1048,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
         target="_blank"
@@ -1056,7 +1056,7 @@ Object {
       >
         лес.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1070,7 +1070,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
         target="_blank"
@@ -1078,7 +1078,7 @@ Object {
       >
         Макаров.
       </a>,
-      "trans": Array [
+      "trans": [
         <a
           href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
           target="_blank"
@@ -1088,7 +1088,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
         target="_blank"
@@ -1096,7 +1096,7 @@ Object {
       >
         мед.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1117,7 +1117,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=176"
         target="_blank"
@@ -1125,7 +1125,7 @@ Object {
       >
         нефр.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1146,7 +1146,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
         target="_blank"
@@ -1154,7 +1154,7 @@ Object {
       >
         нотар.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1191,7 +1191,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
         target="_blank"
@@ -1199,7 +1199,7 @@ Object {
       >
         патент.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1229,7 +1229,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
         target="_blank"
@@ -1237,7 +1237,7 @@ Object {
       >
         психол.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1251,7 +1251,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
         target="_blank"
@@ -1263,7 +1263,7 @@ Object {
           с/х.
         </span>
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1292,7 +1292,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
         target="_blank"
@@ -1300,7 +1300,7 @@ Object {
       >
         сл.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1314,7 +1314,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
         target="_blank"
@@ -1322,7 +1322,7 @@ Object {
       >
         спорт.
       </a>,
-      "trans": Array [
+      "trans": [
         <a
           href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
           target="_blank"
@@ -1332,7 +1332,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
         target="_blank"
@@ -1340,7 +1340,7 @@ Object {
       >
         стом.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1361,7 +1361,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
         target="_blank"
@@ -1369,7 +1369,7 @@ Object {
       >
         эк.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1390,7 +1390,7 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
         target="_blank"
@@ -1398,7 +1398,7 @@ Object {
       >
         юр.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1511,8 +1511,8 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
-      "content": Array [
+    {
+      "content": [
         <span>
           time of
         </span>,
@@ -1529,7 +1529,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
         target="_blank"
@@ -1537,7 +1537,7 @@ Object {
       >
         эк.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1551,8 +1551,8 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
-      "content": Array [
+    {
+      "content": [
         <a
           class="text-gray-500 underline"
           name="abbreviation"
@@ -1582,7 +1582,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=prescription&sc=120"
         target="_blank"
@@ -1590,7 +1590,7 @@ Object {
       >
         сокр., мед.
       </a>,
-      "trans": Array [
+      "trans": [
         
                             ,
         <a
@@ -1604,8 +1604,8 @@ Object {
       ],
       "type": "translation",
     },
-    Object {
-      "content": Array [
+    {
+      "content": [
         <a
           class="text-base"
           href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
@@ -1622,7 +1622,7 @@ Object {
       ],
       "type": "header",
     },
-    Object {
+    {
       "subjLink": <a
         href="https://www.multitran.com/m.exe?a=110&l1=1&l2=10000&s=Prescription&sc=120"
         target="_blank"
@@ -1630,7 +1630,7 @@ Object {
       >
         сокр.
       </a>,
-      "trans": Array [
+      "trans": [
         <a
           href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
           target="_blank"
