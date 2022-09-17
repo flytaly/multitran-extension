@@ -34,64 +34,55 @@ exports[`Parser should match snapshot 1`] = `
         gen.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
           target="_blank"
         >
           предписывание
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
           target="_blank"
         >
           распоряжение
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
           target="_blank"
         >
           рекомендация
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
           target="_blank"
         >
           неписаный закон
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
           target="_blank"
         >
           назначение
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
           target="_blank"
         >
           рецепт
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
           target="_blank"
         >
           пресекательный срок
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
@@ -104,24 +95,21 @@ exports[`Parser should match snapshot 1`] = `
         >
           истечение срока
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
           target="_blank"
         >
           инструкция
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
           target="_blank"
         >
           диоптрия
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
@@ -134,23 +122,19 @@ exports[`Parser should match snapshot 1`] = `
         >
           установка
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
           target="_blank"
         >
           директива
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (ssn)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -163,31 +147,25 @@ exports[`Parser should match snapshot 1`] = `
         agric.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
           target="_blank"
         >
           предписание
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (лекарства)
         </span>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
           target="_blank"
         >
           указание
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -200,24 +178,19 @@ exports[`Parser should match snapshot 1`] = `
         busin.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
           target="_blank"
         >
           право приобретательной давности
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
           target="_blank"
         >
           право погасительной давности
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -230,23 +203,18 @@ exports[`Parser should match snapshot 1`] = `
         dentist.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
           target="_blank"
         >
           пропись для брекета
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (характеристики положения паза брекета по отношению к основанию брекета schyzomaniac)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -259,23 +227,18 @@ exports[`Parser should match snapshot 1`] = `
         econ.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
           target="_blank"
         >
           распоряжение
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (инструкция, указание)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -288,16 +251,12 @@ exports[`Parser should match snapshot 1`] = `
         forestr.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
           target="_blank"
         >
           лесорубочный билет
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -310,24 +269,20 @@ exports[`Parser should match snapshot 1`] = `
         law
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
           target="_blank"
         >
           право давности
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
           target="_blank"
         >
           давность
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
           target="_blank"
@@ -341,35 +296,27 @@ exports[`Parser should match snapshot 1`] = `
         >
           данность
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
           target="_blank"
         >
           срок приобретательной или исковой давности
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
-          (The process of acquiring title to property by reason of uninterrupted possession of
-                                specified duration. Also called positive prescription. Law The limitation of time beyond
-                                which an action, debt, or crime is no longer valid or enforceable. Also called negative
-                                prescription. Maksim Kozlov)
+          (The process of acquiring title to property by reason of uninterrupted possession of specified duration. Also called positive prescription. Law The limitation of time beyond which an action, debt, or crime is no longer valid or enforceable. Also called negative prescription. Maksim Kozlov)
         </span>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
           target="_blank"
         >
-          метод приобретения права на использование земельного участка без права на
-                                собственность. метод обусловлен длительным использованием данного земельного участка.
+          метод приобретения права на использование земельного участка без права на собственность. метод обусловлен длительным использованием данного земельного участка.
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
@@ -382,8 +329,7 @@ exports[`Parser should match snapshot 1`] = `
         >
           срок исковой давности
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
@@ -396,8 +342,7 @@ exports[`Parser should match snapshot 1`] = `
         >
           исковая давность
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
@@ -410,15 +355,12 @@ exports[`Parser should match snapshot 1`] = `
         >
           срок давности
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (MichaelBurov)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -449,23 +391,18 @@ exports[`Parser should match snapshot 1`] = `
         med.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
           target="_blank"
         >
           пропись
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (лекарственная)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -478,23 +415,18 @@ exports[`Parser should match snapshot 1`] = `
         nephr.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=режим&l1=2&l2=1"
           target="_blank"
         >
           режим
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (inadequate dialysis prescription Ying)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -507,39 +439,32 @@ exports[`Parser should match snapshot 1`] = `
         notar.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
           target="_blank"
         >
           норма
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
           target="_blank"
         >
           приобретение по давности
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
           target="_blank"
         >
           давность
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (in most general sense of the word, as it is used, for example, in louisiana)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -552,16 +477,13 @@ exports[`Parser should match snapshot 1`] = `
         offic.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
           target="_blank"
         >
           регламентация
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
@@ -574,15 +496,12 @@ exports[`Parser should match snapshot 1`] = `
         >
           регламентирование
         </a>,
-        
-                            ,
+         ,
         <span
           class="description"
         >
           (igisheva)
         </span>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -595,32 +514,26 @@ exports[`Parser should match snapshot 1`] = `
         patents.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
           target="_blank"
         >
           положение
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
           target="_blank"
         >
           предписание
         </a>,
-        ;
-                            ,
+        ; ,
         <a
           href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-либо+по+давности+владения&l1=2&l2=1"
           target="_blank"
         >
           утверждение права на что-либо по давности владения
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -633,16 +546,12 @@ exports[`Parser should match snapshot 1`] = `
         psychol.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
           target="_blank"
         >
           прописанное лекарство
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -655,16 +564,12 @@ exports[`Parser should match snapshot 1`] = `
         slang
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
           target="_blank"
         >
           наркотик, выдаваемый по рецепту
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -688,6 +593,10 @@ exports[`Parser should match snapshot 1`] = `
     },
     {
       "content": [
+        <a
+          class="text-gray-500 underline"
+          name="noun"
+        />,
         <span>
           time of
         </span>,
@@ -713,16 +622,12 @@ exports[`Parser should match snapshot 1`] = `
         econ.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
           target="_blank"
         >
           срок давности
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
@@ -745,15 +650,6 @@ exports[`Parser should match snapshot 1`] = `
         <em>
           abbr.
         </em>,
-        <span>
-          |
-        </span>,
-        <a
-          class="text-gray-500 underline"
-          href="#noun"
-        >
-          n
-        </a>,
       ],
       "type": "header",
     },
@@ -766,21 +662,21 @@ exports[`Parser should match snapshot 1`] = `
         abbr., med.
       </a>,
       "trans": [
-        
-                            ,
         <a
           href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
           target="_blank"
         >
           presc
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
     {
       "content": [
+        <a
+          class="text-gray-500 underline"
+          name="abbreviation"
+        />,
         <a
           class="text-base"
           href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
@@ -816,8 +712,8 @@ exports[`Parser should match snapshot 1`] = `
       "type": "translation",
     },
   ],
-  "l1": "1",
-  "l2": "2",
+  "l1": null,
+  "l2": null,
 }
 `;
 
@@ -828,738 +724,11 @@ exports[`Parser should match snapshot 2 1`] = `
       "content": [
         <a
           class="text-gray-500 underline"
-          name="noun"
-        />,
-        <a
-          class="text-base"
-          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
-          target="_blank"
-        >
-          prescription
-        </a>,
-        <span>
-          [prɪ'skrɪpʃ(ə)n]
-        </span>,
-        <em>
-          сущ.
-        </em>,
-      ],
-      "type": "header",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=0"
-        target="_blank"
-        title="Общая лексика"
-      >
-        общ.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=предписывание&l1=2&l2=1"
-          target="_blank"
-        >
-          предписывание
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
-          target="_blank"
-        >
-          распоряжение
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=рекомендация&l1=2&l2=1"
-          target="_blank"
-        >
-          рекомендация
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=неписаный+закон&l1=2&l2=1"
-          target="_blank"
-        >
-          неписаный закон
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=назначение&l1=2&l2=1"
-          target="_blank"
-        >
-          назначение
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=рецепт&l1=2&l2=1"
-          target="_blank"
-        >
-          рецепт
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=пресекательный+срок&l1=2&l2=1"
-          target="_blank"
-        >
-          пресекательный срок
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (Lavrov)
-        </span>,
-        ; ,
-        <a
-          href="https://www.multitran.com/m.exe?s=истечение+срока&l1=2&l2=1"
-          target="_blank"
-        >
-          истечение срока
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=инструкция&l1=2&l2=1"
-          target="_blank"
-        >
-          инструкция
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=диоптрия&l1=2&l2=1"
-          target="_blank"
-        >
-          диоптрия
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (Контекстный перевод. Например, prescription glasses eugenius_rus)
-        </span>,
-        ; ,
-        <a
-          href="https://www.multitran.com/m.exe?s=установка&l1=2&l2=1"
-          target="_blank"
-        >
-          установка
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=директива&l1=2&l2=1"
-          target="_blank"
-        >
-          директива
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (ssn)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=291"
-        target="_blank"
-        title="Бизнес"
-      >
-        бизн.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=право+приобретательной+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          право приобретательной давности
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=право+погасительной+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          право погасительной давности
-        </a>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=211"
-        target="_blank"
-        title="Канцеляризм"
-      >
-        канц.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=регламентация&l1=2&l2=1"
-          target="_blank"
-        >
-          регламентация
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (igisheva)
-        </span>,
-        ; ,
-        <a
-          href="https://www.multitran.com/m.exe?s=регламентирование&l1=2&l2=1"
-          target="_blank"
-        >
-          регламентирование
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (igisheva)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=93"
-        target="_blank"
-        title="Лесоводство"
-      >
-        лес.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=лесорубочный+билет&l1=2&l2=1"
-          target="_blank"
-        >
-          лесорубочный билет
-        </a>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=517"
-        target="_blank"
-        title="Макаров"
-      >
-        Макаров.
-      </a>,
-      "trans": [
-        <a
-          href="https://www.multitran.com/m.exe?s=задание&l1=2&l2=1"
-          target="_blank"
-        >
-          задание
-        </a>,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=8"
-        target="_blank"
-        title="Медицина"
-      >
-        мед.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=пропись&l1=2&l2=1"
-          target="_blank"
-        >
-          пропись
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (лекарственная)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=176"
-        target="_blank"
-        title="Нефрология"
-      >
-        нефр.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=режим&l1=2&l2=1"
-          target="_blank"
-        >
-          режим
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (inadequate dialysis prescription Ying)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=431"
-        target="_blank"
-        title="Нотариальная практика"
-      >
-        нотар.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=норма&l1=2&l2=1"
-          target="_blank"
-        >
-          норма
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=приобретение+по+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          приобретение по давности
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
-          target="_blank"
-        >
-          давность
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (in most general sense of the word, as it is used, for example, in louisiana)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=289"
-        target="_blank"
-        title="Патенты"
-      >
-        патент.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=положение&l1=2&l2=1"
-          target="_blank"
-        >
-          положение
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
-          target="_blank"
-        >
-          предписание
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=утверждение+права+на+что-либо+по+давности+владения&l1=2&l2=1"
-          target="_blank"
-        >
-          утверждение права на что-либо по давности владения
-        </a>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=107"
-        target="_blank"
-        title="Психология"
-      >
-        психол.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=прописанное+лекарство&l1=2&l2=1"
-          target="_blank"
-        >
-          прописанное лекарство
-        </a>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=30"
-        target="_blank"
-        title="Сельское хозяйство"
-      >
-        <span
-          class="inline-flag"
-        >
-          с/х.
-        </span>
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=предписание&l1=2&l2=1"
-          target="_blank"
-        >
-          предписание
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (лекарства)
-        </span>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=указание&l1=2&l2=1"
-          target="_blank"
-        >
-          указание
-        </a>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=136"
-        target="_blank"
-        title="Сленг"
-      >
-        сл.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=наркотик,+выдаваемый+по+рецепту&l1=2&l2=1"
-          target="_blank"
-        >
-          наркотик, выдаваемый по рецепту
-        </a>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=20"
-        target="_blank"
-        title="Спорт"
-      >
-        спорт.
-      </a>,
-      "trans": [
-        <a
-          href="https://www.multitran.com/m.exe?s=рецептура&l1=2&l2=1"
-          target="_blank"
-        >
-          рецептура
-        </a>,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=157"
-        target="_blank"
-        title="Стоматология"
-      >
-        стом.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=пропись+для+брекета&l1=2&l2=1"
-          target="_blank"
-        >
-          пропись для брекета
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (характеристики положения паза брекета по отношению к основанию брекета schyzomaniac)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=51"
-        target="_blank"
-        title="Экономика"
-      >
-        эк.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=распоряжение&l1=2&l2=1"
-          target="_blank"
-        >
-          распоряжение
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (инструкция, указание)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=prescription&sc=48"
-        target="_blank"
-        title="Юридическая лексика"
-      >
-        юр.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=право+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          право давности
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=давность&l1=2&l2=1"
-          target="_blank"
-        >
-          давность
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=приобретательная+давность&l1=2&l2=1"
-          target="_blank"
-        >
-          приобретательная давность
-        </a>,
-        ; ,
-        <a
-          href="https://www.multitran.com/m.exe?s=данность&l1=2&l2=1"
-          target="_blank"
-        >
-          данность
-        </a>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=срок+приобретательной+или+исковой+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          срок приобретательной или исковой давности
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (The process of acquiring title to property by reason of uninterrupted possession of
-                                specified duration. Also called positive prescription. Law The limitation of time beyond
-                                which an action, debt, or crime is no longer valid or enforceable. Also called negative
-                                prescription. Maksim Kozlov)
-        </span>,
-        ;
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=метод+приобретения+права+на+использование+земельного+участка+без+права+на+собственность.+метод+обусловлен+длительным+использованием+данного+земельного+участка.&l1=2&l2=1"
-          target="_blank"
-        >
-          метод приобретения права на использование земельного участка без права на
-                                собственность. метод обусловлен длительным использованием данного земельного участка.
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (mazurov)
-        </span>,
-        ; ,
-        <a
-          href="https://www.multitran.com/m.exe?s=срок+исковой+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          срок исковой давности
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (MichaelBurov)
-        </span>,
-        ; ,
-        <a
-          href="https://www.multitran.com/m.exe?s=исковая+давность&l1=2&l2=1"
-          target="_blank"
-        >
-          исковая давность
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (MichaelBurov)
-        </span>,
-        ; ,
-        <a
-          href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          срок давности
-        </a>,
-        
-                            ,
-        <span
-          class="description"
-        >
-          (MichaelBurov)
-        </span>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "content": [
-        <span>
-          time of
-        </span>,
-        <a
-          class="text-base"
-          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
-          target="_blank"
-        >
-          prescription
-        </a>,
-        <em>
-          сущ.
-        </em>,
-      ],
-      "type": "header",
-    },
-    {
-      "subjLink": <a
-        href="https://www.multitran.com/m.exe?a=110&l1=1&l2=2&s=(time+of)+prescription&sc=51"
-        target="_blank"
-        title="Экономика"
-      >
-        эк.
-      </a>,
-      "trans": [
-        
-                            ,
-        <a
-          href="https://www.multitran.com/m.exe?s=срок+давности&l1=2&l2=1"
-          target="_blank"
-        >
-          срок давности
-        </a>,
-        
-                        ,
-      ],
-      "type": "translation",
-    },
-    {
-      "content": [
-        <a
-          class="text-gray-500 underline"
           name="abbreviation"
         />,
         <a
           class="text-base"
-          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=2&init=1"
+          href="https://www.multitran.com/m.exe?a=118&s=prescription&l1=1&l2=10000&init=1"
           target="_blank"
         >
           prescription
@@ -1570,15 +739,6 @@ exports[`Parser should match snapshot 2 1`] = `
         <em>
           сокр.
         </em>,
-        <span>
-          |
-        </span>,
-        <a
-          class="text-gray-500 underline"
-          href="#noun"
-        >
-          сущ.
-        </a>,
       ],
       "type": "header",
     },
@@ -1591,24 +751,24 @@ exports[`Parser should match snapshot 2 1`] = `
         сокр., мед.
       </a>,
       "trans": [
-        
-                            ,
         <a
-          href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=2&thes=1"
+          href="https://www.multitran.com/m.exe?s=presc&l1=1&l2=10000&thes=1"
           target="_blank"
         >
           presc
         </a>,
-        
-                        ,
       ],
       "type": "translation",
     },
     {
       "content": [
         <a
+          class="text-gray-500 underline"
+          name="abbreviation"
+        />,
+        <a
           class="text-base"
-          href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=2&init=1"
+          href="https://www.multitran.com/m.exe?a=118&s=Prescription&l1=1&l2=10000&init=1"
           target="_blank"
         >
           Prescription
@@ -1632,7 +792,7 @@ exports[`Parser should match snapshot 2 1`] = `
       </a>,
       "trans": [
         <a
-          href="https://www.multitran.com/m.exe?s=7&l1=1&l2=2&thes=1"
+          href="https://www.multitran.com/m.exe?s=7&l1=1&l2=10000&thes=1"
           target="_blank"
         >
           7
@@ -1641,7 +801,7 @@ exports[`Parser should match snapshot 2 1`] = `
       "type": "translation",
     },
   ],
-  "l1": "1",
-  "l2": "2",
+  "l1": null,
+  "l2": null,
 }
 `;

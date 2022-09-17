@@ -6,6 +6,6 @@ const r = (p) => path.resolve(__dirname, p);
 export const testFiles = {
     notFound: readFileSync(r('./not-found.html')),
     otherLangs: readFileSync(r('./other-lang.html')),
-    prescriptionRU: readFileSync(r('./prescription.html')),
+    prescriptionRU: readFileSync(r('./prescription.ru.html')),
     prescriptionEN: readFileSync(r('./prescription.en.html')),
 };
