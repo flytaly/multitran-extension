@@ -42,7 +42,7 @@ const getIcon = (fileTitle, langId) => {
 /**
  * @param {SubDomain} subDomain
  * @param {string} word
- * @returns {{ title: string, type: string}[]} files
+ * @returns {Promise<{ title: string, type: string}[]}} files
  */
 const getAudioFilesOnPage = async (subDomain, word) => {
     const url = `https://${subDomain}.wiktionary.org/api/rest_v1/page/media-list/${word}`;
@@ -60,7 +60,7 @@ const getAudioFilesOnPage = async (subDomain, word) => {
  *
  * @param {{title:string}[]} files
  * @param {string} langId
- * @returns {AudioFile[]}
+ * @returns {Promise<AudioFile[]>}
  */
 const getFileUrls = async (files, langId) => {
     const titles = files.map((f) => f.title).filter(filterLanguages(langId));
