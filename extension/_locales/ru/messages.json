@@ -29,9 +29,15 @@
         "message": "Настройки перевода",
         "description": "Settings: translation settings block header"
     },
-    "settingLangPair": {
-        "message": "Направление перевода",
-        "description": "Settings: language pair"
+    "settingLangPairs": {
+        "message": "Языковая пара",
+        "description": "Settings: language pairs"
+    },
+    "settingLangPairsDesc": {
+        "message": "Пары работают в обе стороны. Для быстрого переключения можно сохранить 2 дополнительные пары."
+    },
+    "settingAddPair": {
+        "message": "добавить языковую пару"
     },
     "settingMultitranLang": {
         "message": "Язык интерфейса мультитрана",

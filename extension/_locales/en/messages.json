@@ -29,9 +29,15 @@
         "message": "Translation settings",
         "description": "Settings: translation settings block header"
     },
-    "settingLangPair": {
-        "message": "Language pair",
-        "description": "Settings: language pair"
+    "settingLangPairs": {
+        "message": "Language pairs",
+        "description": "Settings: language pairs"
+    },
+    "settingLangPairsDesc": {
+        "message": "Pairs work in both ways. You can store 2 additional pairs for quick access."
+    },
+    "settingAddPair": {
+        "message": "add a language pair"
     },
     "settingMultitranLang": {
         "message": "Multitran interface language",
