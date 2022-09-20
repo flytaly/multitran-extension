@@ -7,8 +7,11 @@ import { setShortcut } from './shortcuts.js';
 import { addLinkToBrowserStore } from '../store-link.js';
 import { clamp } from '../utils.js';
 import { defaultSizes } from '../constants.js';
+import pkg from '../../../package.json';
 
 async function init() {
+    const v = document.querySelector('[data-type="version"]');
+    if (v) v.textContent = `v${pkg.version}`;
     setLangSelectorListeners();
     addLinkToBrowserStore();
     const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize, width, height } =
