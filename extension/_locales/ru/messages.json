@@ -36,6 +36,9 @@
     "settingLangPairsDesc": {
         "message": "Пары работают в обе стороны. Для быстрого переключения можно сохранить 2 дополнительные пары."
     },
+    "settingSetMainLangPair_title": {
+        "message": "выбрать как основную языковую пару"
+    },
     "settingAddPair": {
         "message": "добавить языковую пару"
     },

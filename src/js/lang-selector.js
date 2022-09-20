@@ -1,19 +1,21 @@
 /* eslint-disable no-param-reassign */
 import browser from 'webextension-polyfill';
 import { langIds } from './constants.js';
+import { translateElement } from './l10n.js';
 import { storage } from './storage.js';
-
 
 /**
  * @arg {string} l1
  * @arg {string} l2
  * @arg {number} id
- * @arg {(l1:string, l2:string)=>Promise<void>} changeHandler
- * @arg {()=>Promise<void>} deleteHandler
+ * @arg {(l1:string, l2:string)=>Promise<void>} onChange
+ * @arg {(id: string)=>Promise<void>} onDelete
+ * @arg {(id: string)=>Promise<void>} onSetMain
  */
-function mountLanguageSelector(l1, l2, id, changeHandler, deleteHandler) {
+function mountLanguageSelector(l1, l2, id, onChange, onDelete, onSetMain) {
     /** @type DocumentFragment */
     const fragment = document.getElementById('lang-selector-tmp')?.content.cloneNode(true);
+    translateElement(fragment);
 
     const langBlock = fragment.querySelector('[data-type="pair"]');
     /** @type {HTMLSelectElement} */
@@ -21,7 +23,8 @@ function mountLanguageSelector(l1, l2, id, changeHandler, deleteHandler) {
     /** @type {HTMLSelectElement} */
     const l2Elem = langBlock.querySelector('[name="l2"]');
     const delBtn = langBlock.querySelector('button[name="remove"]');
-    const langSwap = langBlock.querySelector('[name="lang-swap"]');
+    const setMainBtn = langBlock.querySelector('button[name="make-main"]');
+    const langSwapBtn = langBlock.querySelector('[name="lang-swap"]');
 
     const updateValues = (l1_, l2_, id_) => {
         langBlock.dataset.id = id_;
@@ -31,21 +34,27 @@ function mountLanguageSelector(l1, l2, id, changeHandler, deleteHandler) {
 
     updateValues(l1, l2, id);
 
-    langSwap.addEventListener('click', () => {
-        [l1Elem.value, l2Elem.value] = [l2Elem.value, l1Elem.value];
-        storage.saveOptions({ l1: l1Elem.value, l2: l2Elem.value });
-    });
-
-    if (deleteHandler) {
-        delBtn.addEventListener('click', () => deleteHandler(langBlock.dataset.id));
+    if (onDelete) {
+        delBtn.addEventListener('click', () => onDelete(langBlock.dataset.id));
         delBtn.classList.remove('hidden');
     } else {
         delBtn.classList.add('hidden');
     }
 
-    const handler = () => changeHandler(l1Elem.value, l2Elem.value, langBlock.dataset.id);
+    if (onSetMain) {
+        setMainBtn.addEventListener('click', () => onSetMain(langBlock.dataset.id));
+        setMainBtn.classList.remove('hidden');
+    } else {
+        setMainBtn.classList.add('hidden');
+    }
+
+    const handler = () => onChange(l1Elem.value, l2Elem.value, langBlock.dataset.id);
     l1Elem.addEventListener('change', handler);
     l2Elem.addEventListener('change', handler);
+    langSwapBtn.addEventListener('click', () => {
+        [l1Elem.value, l2Elem.value] = [l2Elem.value, l1Elem.value];
+        handler();
+    });
 
     const container = document.querySelector('[data-type="lang-pairs"]');
     container.appendChild(langBlock);
@@ -98,7 +107,13 @@ export async function setLangSelectorListeners() {
                     options.additionalPairs.splice(idx, 1);
                     commitChanges();
                 };
-                const controls = mountLanguageSelector(p[0], p[1], index, onUpdate, onRemove);
+                const onSetMain = async (idx) => {
+                    const { l1, l2, additionalPairs: lp } = options;
+                    [options.l1, options.l2] = lp[idx];
+                    [lp[idx][0], lp[idx][1]] = [l1, l2];
+                    commitChanges();
+                };
+                const controls = mountLanguageSelector(p[0], p[1], index, onUpdate, onRemove, onSetMain);
                 refs.extra.push(controls);
             } else {
                 refs.extra[index].update(p[0], p[1], index);

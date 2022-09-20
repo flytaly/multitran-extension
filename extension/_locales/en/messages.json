@@ -36,6 +36,9 @@
     "settingLangPairsDesc": {
         "message": "Pairs work in both ways. You can store 2 additional pairs for quick access."
     },
+    "settingSetMainLangPair_title": {
+        "message": "select as a main language pair"
+    },
     "settingAddPair": {
         "message": "add a language pair"
     },
