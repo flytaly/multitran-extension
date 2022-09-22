@@ -5,6 +5,15 @@ import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
 import { CONTEXT_ID, addToContextMenu } from '../context-menu.js';
 import { IS_DEV } from '../constants.js';
 
+async function onInstall() {
+    const listener = (info) => {
+        if (info.reason === 'update' && parseInt(info.previousVersion || '1', 10) < 2) {
+            storage.migrateToV2();
+        }
+    };
+    browser.runtime.onInstalled.addListener(listener);
+}
+
 /**
  * @typedef {Object} MT_DATA_RESPONSE
  * @property {'MULTITRAN_DATA'} type
@@ -44,6 +53,7 @@ async function handleMessage(request) {
 }
 
 async function run() {
+    onInstall();
     if (IS_DEV) browser.runtime.openOptionsPage();
 
     browser.runtime.onMessage.addListener(handleMessage);

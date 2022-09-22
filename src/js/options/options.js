@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { addToContextMenu, removeFromContextMenu } from '../context-menu.js';
 import '../l10n.js';
-import { setLangSelectorListeners } from '../lang-selector.js';
+import { setLangSelectorListeners } from './lang-selector.js';
 import { storage } from '../storage.js';
 import { setShortcut } from './shortcuts.js';
 import { addLinkToBrowserStore } from '../store-link.js';
