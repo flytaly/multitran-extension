@@ -2,17 +2,21 @@ import browser from 'webextension-polyfill';
 import { composeURL, fetchPage } from '../translate-engine/multitran.js';
 import { storage } from '../storage.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
-import { CONTEXT_ID, addToContextMenu } from '../context-menu.js';
+import { addToContextMenu, contextMenuClickHandler } from '../context-menu.js';
 import { IS_DEV } from '../constants.js';
 
-async function onInstall() {
-    const listener = (info) => {
-        if (info.reason === 'update' && parseInt(info.previousVersion || '1', 10) < 2) {
-            storage.migrateToV2();
-        }
-    };
-    browser.runtime.onInstalled.addListener(listener);
-}
+/** @arg {import('webextension-polyfill').Runtime.OnInstalledDetailsType} details */
+const onInstalled = (details) => {
+    if (details.reason === 'update' && parseInt(details.previousVersion || '1', 10) < 2) {
+        storage.migrateToV2();
+    }
+
+    storage.getOptions().then(({ contextMenuItem }) => {
+        if (contextMenuItem) addToContextMenu();
+    });
+
+    if (IS_DEV) browser.runtime.openOptionsPage();
+};
 
 /**
  * @typedef {Object} MT_DATA_RESPONSE
@@ -33,7 +37,7 @@ async function handleMessage(request) {
         const { selection } = request;
         if (selection) {
             const { pairs, multitranLang } = await storage.getOptions();
-            const [l1, l2] = pairs[0]
+            const [l1, l2] = pairs[0];
             const { error, textData } = await fetchPage(composeURL(selection, l1, l2, multitranLang));
             if (error) console.error(error);
             if (!textData) return;
@@ -54,23 +58,8 @@ async function handleMessage(request) {
 }
 
 async function run() {
-    onInstall();
-    if (IS_DEV) browser.runtime.openOptionsPage();
-
+    browser.runtime.onInstalled.addListener(onInstalled);
     browser.runtime.onMessage.addListener(handleMessage);
-
-    const { contextMenuItem } = await storage.getOptions();
-    if (contextMenuItem) addToContextMenu();
-
-    const contextMenuClickHandler = (info, tab) => {
-        if (info.menuItemId === CONTEXT_ID) {
-            const { selectionText } = info;
-            if (selectionText) {
-                browser.tabs.sendMessage(tab.id, { type: 'TRANSLATE_SELECTION' });
-            }
-        }
-    };
-
     browser.contextMenus.onClicked.addListener(contextMenuClickHandler);
 }
 
