@@ -58,7 +58,7 @@ export const storage = {
         const { options = {} } = await browser.storage.local.get('options');
         if (!options.pairs || !options.pairs.length) options.pairs = [[langIds.English, langIds.Russian]];
         if (!options.multitranLang) options.multitranLang = langIds.English;
-        if (options.doubleClick === undefined) options.doubleClick = true;
+        if (options.doubleClick === undefined) options.doubleClick = false;
         if (options.select === undefined) options.select = true;
         if (options.withKey === undefined) options.withKey = true;
         if (options.fetchAudio === undefined) options.fetchAudio = true;
