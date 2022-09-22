@@ -32,7 +32,8 @@ async function handleMessage(request) {
     if (request?.type === 'GET_MULTITRAN_DATA') {
         const { selection } = request;
         if (selection) {
-            const { l1, l2, multitranLang } = await storage.getOptions();
+            const { pairs, multitranLang } = await storage.getOptions();
+            const [l1, l2] = pairs[0]
             const { error, textData } = await fetchPage(composeURL(selection, l1, l2, multitranLang));
             if (error) console.error(error);
             if (!textData) return;

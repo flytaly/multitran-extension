@@ -89,7 +89,7 @@ const getFileUrls = async (files, langId) => {
  *
  * @param {string} word
  * @param {string} lang
- * @returns {Array<AudioFile>|undefined} [files]
+ * @returns {Promise<Array<AudioFile>|undefined>} [files]
  */
 export const getAudioUrls = async (word, lang) => {
     const subDomain = subDomains[lang];

@@ -35,5 +35,6 @@ module.exports = {
         'implicit-arrow-linebreak': 'off',
         'no-param-reassign': 'off',
         'consistent-return': 'off',
+        radix: 'off',
     },
 };
