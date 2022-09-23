@@ -1,8 +1,10 @@
 import browser from 'webextension-polyfill';
+import pkg from '../../../package.json';
 import { translateElement } from '../l10n.js';
 
 export async function renderParts() {
     const parts = Array.from(document.querySelectorAll('[data-path]'));
+
     await Promise.all(
         parts.map(async (elem) => {
             if (!elem.dataset.path) return;
@@ -16,4 +18,7 @@ export async function renderParts() {
             }
         }),
     );
+
+    const v = document.querySelector('[data-type="version"]');
+    if (v) v.textContent = `v${pkg.version}`;
 }

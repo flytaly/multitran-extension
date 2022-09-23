@@ -6,13 +6,10 @@ import { setShortcut } from './shortcuts.js';
 import { addLinkToBrowserStore } from '../store-link.js';
 import { clamp } from '../utils.js';
 import { defaultSizes } from '../constants.js';
-import pkg from '../../../package.json';
 import { renderParts } from './render-parts.js';
 
 async function init() {
     await renderParts();
-    const v = document.querySelector('[data-type="version"]');
-    if (v) v.textContent = `v${pkg.version}`;
     setLangSelectorListeners();
     addLinkToBrowserStore();
     const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize, width, height } =

@@ -1,6 +1,6 @@
 {
     "name": "multitran-extension",
-    "version": "1.8.0",
+    "version": "2.0.0",
     "description": "Multitran Browser extension",
     "main": "manifest.json",
     "scripts": {
@@ -28,10 +28,10 @@
     "dependencies": {
         "@babel/preset-env": "^7.19.1",
         "@types/webextension-polyfill": "^0.9.1",
-        "autoprefixer": "^10.4.11",
+        "autoprefixer": "^10.4.12",
         "chokidar": "^3.5.3",
         "cross-env": "^7.0.3",
-        "esbuild": "^0.15.7",
+        "esbuild": "^0.15.9",
         "eslint": "^8.23.1",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.5.0",
