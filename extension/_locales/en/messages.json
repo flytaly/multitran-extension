@@ -34,7 +34,7 @@
         "description": "Settings: language pairs"
     },
     "settingLangPairsDesc": {
-        "message": "Pairs work in both ways. You can store 2 additional pairs for quick access."
+        "message": "Pairs work in both directions. You can store 2 additional pairs for quick access. Only the first pair is used for translation on web pages."
     },
     "settingSetMainLangPair_title": {
         "message": "select as a main language pair"

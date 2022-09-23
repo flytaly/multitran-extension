@@ -13,6 +13,7 @@ const selector = {
  * @arg {(l1: string, l2: string, index: number) => void} onChange
  * */
 export function setLangSelectorListeners(pairs, pairIndex, onChange) {
+    pairIndex = pairIndex < pairs.length ? pairIndex : 0;
     const container = selector.container();
     const l1Elem = selector.l1Elem();
     const l2Elem = selector.l2Elem();
@@ -34,10 +35,11 @@ export function setLangSelectorListeners(pairs, pairIndex, onChange) {
 }
 
 /**
- * @arg {[string, string][]} pair
+ * @arg {[string, string][]} pairs
  * @arg {number} pairIndex
  * */
 export function updateLangSelector(pairs, pairIndex) {
-    [selector.l1Elem().value, selector.l2Elem().value] = pairs[pairIndex];
+    pairIndex = pairIndex < pairs.length ? pairIndex : 0;
+    if (pairIndex >= pairs.length) [selector.l1Elem().value, selector.l2Elem().value] = pairs[pairIndex];
     selector.container().dataset.id = pairIndex;
 }

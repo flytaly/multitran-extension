@@ -92,6 +92,7 @@ export async function setLangSelectorListeners() {
         const onRemove = async (idx) => {
             if (options.pairs.length <= 1) return;
             options.pairs.splice(idx, 1);
+            options.currentPair = options.currentPair < options.pairs.length ? options.currentPair : 0;
             return commitChanges();
         };
         const onSetMain = async (idx) => {

@@ -9,15 +9,19 @@ export function onAddingTab(callback) {
 
 /**
  * @arg {[string, string][]} pairs
+ * @arg {number} tabIdx
  * @arg {(tabIdx: number) => void} onChange
  * */
-export function updateTabs(pairs, onChange) {
+export function updateTabs(pairs, tabIdx, onChange) {
     const tabsBlock = document.querySelector('#tabs');
     const tabList = tabsBlock.querySelectorAll('button');
     const addPairBtn = document.getElementById('add-pair');
+    currentTab = tabIdx;
 
     function updateClass() {
-        tabsBlock.querySelectorAll('button').forEach((t) => {
+        const tabs = tabsBlock.querySelectorAll('button');
+        currentTab = currentTab < tabs.length ? currentTab : 0;
+        tabs.forEach((t) => {
             if (parseInt(t.dataset.id) !== currentTab) {
                 t.classList.remove('tab-active');
                 return;

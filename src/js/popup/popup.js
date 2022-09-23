@@ -11,18 +11,18 @@ import { renderTranslation } from './render-translation.js';
 
 /** @type {import('../storage').Options} */
 let options = {};
-let pairIndex = 0;
 
 function addPair() {
     if (options.pairs.length > 2) return;
     options.pairs.push([langIds.German, langIds.English]);
-    pairIndex += 1;
+    options.currentPair = options.pairs.length - 1;
     storage.saveOptions(options);
 }
 
 const onTabChange = (tabIndex) => {
-    pairIndex = tabIndex;
-    updateLangSelector(options.pairs, pairIndex);
+    options.currentPair = tabIndex;
+    storage.saveOptions(options);
+    /* updateLangSelector(options.pairs, options.currentPair); */
 };
 
 async function setListeners() {
@@ -30,17 +30,17 @@ async function setListeners() {
     browser.storage.local.onChanged.addListener((change) => {
         if (change.options.newValue) {
             options = { ...options, ...change.options.newValue };
-            updateTabs(options.pairs, onTabChange);
-            updateLangSelector(options.pairs, pairIndex);
+            updateTabs(options.pairs, options.currentPair, onTabChange);
+            updateLangSelector(options.pairs, options.currentPair);
         }
     });
 
-    setLangSelectorListeners(options.pairs, pairIndex, (l1, l2, idx) => {
+    setLangSelectorListeners(options.pairs, options.currentPair, (l1, l2, idx) => {
         options.pairs[idx] = [l1, l2];
         storage.saveOptions({ pairs: options.pairs });
     });
     onAddingTab(addPair);
-    updateTabs(options.pairs, onTabChange);
+    updateTabs(options.pairs, options.currentPair, onTabChange);
     addLinkToBrowserStore();
     addKeyboardListener();
 
@@ -56,7 +56,7 @@ async function setListeners() {
     // prevent spamming requests by holding Enter
     const throttledRender = throttle(() => {
         const value = input.value.trim();
-        renderTranslation(value, options, pairIndex);
+        renderTranslation(value, options, options.currentPair);
     }, 800);
 
     form.addEventListener('submit', (e) => {

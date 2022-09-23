@@ -6,6 +6,7 @@ import { defaultSizes, langIds } from './constants.js';
  *
  * @typedef {Object} Options
  * @property {[string, string][]} [pairs] - additional translation pairs
+ * @property {number} [currentPair] - selected language pair index
  * @property {string} [multitranLang] - multitran interface language
  * @property {number} [fontSize] - base font size
  * @property {number} [width] - popup max width
@@ -57,6 +58,7 @@ export const storage = {
         /** @type {{options: Options}} */
         const { options = {} } = await browser.storage.local.get('options');
         if (!options.pairs || !options.pairs.length) options.pairs = [[langIds.English, langIds.Russian]];
+        if (options.currentPair === undefined) options.currentPair = 0;
         if (!options.multitranLang) options.multitranLang = langIds.English;
         if (options.doubleClick === undefined) options.doubleClick = false;
         if (options.select === undefined) options.select = true;
