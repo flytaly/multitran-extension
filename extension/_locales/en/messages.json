@@ -115,13 +115,7 @@
         "description": "Settings page: Link to github"
     },
     "settingLinkSupport": {
-        "message": "Support me"
-    },
-    "settingLinkSupportWith": {
-        "message": "with"
-    },
-    "settingLinkSupportOr": {
-        "message": "or"
+        "message": "Donate"
     },
     "settingLinkStore": {
         "message": "rate extension",
@@ -136,5 +130,26 @@
     },
     "tipUseArrows": {
         "message": "pressing Ctrl + Arrow Down/Up scrolls to the next/previous translation block"
+    },
+    "donateBacktoOptions": {
+        "message": "options"
+    },
+    "donateHeader": {
+        "message": "Support extension’s developing and maintenance"
+    },
+    "donateSectionCrypto": {
+        "message": "Cryptocurrency"
+    },
+    "donateSectionOther": {
+        "message": "Other methods"
+    },
+    "donateNowPayments": {
+        "message": "in any cryptocurrency via NOWPayments"
+    },
+    "donateNowPayments_title": {
+        "message": "donate in any cryptocurrency via NOWPayments"
+    },
+    "donateCrypto": {
+        "message": "or directly to the addresses:"
     }
 }

@@ -115,13 +115,7 @@
         "description": "Settings page: Link to github"
     },
     "settingLinkSupport": {
-        "message": "Поддержать"
-    },
-    "settingLinkSupportWith": {
-        "message": "с"
-    },
-    "settingLinkSupportOr": {
-        "message": "или"
+        "message": "Поддержать разработку"
     },
     "settingLinkStore": {
         "message": "поставить оценку",
@@ -136,5 +130,26 @@
     },
     "tipUseArrows": {
         "message": "нажатие Ctrl + стрелка вниз/вверх перематывает к следующему/предыдущему блоку с переводом"
+    },
+    "donateBacktoOptions": {
+        "message": "настройки"
+    },
+    "donateHeader": {
+        "message": "Поддержать разработку расширения"
+    },
+    "donateSectionCrypto": {
+        "message": "Криптовалютой"
+    },
+    "donateSectionOther": {
+        "message": "Другое"
+    },
+    "donateNowPayments": {
+        "message": "любой криптовалютой через NOWPayments"
+    },
+    "donateNowPayments_title": {
+        "message": "поддержать криптовалютой через NOWPayments"
+    },
+    "donateCrypto": {
+        "message": "или напрямую на один из адресов ниже"
     }
 }

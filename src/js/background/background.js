@@ -14,8 +14,6 @@ const onInstalled = (details) => {
     storage.getOptions().then(({ contextMenuItem }) => {
         if (contextMenuItem) addToContextMenu();
     });
-
-    if (IS_DEV) browser.runtime.openOptionsPage();
 };
 
 /**
@@ -58,6 +56,7 @@ async function handleMessage(request) {
 }
 
 async function run() {
+    if (IS_DEV) browser.runtime.openOptionsPage();
     browser.runtime.onInstalled.addListener(onInstalled);
     browser.runtime.onMessage.addListener(handleMessage);
     browser.contextMenus.onClicked.addListener(contextMenuClickHandler);

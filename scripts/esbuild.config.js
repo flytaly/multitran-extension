@@ -9,6 +9,7 @@ build({
         './src/js/content/content.js',
         './src/js/popup/popup.js',
         './src/js/options/options.js',
+        './src/js/options/donate-page.js',
     ],
     bundle: true,
     outdir,
