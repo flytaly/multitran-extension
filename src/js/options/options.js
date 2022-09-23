@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { addToContextMenu, removeFromContextMenu } from '../context-menu.js';
 import '../l10n.js';
 import { setLangSelectorListeners } from './lang-selector.js';
@@ -8,8 +7,10 @@ import { addLinkToBrowserStore } from '../store-link.js';
 import { clamp } from '../utils.js';
 import { defaultSizes } from '../constants.js';
 import pkg from '../../../package.json';
+import { renderParts } from './render-parts.js';
 
 async function init() {
+    await renderParts();
     const v = document.querySelector('[data-type="version"]');
     if (v) v.textContent = `v${pkg.version}`;
     setLangSelectorListeners();
