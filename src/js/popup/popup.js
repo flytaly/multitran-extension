@@ -1,13 +1,13 @@
 import browser from 'webextension-polyfill';
 import '../l10n.js';
 import { storage } from '../storage.js';
-import { throttle, clamp } from '../utils.js';
+import { throttle } from '../utils.js';
 import { addLinkToBrowserStore } from '../store-link.js';
 import { addKeyboardListener } from './keys.js';
 import { langIds } from '../constants.js';
 import { updateLangSelector, setLangSelectorListeners } from './lang-selector.js';
 import { onAddingTab, updateTabs } from './tabs.js';
-import { renderTranslation, getContainer } from './render-translation.js';
+import { renderTranslation } from './render-translation.js';
 
 /** @type {import('../storage').Options} */
 let options = {};
@@ -47,8 +47,6 @@ async function setListeners() {
     const form = document.getElementById('input-form');
     const input = form.querySelector('input');
     const optionButton = document.getElementById('optionsButton');
-
-    getContainer().style.minWidth = `${clamp(options.width, 400, 800)}px`;
 
     optionButton.addEventListener('click', async () => {
         await browser.runtime.openOptionsPage();

@@ -3,7 +3,7 @@ import { otherLangsPopupMarkup, popupMarkup } from '../content/content-popup.js'
 import '../l10n.js';
 import { multitranData } from '../translate-engine/multitran.js';
 import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
-import { applySizeVariables } from '../utils.js';
+import { applySizeVariables, clamp } from '../utils.js';
 
 export const getContainer = () => document.querySelector('#translation-container');
 
@@ -50,6 +50,10 @@ export async function renderTranslation(text, options, pairIndex = 0) {
             fontSize,
             width: 800, // clamp(options.width, 400, 800),
         });
+
+        const { width } = document.body.getBoundingClientRect();
+        getContainer().style.width = `${clamp(Math.max(options.width, width), 400, 800)}px`;
+
         if (fetchAudio) {
             const container = translationElem.querySelector('#pronunciation');
             container.textContent = 'fetching audio...';
