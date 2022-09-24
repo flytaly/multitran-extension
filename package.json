@@ -13,10 +13,11 @@
         "web-ext:chrome": "web-ext run --target chromium --source-dir extension",
         "dev:chrome": "cross-env NODE_ENV=development TARGET=chrome run-p d:prepare js styles:watch web-ext:chrome",
         "dev:ff": "cross-env NODE_ENV=development TARGET=firefox run-p d:prepare js styles:watch web-ext:ff",
-        "build:chrome": "cross-env TARGET=chrome run-s d:prepare js styles:build",
-        "build:ff": "cross-env TARGET=firefox run-s d:prepare js styles:build",
+        "build:chrome": "cross-env TARGET=chrome run-s clear d:prepare js styles:build",
+        "build:ff": "cross-env TARGET=firefox run-s clear d:prepare js styles:build",
         "buildzip:chrome": "run-s build:chrome zip",
         "buildzip:ff": "run-s build:ff zip",
+        "clear": "rimraf extension/dist",
         "zip": "web-ext build --source-dir extension",
         "lint": "eslint ./src",
         "lint:fix": "eslint --fix ./src",
@@ -27,7 +28,6 @@
     "license": "MPL-2.0",
     "dependencies": {
         "@babel/preset-env": "^7.19.1",
-        "@types/webextension-polyfill": "^0.9.1",
         "autoprefixer": "^10.4.12",
         "chokidar": "^3.5.3",
         "cross-env": "^7.0.3",
@@ -59,6 +59,8 @@
         }
     },
     "devDependencies": {
-        "@types/qrcode": "^1.5.0"
+        "@types/qrcode": "^1.5.0",
+        "@types/webextension-polyfill": "^0.9.1",
+        "rimraf": "^3.0.2"
     }
 }
