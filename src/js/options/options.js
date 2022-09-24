@@ -1,16 +1,15 @@
-/* eslint-disable no-param-reassign */
 import { addToContextMenu, removeFromContextMenu } from '../context-menu.js';
 import '../l10n.js';
-import { setLangSelectorListeners } from '../lang-selector.js';
+import { setLangSelectorListeners } from './lang-selector.js';
 import { storage } from '../storage.js';
 import { setShortcut } from './shortcuts.js';
-import { addLinkToBrowserStore } from '../store-link.js';
 import { clamp } from '../utils.js';
 import { defaultSizes } from '../constants.js';
+import { renderParts } from './render-parts.js';
 
 async function init() {
+    await renderParts();
     setLangSelectorListeners();
-    addLinkToBrowserStore();
     const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize, width, height } =
         await storage.getOptions();
     // multitran interface language

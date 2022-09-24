@@ -29,9 +29,18 @@
         "message": "Настройки перевода",
         "description": "Settings: translation settings block header"
     },
-    "settingLangPair": {
-        "message": "Направление перевода",
-        "description": "Settings: language pair"
+    "settingLangPairs": {
+        "message": "Языковая пара",
+        "description": "Settings: language pairs"
+    },
+    "settingLangPairsDesc": {
+        "message": "Пары работают в обе стороны. Можно сохранить 2 дополнительные пары для быстрого переключения. При переводе на веб страницах используется только первая пара."
+    },
+    "settingSetMainLangPair_title": {
+        "message": "выбрать как основную языковую пару"
+    },
+    "settingAddPair": {
+        "message": "добавить языковую пару"
     },
     "settingMultitranLang": {
         "message": "Язык интерфейса мультитрана",
@@ -106,13 +115,7 @@
         "description": "Settings page: Link to github"
     },
     "settingLinkSupport": {
-        "message": "Поддержать"
-    },
-    "settingLinkSupportWith": {
-        "message": "с"
-    },
-    "settingLinkSupportOr": {
-        "message": "или"
+        "message": "Поддержать разработку"
     },
     "settingLinkStore": {
         "message": "поставить оценку",
@@ -127,5 +130,26 @@
     },
     "tipUseArrows": {
         "message": "нажатие Ctrl + стрелка вниз/вверх перематывает к следующему/предыдущему блоку с переводом"
+    },
+    "donateBacktoOptions": {
+        "message": "настройки"
+    },
+    "donateHeader": {
+        "message": "Поддержать разработку расширения"
+    },
+    "donateSectionCrypto": {
+        "message": "Криптовалютой"
+    },
+    "donateSectionOther": {
+        "message": "Другое"
+    },
+    "donateNowPayments": {
+        "message": "любой криптовалютой через NOWPayments"
+    },
+    "donateNowPayments_title": {
+        "message": "поддержать криптовалютой через NOWPayments"
+    },
+    "donateCrypto": {
+        "message": "или напрямую на один из адресов ниже"
     }
 }

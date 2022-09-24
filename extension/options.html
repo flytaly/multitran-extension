@@ -5,219 +5,173 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="dist/styles.css" />
         <script src="dist/options/options.js" defer></script>
-        <title>Multitran Popup options</title>
+        <title>Multitran Popup | Options</title>
     </head>
 
     <body class="bg-slate-100 accent-blue-600 text-slate-900 pb-10">
         <div class="h-2 bg-blue-600"></div>
+        <header class="mx-auto max-w-4xl w-full px-2" data-path="header.html"></header>
         <div class="mx-auto max-w-4xl w-full px-2">
-            <!-- EXTENSION TITLE -->
-            <div class="flex my-3">
-                <!-- ICON -->
-                <div class="text-blue-500">
-                    <svg class="h-[50px] w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                        <g class="fill-current stroke-current">
-                            <path
-                                style="fill: none; stroke-miterlimit: 10; stroke-width: 6px"
-                                d="M11.33,110.75l.86-93.89A9.76,9.76,0,0,1,14.78,10a12.64,12.64,0,0,1,7.76-3.82h94.83l-.86,93.91H20.65c-5.27,1.39-9,5.71-9.32,10.67-.32,5.4,3.54,10.45,9.32,12H119.7"
-                            />
-                            <path
-                                d="M56.94,79.94,44.7,39.61h-.37q.86,10.3.86,16V79.94H30.85V24H52.4L64.89,63.7h.33L77.47,24H99.06v56H84.19V55.39c0-1.27,0-2.69.06-4.25s.22-5.37.55-11.45h-.37L72.35,79.94Z"
-                            />
-                        </g>
-                    </svg>
-                </div>
-                <!-- TITLE  -->
-                <div class="ml-2">
-                    <div class="text-xl font-bold capitalize text-blue-500" data-l10n-id="name">Multitran Popup</div>
-                    <div class="text-xs">
-                        <span data-l10n-id="settingsPageSubHeader">Browser extension for</span>
-                        <span> </span>
-                        <a href="https://multitran.com">multitran.com</a>
-                    </div>
-                </div>
-            </div>
-            <main class="text-base space-y-10">
-                <!-- EXTERNAL LINKS -->
-                <div class="flex items-center justify-center space-x-4 font-semibold text-sm group">
-                    <a
-                        class="inline-flex items-center capitalize space-x-1 text-slate-700"
-                        id="storeLink"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg
-                            class="w-4 h-5 text-blue-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true"
-                            role="img"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z"
-                                fill="currentColor"
-                            />
-                        </svg>
-                        <span data-l10n-id="settingLinkStore"></span>
-                    </a>
-                    <span>|</span>
-                    <a
-                        class="inline-flex items-center capitalize space-x-1"
-                        href="https://github.com/flytaly/multitran-extension"
-                        target="_blank"
-                    >
-                        <svg
-                            class="w-4 h-4 text-blue-600"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true"
-                            role="img"
-                            viewBox="0 0 24 24"
-                        >
-                            <g stroke-width="1.5" fill="none">
-                                <path
-                                    d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                                <path
-                                    d="M9 20.027c-3 .973-5.5 0-7-3"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </g>
-                        </svg>
-                        <span data-l10n-id="settingLinkGithub">GitHub</span>
-                    </a>
-                    <span>|</span>
-                    <div class="inline-flex items-center space-x-1">
-                        <svg
-                            class="w-4 h-4 text-red-200 group-hover:text-red-600 stroke-blue-600 group-hover:stroke-black"
-                            width="67"
-                            height="60"
-                            viewBox="0 0 67 60"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M31.9912 12.8793L33.4999 17.2697L35.0088 12.8793C36.1577 9.53545 38.0553 7.11242 40.6787 5.50162C43.3276 3.87522 46.8439 3 51.3378 3C57.5834 3 61.8872 6.81556 63.8439 12.0937C65.8196 17.4235 65.3183 24.0999 61.9124 29.3561C57.2533 36.5467 47.8413 45.7559 33.4999 57C19.1587 45.7559 9.74665 36.5467 5.08747 29.3561C1.68155 24.0999 1.18043 17.4235 3.15616 12.0937C5.11279 6.81556 9.41677 3 15.6622 3C20.1561 3 23.6724 3.87522 26.3213 5.50162C28.9447 7.11242 30.8423 9.53545 31.9912 12.8793Z"
-                                fill="currentColor"
-                            />
-                        </svg>
-                        <span data-l10n-id="settingLinkSupport">Support me</span>
-                        <span class="invisible group-hover:visible">
-                            <span class="font-normal" data-l10n-id="settingLinkSupportWith">with</span>
-                            <a href="https://qiwi.com/n/FLYTALY" target="_blank">Qiwi</a>
-                            <span class="font-normal" data-l10n-id="settingLinkSupportOr">or</span>
-                            <a
-                                href="https://yoomoney.ru/to/41001510227595
-                                "
-                                target="_blank"
-                                >ЮMoney</a
-                            >
-                        </span>
-                    </div>
-                </div>
-
+            <main class="text-base my-10 space-y-10">
                 <section>
                     <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingTranslationHeader">
                         Translation settings
                     </h2>
                     <div class="ml-8 grid grid-cols-1 md:grid-cols-[auto,max-content] gap-x-4 gap-y-6 items-start">
-                        <label for="l1" class="font-medium" data-l10n-id="settingLangPair">Language pair</label>
-                        <div class="flex space-x-2 items-center">
-                            <select id="l1" class="border border-gray-700 px-3 rounded-sm">
-                                <option value="10">Arabic</option>
-                                <option value="68">Basque</option>
-                                <option value="15">Bulgarian</option>
-                                <option value="53">Catalan</option>
-                                <option value="17">Chinese</option>
-                                <option value="98">Chinese Taiwan</option>
-                                <option value="97">Chinese simplified</option>
-                                <option value="8">Croatian</option>
-                                <option value="16">Czech</option>
-                                <option value="22">Danish</option>
-                                <option value="1" selected>English</option>
-                                <option value="26">Estonian</option>
-                                <option value="36">Finnish</option>
-                                <option value="4">French</option>
-                                <option value="3">German</option>
-                                <option value="38">Greek</option>
-                                <option value="42">Hungarian</option>
-                                <option value="49">Irish</option>
-                                <option value="23">Italian</option>
-                                <option value="28">Japanese</option>
-                                <option value="39">Korean</option>
-                                <option value="37">Latin</option>
-                                <option value="27">Latvian</option>
-                                <option value="12">Lithuanian</option>
-                                <option value="78">Maltese</option>
-                                <option value="30">Norwegian Bokmål</option>
-                                <option value="14">Polish</option>
-                                <option value="11">Portuguese</option>
-                                <option value="13">Romanian</option>
-                                <option value="2">Russian</option>
-                                <option value="60">Slovak</option>
-                                <option value="67">Slovenian</option>
-                                <option value="5">Spanish</option>
-                                <option value="29">Swedish</option>
-                                <option value="32">Turkish</option>
-                                <option value="33">Ukrainian</option>
-                                <option value="24">Verklaren op eer</option>
-                            </select>
-                            <button id="lang-swap" class="px-3 rounded-sm">⇄</button>
-                            <select id="l2" class="border border-gray-700 px-3 rounded-sm">
-                                <option value="10">Arabic</option>
-                                <option value="68">Basque</option>
-                                <option value="15">Bulgarian</option>
-                                <option value="53">Catalan</option>
-                                <option value="17">Chinese</option>
-                                <option value="98">Chinese Taiwan</option>
-                                <option value="97">Chinese simplified</option>
-                                <option value="8">Croatian</option>
-                                <option value="16">Czech</option>
-                                <option value="22">Danish</option>
-                                <option value="1">English</option>
-                                <option value="26">Estonian</option>
-                                <option value="36">Finnish</option>
-                                <option value="4">French</option>
-                                <option value="3">German</option>
-                                <option value="38">Greek</option>
-                                <option value="42">Hungarian</option>
-                                <option value="49">Irish</option>
-                                <option value="23">Italian</option>
-                                <option value="28">Japanese</option>
-                                <option value="39">Korean</option>
-                                <option value="37">Latin</option>
-                                <option value="27">Latvian</option>
-                                <option value="12">Lithuanian</option>
-                                <option value="78">Maltese</option>
-                                <option value="30">Norwegian Bokmål</option>
-                                <option value="14">Polish</option>
-                                <option value="11">Portuguese</option>
-                                <option value="13">Romanian</option>
-                                <option value="2" selected>Russian</option>
-                                <option value="60">Slovak</option>
-                                <option value="67">Slovenian</option>
-                                <option value="5">Spanish</option>
-                                <option value="29">Swedish</option>
-                                <option value="32">Turkish</option>
-                                <option value="33">Ukrainian</option>
-                                <option value="24">Verklaren op eer</option>
-                            </select>
+                        <label for="l1">
+                            <div class="font-medium" data-l10n-id="settingLangPairs">Language pairs</div>
+                            <div class="text-sm mt-1" data-l10n-id="settingLangPairsDesc"></div>
+                        </label>
+
+                        <div class="flex flex-col gap-2 items-center">
+                            <div data-type="lang-pairs" class="flex flex-col gap-2">
+                                <template id="lang-selector-tmp">
+                                    <div class="flex space-x-2 items-center" data-type="pair">
+                                        <select name="l1" class="border border-gray-700 px-3 rounded-sm">
+                                            <option value="10">Arabic</option>
+                                            <option value="15">Bulgarian</option>
+                                            <option value="17">Chinese</option>
+                                            <option value="8">Croatian</option>
+                                            <option value="16">Czech</option>
+                                            <option value="22">Danish</option>
+                                            <option value="24">Dutch</option>
+                                            <option value="1" selected>English</option>
+                                            <option value="26">Estonian</option>
+                                            <option value="36">Finnish</option>
+                                            <option value="4">French</option>
+                                            <option value="3">German</option>
+                                            <option value="38">Greek</option>
+                                            <option value="42">Hungarian</option>
+                                            <option value="49">Irish</option>
+                                            <option value="23">Italian</option>
+                                            <option value="28">Japanese</option>
+                                            <option value="39">Korean</option>
+                                            <option value="37">Latin</option>
+                                            <option value="27">Latvian</option>
+                                            <option value="12">Lithuanian</option>
+                                            <option value="78">Maltese</option>
+                                            <option value="30">Norwegian Bokmål</option>
+                                            <option value="14">Polish</option>
+                                            <option value="11">Portuguese</option>
+                                            <option value="13">Romanian</option>
+                                            <option value="2">Russian</option>
+                                            <option value="60">Slovak</option>
+                                            <option value="67">Slovenian</option>
+                                            <option value="5">Spanish</option>
+                                            <option value="29">Swedish</option>
+                                            <option value="32">Turkish</option>
+                                            <option value="33">Ukrainian</option>
+                                        </select>
+                                        <button name="lang-swap" class="px-3 rounded-sm">⇄</button>
+                                        <select name="l2" class="border border-gray-700 px-3 rounded-sm">
+                                            <option value="10">Arabic</option>
+                                            <option value="15">Bulgarian</option>
+                                            <option value="17">Chinese</option>
+                                            <option value="8">Croatian</option>
+                                            <option value="16">Czech</option>
+                                            <option value="22">Danish</option>
+                                            <option value="24">Dutch</option>
+                                            <option value="1">English</option>
+                                            <option value="26">Estonian</option>
+                                            <option value="36">Finnish</option>
+                                            <option value="4">French</option>
+                                            <option value="3">German</option>
+                                            <option value="38">Greek</option>
+                                            <option value="42">Hungarian</option>
+                                            <option value="49">Irish</option>
+                                            <option value="23">Italian</option>
+                                            <option value="28">Japanese</option>
+                                            <option value="39">Korean</option>
+                                            <option value="37">Latin</option>
+                                            <option value="27">Latvian</option>
+                                            <option value="12">Lithuanian</option>
+                                            <option value="78">Maltese</option>
+                                            <option value="30">Norwegian Bokmål</option>
+                                            <option value="14">Polish</option>
+                                            <option value="11">Portuguese</option>
+                                            <option value="13">Romanian</option>
+                                            <option value="2" selected>Russian</option>
+                                            <option value="60">Slovak</option>
+                                            <option value="67">Slovenian</option>
+                                            <option value="5">Spanish</option>
+                                            <option value="29">Swedish</option>
+                                            <option value="32">Turkish</option>
+                                            <option value="33">Ukrainian</option>
+                                        </select>
+                                        <button
+                                            name="make-main"
+                                            class="hover:text-blue-600 active:text-blue-500"
+                                            data-l10n-id="settingSetMainLangPair"
+                                            data-l10n-attrs="title"
+                                            data-l10n-nocontent="true"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="1em"
+                                                height="1em"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <rect x="0" y="0" width="16" height="16" fill="none" stroke="none" />
+                                                <path
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="1.5"
+                                                    d="m7.75 5.75l-3-3l-3 3m3 7.5V2.75m9.5 7.5l-3 3l-3-3m3-7.5v10.5"
+                                                />
+                                            </svg>
+                                        </button>
+                                        <button name="remove" class="hover:text-red-600 active:text-red-500">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="1em"
+                                                height="1em"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                viewBox="0 0 1024 1024"
+                                            >
+                                                <path
+                                                    fill="currentColor"
+                                                    d="M160 256H96a32 32 0 0 1 0-64h256V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64h-64v672a32 32 0 0 1-32 32H192a32 32 0 0 1-32-32V256zm448-64v-64H416v64h192zM224 896h576V256H224v640zm192-128a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32zm192 0a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32z"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </template>
+                            </div>
+                            <button
+                                type="button"
+                                id="add-pair"
+                                class="group flex gap-x-1 min-w-[10rem] max-w-max mt-2 px-3 rounded-sm items-center text-blue-600 hover:text-blue-500 active:text-blue-400"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1em"
+                                    height="1em"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 12 12"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M6.5 1.75a.75.75 0 0 0-1.5 0V5H1.75a.75.75 0 0 0 0 1.5H5v3.25a.75.75 0 0 0 1.5 0V6.5h3.25a.75.75 0 0 0 0-1.5H6.5V1.75Z"
+                                    />
+                                </svg>
+                                <span data-l10n-id="settingAddPair">add</span>
+                            </button>
                         </div>
+
                         <label for="mtLang">
                             <div class="font-medium" data-l10n-id="settingMultitranLang">Multitran language</div>
-                            <div class="text-sm" data-l10n-id="settingMultitranLangDesc"></div>
+                            <div class="text-sm mt-1" data-l10n-id="settingMultitranLangDesc"></div>
                         </label>
                         <select id="mtLang" class="border border-gray-700 px-3 w-max rounded-sm">
                             <option value="1">English</option>
-                            <option value="2">Russian</option>
-                            <option value="3">German</option>
-                            <option value="33">Ukrainian</option>
+                            <option value="2">Русский</option>
+                            <option value="3">Deutsch</option>
+                            <option value="5">Español</option>
+                            <option value="17">中文</option>
+                            <option value="33">Українська</option>
                         </select>
                     </div>
                 </section>

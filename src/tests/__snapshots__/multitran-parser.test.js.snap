@@ -712,8 +712,8 @@ exports[`Parser should match snapshot 1`] = `
       "type": "translation",
     },
   ],
-  "l1": null,
-  "l2": null,
+  "l1": "1",
+  "l2": "2",
 }
 `;
 
@@ -801,7 +801,7 @@ exports[`Parser should match snapshot 2 1`] = `
       "type": "translation",
     },
   ],
-  "l1": null,
-  "l2": null,
+  "l1": "1",
+  "l2": "2",
 }
 `;

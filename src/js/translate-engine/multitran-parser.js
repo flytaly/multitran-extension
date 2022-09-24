@@ -143,8 +143,8 @@ export function parser(text) {
         }
     });
 
-    const l1Input = html.getElementById('l1');
-    const l2Input = html.getElementById('l2');
+    const l1Input = html.getElementById('ll1');
+    const l2Input = html.getElementById('ll2');
     const l1 = l1Input && l1Input.value;
     const l2 = l2Input && l2Input.value;
     return { data, l1, l2 };

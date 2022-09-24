@@ -40,10 +40,10 @@ async function getParsedData(url) {
  * @param {string} text
  * @param {string} langFrom
  * @param {string} langTo
- * @param {string} interfaceLang
+ * @param {string|number} interfaceLang
  */
 export async function multitranData(text, langFrom, langTo, interfaceLang = 1) {
-    const parsed = await getParsedData(composeURL(text, langFrom, langTo, interfaceLang));
+    let parsed = await getParsedData(composeURL(text, langFrom, langTo, interfaceLang));
     const { otherLang } = parsed;
     const hasReverseTranslation =
         otherLang &&
@@ -54,7 +54,10 @@ export async function multitranData(text, langFrom, langTo, interfaceLang = 1) {
         });
 
     if (hasReverseTranslation) {
-        return getParsedData(composeURL(text, langTo, langFrom, interfaceLang));
+        parsed = getParsedData(composeURL(text, langTo, langFrom, interfaceLang));
+        [langFrom, langTo] = [langTo, langFrom];
     }
+    parsed.l1 = parsed.l1 || langFrom;
+    parsed.l2 = parsed.l2 || langTo;
     return parsed;
 }

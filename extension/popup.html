@@ -10,9 +10,31 @@
     <body
         class="flex flex-col min-w-[400px] min-h-[150px] text-slate-900 text-sm font-sans overflow-x-hidden overflow-y-auto accent-blue-600"
     >
-        <div id="top-bar" class="h-1 bg-blue-600"></div>
+        <div id="top-bar" class="h-px bg-blue-800"></div>
+        <div class="flex bg-blue-800 whitespace-nowrap">
+            <div id="tabs" class="flex w-max text-sm">
+                <!-- <button class="tab tab-active"></button> -->
+            </div>
+            <button id="add-pair" class="ml-2 text-xl text-slate-200 hover:text-slate-50 active:text-blue-400">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                >
+                    <rect x="0" y="0" width="16" height="16" fill="none" stroke="none" />
+                    <g fill="currentColor">
+                        <path
+                            d="M8 5a.5.5 0 0 1 .5.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2A.5.5 0 0 1 8 5Z"
+                        />
+                        <path d="M2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8Zm6-5a5 5 0 1 0 0 10A5 5 0 0 0 8 3Z" />
+                    </g>
+                </svg>
+            </button>
+        </div>
         <div class="p-2">
-            <header class="flex items-center justify-between mb-2">
+            <div class="flex items-center justify-between mb-2">
                 <a class="text-blue-600 hover:text-blue-500" href="https://multitran.com/" target="_blank">
                     <svg class="h-8 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                         <g class="fill-current stroke-current">
@@ -26,18 +48,15 @@
                         </g>
                     </svg>
                 </a>
-                <div class="lang-select">
+                <div data-type="lang-selector">
                     <select class="border border-black rounded-sm" id="l1">
                         <option value="10">Arabic</option>
-                        <option value="68">Basque</option>
                         <option value="15">Bulgarian</option>
-                        <option value="53">Catalan</option>
                         <option value="17">Chinese</option>
-                        <option value="98">Chinese Taiwan</option>
-                        <option value="97">Chinese simplified</option>
                         <option value="8">Croatian</option>
                         <option value="16">Czech</option>
                         <option value="22">Danish</option>
+                        <option value="24">Dutch</option>
                         <option value="1" selected>English</option>
                         <option value="26">Estonian</option>
                         <option value="36">Finnish</option>
@@ -64,20 +83,16 @@
                         <option value="29">Swedish</option>
                         <option value="32">Turkish</option>
                         <option value="33">Ukrainian</option>
-                        <option value="24">Verklaren op eer</option>
                     </select>
                     <a id="lang-swap" href="#">⇄</a>
                     <select class="border border-black rounded-sm" id="l2">
                         <option value="10">Arabic</option>
-                        <option value="68">Basque</option>
                         <option value="15">Bulgarian</option>
-                        <option value="53">Catalan</option>
                         <option value="17">Chinese</option>
-                        <option value="98">Chinese Taiwan</option>
-                        <option value="97">Chinese simplified</option>
                         <option value="8">Croatian</option>
                         <option value="16">Czech</option>
                         <option value="22">Danish</option>
+                        <option value="24">Dutch</option>
                         <option value="1">English</option>
                         <option value="26">Estonian</option>
                         <option value="36">Finnish</option>
@@ -104,7 +119,6 @@
                         <option value="29">Swedish</option>
                         <option value="32">Turkish</option>
                         <option value="33">Ukrainian</option>
-                        <option value="24">Verklaren op eer</option>
                     </select>
                 </div>
                 <button
@@ -121,7 +135,7 @@
                         ></path>
                     </svg>
                 </button>
-            </header>
+            </div>
             <form
                 class="flex w-full bg-white ring-1 ring-slate-500 focus-within:ring-2 focus-within:ring-blue-700 rounded-sm border-0"
                 id="input-form"
@@ -150,11 +164,11 @@
         <div id="translation-container"></div>
 
         <footer class="mt-auto mb-1 mr-4 text-xs text-right font-normal">
+            <a class="text-slate-600" href="donate.html" target="_blank">Donate</a>
+            |
             <a class="text-slate-600" id="storeLink" href="#" target="_blank">Rating</a>
             |
             <a class="text-slate-600" href="https://github.com/flytaly/multitran-extension" target="_blank">GitHub</a>
-            |
-            <a class="text-slate-600" href="https://qiwi.com/n/FLYTALY" target="_blank">Qiwi</a>
         </footer>
     </body>
 </html>

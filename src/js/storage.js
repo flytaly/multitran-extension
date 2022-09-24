@@ -5,8 +5,8 @@ import { defaultSizes, langIds } from './constants.js';
  * @typedef {import("./options/shortcuts.js").ShortcutKeys} ShortcutKeys
  *
  * @typedef {Object} Options
- * @property {string} [l1] - "from" language
- * @property {string} [l2] - "to" language
+ * @property {[string, string][]} [pairs] - additional translation pairs
+ * @property {number} [currentPair] - selected language pair index
  * @property {string} [multitranLang] - multitran interface language
  * @property {number} [fontSize] - base font size
  * @property {number} [width] - popup max width
@@ -57,10 +57,10 @@ export const storage = {
     async getOptions() {
         /** @type {{options: Options}} */
         const { options = {} } = await browser.storage.local.get('options');
-        if (!options.l1) options.l1 = langIds.English;
-        if (!options.l2) options.l2 = langIds.Russian;
+        if (!options.pairs || !options.pairs.length) options.pairs = [[langIds.English, langIds.Russian]];
+        if (options.currentPair === undefined) options.currentPair = 0;
         if (!options.multitranLang) options.multitranLang = langIds.English;
-        if (options.doubleClick === undefined) options.doubleClick = true;
+        if (options.doubleClick === undefined) options.doubleClick = false;
         if (options.select === undefined) options.select = true;
         if (options.withKey === undefined) options.withKey = true;
         if (options.fetchAudio === undefined) options.fetchAudio = true;
@@ -77,5 +77,13 @@ export const storage = {
                 additionalKey: null,
             };
         return options;
+    },
+
+    async migrateToV2() {
+        const { options = {} } = await browser.storage.local.get('options');
+        const l1 = options.l1 || langIds.English;
+        const l2 = options.l2 || langIds.Russian;
+        options.pairs = [[l1, l2]];
+        await browser.storage.local.set({ options });
     },
 };

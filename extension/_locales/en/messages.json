@@ -29,9 +29,18 @@
         "message": "Translation settings",
         "description": "Settings: translation settings block header"
     },
-    "settingLangPair": {
-        "message": "Language pair",
-        "description": "Settings: language pair"
+    "settingLangPairs": {
+        "message": "Language pairs",
+        "description": "Settings: language pairs"
+    },
+    "settingLangPairsDesc": {
+        "message": "Pairs work in both directions. You can store 2 additional pairs for quick access. Only the first pair is used for translation on web pages."
+    },
+    "settingSetMainLangPair_title": {
+        "message": "select as a main language pair"
+    },
+    "settingAddPair": {
+        "message": "add a language pair"
     },
     "settingMultitranLang": {
         "message": "Multitran interface language",
@@ -106,13 +115,7 @@
         "description": "Settings page: Link to github"
     },
     "settingLinkSupport": {
-        "message": "Support me"
-    },
-    "settingLinkSupportWith": {
-        "message": "with"
-    },
-    "settingLinkSupportOr": {
-        "message": "or"
+        "message": "Donate"
     },
     "settingLinkStore": {
         "message": "rate extension",
@@ -127,5 +130,26 @@
     },
     "tipUseArrows": {
         "message": "pressing Ctrl + Arrow Down/Up scrolls to the next/previous translation block"
+    },
+    "donateBacktoOptions": {
+        "message": "options"
+    },
+    "donateHeader": {
+        "message": "Support extension’s developing and maintenance"
+    },
+    "donateSectionCrypto": {
+        "message": "Cryptocurrency"
+    },
+    "donateSectionOther": {
+        "message": "Other methods"
+    },
+    "donateNowPayments": {
+        "message": "in any cryptocurrency via NOWPayments"
+    },
+    "donateNowPayments_title": {
+        "message": "donate in any cryptocurrency via NOWPayments"
+    },
+    "donateCrypto": {
+        "message": "or directly to the addresses:"
     }
 }

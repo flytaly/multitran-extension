@@ -6,6 +6,18 @@
     @apply focus-visible:outline-blue-700;
 }
 
+@layer components {
+    .tab {
+        @apply py-1 px-2 text-center select-none max-w-[12rem] overflow-hidden text-ellipsis
+               border border-b-0 border-transparent rounded-t-md 
+               bg-transparent hover:bg-slate-200 
+               text-slate-300 hover:text-slate-900;
+    }
+    .tab-active {
+        @apply border-blue-500 bg-slate-50 text-slate-900;
+    }
+}
+
 :root,
 .root {
     --base-spacing: 16px;
@@ -15,6 +27,7 @@
 
     line-height: normal;
     letter-spacing: normal;
+    text-align: initial;
 }
 
 body {

@@ -7,6 +7,7 @@ module.exports = {
     env: {
         browser: true,
         jest: true,
+        webextensions: true,
     },
     globals: {
         TARGET: true,
@@ -34,5 +35,6 @@ module.exports = {
         'implicit-arrow-linebreak': 'off',
         'no-param-reassign': 'off',
         'consistent-return': 'off',
+        radix: 'off',
     },
 };
