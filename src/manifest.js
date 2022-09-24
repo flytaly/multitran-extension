@@ -73,7 +73,7 @@ function browserSpecific() {
             manifest_version: 2,
             applications: {
                 gecko: {
-                    strict_min_version: '101',
+                    strict_min_version: '101.0',
                     id: 'multitran@flytaly',
                 },
             },
