@@ -40,6 +40,6 @@ export function setLangSelectorListeners(pairs, pairIndex, onChange) {
  * */
 export function updateLangSelector(pairs, pairIndex) {
     pairIndex = pairIndex < pairs.length ? pairIndex : 0;
-    if (pairIndex >= pairs.length) [selector.l1Elem().value, selector.l2Elem().value] = pairs[pairIndex];
+    [selector.l1Elem().value, selector.l2Elem().value] = pairs[pairIndex];
     selector.container().dataset.id = pairIndex;
 }
