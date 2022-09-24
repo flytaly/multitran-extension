@@ -7,7 +7,7 @@ import { addKeyboardListener } from './keys.js';
 import { langIds } from '../constants.js';
 import { updateLangSelector, setLangSelectorListeners } from './lang-selector.js';
 import { onAddingTab, updateTabs } from './tabs.js';
-import { renderTranslation } from './render-translation.js';
+import { renderTranslation, setContainerWidth } from './render-translation.js';
 
 /** @type {import('../storage').Options} */
 let options = {};
@@ -52,6 +52,8 @@ async function setListeners() {
         await browser.runtime.openOptionsPage();
         window.close();
     });
+
+    setContainerWidth(options.width)
 
     // prevent spamming requests by holding Enter
     const throttledRender = throttle(() => {

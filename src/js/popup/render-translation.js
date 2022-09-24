@@ -14,6 +14,11 @@ function removePrevTranslation() {
     prevRenderElem.parentNode.removeChild(prevRenderElem);
 }
 
+export function setContainerWidth(width) {
+    const { width: bodyWidth } = document.body.getBoundingClientRect();
+    getContainer().style.width = `${clamp(Math.max(width, bodyWidth), 400, 800)}px`;
+}
+
 /**
  * @param {string} text
  * @param {import('../storage.js').Options} options
@@ -51,8 +56,7 @@ export async function renderTranslation(text, options, pairIndex = 0) {
             width: 800, // clamp(options.width, 400, 800),
         });
 
-        const { width } = document.body.getBoundingClientRect();
-        getContainer().style.width = `${clamp(Math.max(options.width, width), 400, 800)}px`;
+        setContainerWidth(options.width)
 
         if (fetchAudio) {
             const container = translationElem.querySelector('#pronunciation');
