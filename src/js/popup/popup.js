@@ -20,6 +20,9 @@ function addPair() {
 }
 
 const onTabChange = (tabIndex) => {
+    /** @type {HTMLInputElement} */
+    const input = document.querySelector('#input-form input');
+    input.focus();
     options.currentPair = tabIndex;
     storage.saveOptions(options);
     /* updateLangSelector(options.pairs, options.currentPair); */
@@ -53,7 +56,7 @@ async function setListeners() {
         window.close();
     });
 
-    setContainerWidth(options.width)
+    setContainerWidth(options.width);
 
     // prevent spamming requests by holding Enter
     const throttledRender = throttle(() => {
