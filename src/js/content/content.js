@@ -66,38 +66,53 @@ async function processSelection(target) {
     sending.then(handleResponse, handleError);
 }
 
-state.onOptionsChange = async () => {
-    function mouseupHandler(e) {
-        const launch = () => setTimeout(() => processSelection(e.target), 10);
-        if (state.doubleClick && e.detail === 2) {
-            launch();
-        } else {
-            if (!state.select || (state.withKey && !state.areKeysPressed)) return;
-            launch();
-        }
+/**
+ * Checks state of modifier keys that supposed to be pressed.
+ * @arg {KeyboardEvent|MouseEvent} e */
+function modifierState(e) {
+    if (state.keys.altKey && !e.altKey) return false;
+    if (state.keys.ctrlKey && !e.ctrlKey) return false;
+    if (state.keys.metaKey && !e.metaKey) return false;
+    if (state.keys.shiftKey && !e.shiftKey) return false;
+    return true;
+}
+
+/** @arg {MouseEvent} e */
+function mouseupHandler(e) {
+    const launch = () => setTimeout(() => processSelection(e.target), 10);
+    if (state.doubleClick && e.detail === 2) {
+        return launch();
     }
 
-    function keydownHandler(e) {
-        let areKeysPressed = true;
-        if (
-            (state.keys.altKey && !e.altKey) ||
-            (state.keys.ctrlKey && !e.ctrlKey) ||
-            (state.keys.metaKey && !e.metaKey) ||
-            (state.keys.shiftKey && !e.shiftKey) ||
-            (state.keys.additionalKey && e.code !== state.keys.additionalKey)
-        ) {
-            areKeysPressed = false;
-        }
-        if (areKeysPressed) {
-            state.areKeysPressed = areKeysPressed;
-            processSelection(e.target);
-        }
+    if (!state.select) return;
+
+    if (!state.withKey) {
+        return launch();
     }
 
-    function keyupHandler() {
+    if (!modifierState(e)) {
+        // Check modifier keys to prevent some bugs when keyup events didn't trigger.
+        // It's imposible to check additional key though.
         state.areKeysPressed = false;
     }
+    if (state.areKeysPressed) launch();
+}
 
+/** @arg {KeyboardEvent} e */
+function keydownHandler(e) {
+    if (!modifierState(e) || (state.keys.additionalKey && e.code !== state.keys.additionalKey)) {
+        state.areKeysPressed = false;
+        return;
+    }
+    state.areKeysPressed = true;
+    processSelection(e.target);
+}
+
+function keyupHandler() {
+    state.areKeysPressed = false;
+}
+
+state.onOptionsChange = async () => {
     function removeHandlers() {
         document.body.removeEventListener('mouseup', mouseupHandler);
         document.body.removeEventListener('keydown', keydownHandler);
