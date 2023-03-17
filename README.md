@@ -6,7 +6,10 @@
 ![Mozilla Add-on](https://img.shields.io/amo/v/multitran) ![Mozilla Add-on](https://img.shields.io/amo/stars/multitran) ![Mozilla Add-on](https://img.shields.io/amo/users/multitran)
 
 [ ![chrome.google.com/](https://i.imgur.com/unvdmLG.png)](https://chrome.google.com/webstore/detail/multitran-popup/fbncpmcdhgdolipfkpeckjajpgjdpehj)
-[ ![addons.mozilla.org/](https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/en-US/firefox/addon/multitran/)
+[ ![addons.mozilla.org/](https://user-images.githubusercontent.com/1577569/225926070-baa9ed48-841c-4ce7-bf70-557f848eed23.png)](https://addons.mozilla.org/en-US/firefox/addon/multitran/)
+
+
+
 
 Browser extension for translating words on webpages and in the toolbar popup using [multitran.com](https://www.multitran.com/) dictionary.
 
