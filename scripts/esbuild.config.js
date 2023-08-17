@@ -20,11 +20,16 @@ async function startEsbuild() {
     });
 
     log(`esbuild`, `Built background and content scripts for ${TARGET}`);
-    if (IS_DEV) {
-        log('esbuild', `watch for changes`);
-        await ctx.watch();
+
+    await ctx.rebuild();
+
+    if (!IS_DEV) {
+        await ctx.dispose();
+        return;
     }
-    /* await ctx.dispose(); */
+
+    log('esbuild', `watch for changes`);
+    await ctx.watch();
 }
 
 startEsbuild();
