@@ -1,8 +1,8 @@
 import { addAudioElements } from '../audio.js';
 import { otherLangsPopupMarkup, popupMarkup } from '../content/content-popup.js';
 import '../l10n.js';
-import { multitranData } from '../translate-engine/multitran.js';
-import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
+import { multitranData } from '../engine/multitran.js';
+import { getAudioUrls } from '../engine/wiktionary-voice.js';
 import { applySizeVariables, clamp } from '../utils.js';
 
 export const getContainer = () => document.querySelector('#translation-container');

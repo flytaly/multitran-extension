@@ -3,7 +3,7 @@ import { getTemplate } from './templates.js';
 
 /**
  * @param {HTMLElement} container
- * @param {(import('./translate-engine/wiktionary-voice').AudioFile)[]} audioFiles
+ * @param {(import('./engine/wiktionary-voice').AudioFile)[]} audioFiles
  */
 export const addAudioElements = async (container, audioFiles) => {
     const flags = [];

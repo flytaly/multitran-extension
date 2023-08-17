@@ -1,7 +1,8 @@
-import { testFiles } from './mocks/index.js';
+import { jest } from '@jest/globals';
 import { langIds } from '../js/constants.js';
-import { parser } from '../js/translate-engine/multitran-parser.js';
-import { multitranData } from '../js/translate-engine/multitran.js';
+import { parser } from '../js/engine/multitran-parser.js';
+import { multitranData } from '../js/engine/multitran.js';
+import { testFiles } from './mocks/index.js';
 
 const { notFound, prescriptionRU, prescriptionEN, otherLangs } = testFiles;
 

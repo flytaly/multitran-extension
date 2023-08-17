@@ -1,15 +1,15 @@
 /* eslint-disable no-use-before-define */
 import browser from 'webextension-polyfill';
 import { state } from './state.js';
-import { parser } from '../translate-engine/multitran-parser.js';
+import { parser } from '../engine/multitran-parser.js';
 import { applySizeVariables, idToLangMap } from '../utils.js';
 import { addAudioElements } from '../audio.js';
 import { getTemplate } from '../templates.js';
-import { composeURL } from '../translate-engine/multitran.js';
+import { composeURL } from '../engine/multitran.js';
 import { addKeyboardListener } from '../popup/keys.js';
 
 /**
- * @typedef { import("../translate-engine/multitran-parser").MtGroup } MtGroup
+ * @typedef { import("../engine/multitran-parser").MtGroup } MtGroup
  * @param {Array<MtGroup>} data
  * @param {string} text
  * @param {string} l1Code

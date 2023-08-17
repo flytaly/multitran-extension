@@ -1,7 +1,7 @@
 import browser from 'webextension-polyfill';
-import { composeURL, fetchPage } from '../translate-engine/multitran.js';
+import { composeURL, fetchPage } from '../engine/multitran.js';
 import { storage } from '../storage.js';
-import { getAudioUrls } from '../translate-engine/wiktionary-voice.js';
+import { getAudioUrls } from '../engine/wiktionary-voice.js';
 import { addToContextMenu, contextMenuClickHandler } from '../context-menu.js';
 import { IS_DEV } from '../constants.js';
 
