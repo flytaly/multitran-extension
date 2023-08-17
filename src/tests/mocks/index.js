@@ -1,6 +1,8 @@
-import { readFileSync } from 'fs';
-import path from 'path';
+import { readFileSync } from 'node:fs';
+import path, { dirname } from 'node:path';
+import { fileURLToPath } from 'url';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const r = (p) => path.resolve(__dirname, p);
 
 export const testFiles = {
