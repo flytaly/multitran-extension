@@ -1,7 +1,8 @@
 const spacing = (n) => `calc(${n / 4}*var(--base-spacing))`;
 const fontSize = (n) => `calc(${n}*var(--font-size))`;
 
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
     content: ['./src/**/*.{html,js,css}', './extension/**/*.html'],
     theme: {
         fill: {
