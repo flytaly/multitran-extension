@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { readFileSync } from 'node:fs';
 import path, { dirname } from 'node:path';
 import { fileURLToPath } from 'url';
