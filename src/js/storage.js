@@ -72,10 +72,10 @@ export const storage = {
         if (!options.keys)
             options.keys = {
                 altKey: false,
-                ctrlKey: true,
+                ctrlKey: false,
                 metaKey: false,
                 shiftKey: false,
-                additionalKey: null,
+                additionalKey: 'F2',
             };
         if (options.allPairs === undefined) options.allPairs = false;
         return options;
