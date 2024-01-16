@@ -23,19 +23,19 @@ export const addAudioElements = async (container, audioFiles) => {
                 // new Audio(url) is blocked in FF by Content Security Policy
                 const audio = document.createElement('audio');
                 audio.onloadstart = () => {
-                    img.style.opacity = '0.4' 
+                    img.style.opacity = '0.4';
                     spinner?.classList.remove('hidden');
                 };
                 audio.onloadeddata = () => {
-                    img.style.opacity = '1' 
+                    img.style.opacity = '1';
                     spinner?.classList.add('hidden');
-                }
+                };
                 audio.onplay = () => {
-                    flagButton.disabled = true
-                }
+                    flagButton.disabled = true;
+                };
                 audio.onended = () => {
-                    flagButton.disabled = false
-                }
+                    flagButton.disabled = false;
+                };
                 audio.src = file.url;
                 audio.play();
             };

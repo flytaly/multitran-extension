@@ -8,40 +8,40 @@
         <title>Multitran Popup | Options</title>
     </head>
 
-    <body class="bg-slate-100 accent-blue-600 text-slate-900 pb-10 flex flex-col">
+    <body class="flex flex-col bg-slate-100 pb-10 text-slate-900 accent-blue-600">
         <div class="h-2 bg-blue-600"></div>
-        <div class="max-w-5xl mx-auto">
+        <div class="mx-auto max-w-5xl">
             <header class="w-full px-2" data-path="header.html"></header>
             <div class="w-full px-2">
-                <main class="text-base my-10 space-y-10">
+                <main class="my-10 space-y-10 text-base">
                     <section>
-                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingTranslationHeader">
+                        <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="settingTranslationHeader">
                             Translation settings
                         </h2>
                         <div
-                            class="ml-8 grid grid-cols-1 lg:grid-cols-[auto,minmax(min-content,max-content)] gap-x-4 gap-y-6 items-start"
+                            class="ml-8 grid grid-cols-1 items-start gap-x-4 gap-y-6 lg:grid-cols-[auto,minmax(min-content,max-content)]"
                         >
                             <label for="l1">
                                 <div class="font-medium" data-l10n-id="settingLangPairs">Language pairs</div>
-                                <div class="text-sm mt-1" data-l10n-id="settingLangPairsDesc"></div>
+                                <div class="mt-1 text-sm" data-l10n-id="settingLangPairsDesc"></div>
                             </label>
 
-                            <div class="flex flex-col gap-2 items-center">
+                            <div class="flex flex-col items-center gap-2">
                                 <div data-type="lang-pairs" class="flex flex-col gap-2">
                                     <template id="lang-selector-tmp">
                                         <div data-type="pair" class="whitespace-nowrap">
-                                            <span class="inline-flex gap-2 items-center">
+                                            <span class="inline-flex items-center gap-2">
                                                 <select
                                                     name="l1"
-                                                    class="border border-gray-700 px-3 rounded-sm"
+                                                    class="rounded-sm border border-gray-700 px-3"
                                                 ></select>
-                                                <button name="lang-swap" class="px-3 rounded-sm">⇄</button>
+                                                <button name="lang-swap" class="rounded-sm px-3">⇄</button>
                                                 <select
                                                     name="l2"
-                                                    class="border border-gray-700 px-3 rounded-sm"
+                                                    class="rounded-sm border border-gray-700 px-3"
                                                 ></select>
                                             </span>
-                                            <span class="ml-2 inline-flex space-x-2 items-center">
+                                            <span class="ml-2 inline-flex items-center space-x-2">
                                                 <button
                                                     name="make-main"
                                                     class="hover:text-blue-600 active:text-blue-500"
@@ -95,7 +95,7 @@
                                 <button
                                     type="button"
                                     id="add-pair"
-                                    class="group flex gap-x-1 min-w-[10rem] max-w-max mt-2 px-3 rounded-sm items-center text-blue-600 hover:text-blue-500 active:text-blue-400"
+                                    class="group mt-2 flex min-w-[10rem] max-w-max items-center gap-x-1 rounded-sm px-3 text-blue-600 hover:text-blue-500 active:text-blue-400"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@
                                 <input type="checkbox" id="allPairs" name="allPairs" />
                                 <label class="font-medium" for="allPairs" data-l10n-id="settingAllPairs"></label>
                                 <div
-                                    class="text-sm mt-1"
+                                    class="mt-1 text-sm"
                                     data-l10n-id="settingAllPairsDesc"
                                     data-l10n-is-html="true"
                                 ></div>
@@ -125,9 +125,9 @@
 
                             <label for="mtLang">
                                 <div class="font-medium" data-l10n-id="settingMultitranLang">Multitran language</div>
-                                <div class="text-sm mt-1" data-l10n-id="settingMultitranLangDesc"></div>
+                                <div class="mt-1 text-sm" data-l10n-id="settingMultitranLangDesc"></div>
                             </label>
-                            <select id="mtLang" class="border border-gray-700 px-3 w-max rounded-sm">
+                            <select id="mtLang" class="w-max rounded-sm border border-gray-700 px-3">
                                 <option value="1">English</option>
                                 <option value="2">Русский</option>
                                 <option value="3">Deutsch</option>
@@ -139,7 +139,7 @@
                     </section>
 
                     <section>
-                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingWebPageHeader">
+                        <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="settingWebPageHeader">
                             Web page translation
                         </h2>
                         <div id="tranAfter" class="ml-8 space-y-4">
@@ -149,7 +149,7 @@
                                     >Double clicking
                                 </label>
                             </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 items-center gap-y-1">
+                            <div class="grid grid-cols-1 items-center gap-y-1 sm:grid-cols-2">
                                 <div>
                                     <div class="space-x-1">
                                         <input type="checkbox" id="selecting" name="selecting" />
@@ -157,7 +157,7 @@
                                             Translate text by Selecting
                                         </label>
                                     </div>
-                                    <div class="flex space-x-3 items-start">
+                                    <div class="flex items-start space-x-3">
                                         <label for="shortcutInput" class="ml-[1.5rem]">
                                             <div data-l10n-id="settingPressKey" data-l10n-attrs="title">
                                                 and pressing following keys:
@@ -165,9 +165,9 @@
                                         </label>
                                     </div>
                                 </div>
-                                <span class="relative bg-red-100 ml-[1.5rem] w-[15rem]">
+                                <span class="relative ml-[1.5rem] w-[15rem] bg-red-100">
                                     <input
-                                        class="pl-3 pr-8 rounded-sm disabled:cursor-not-allowed w-full"
+                                        class="w-full rounded-sm pl-3 pr-8 disabled:cursor-not-allowed"
                                         id="shortcutInput"
                                         type="text"
                                         data-l10n-id="settingPressKey"
@@ -175,7 +175,7 @@
                                         data-l10n-nocontent="true"
                                     />
                                     <button
-                                        class="absolute -translate-y-1/2 top-1/2 right-1 w-4 h-4"
+                                        class="absolute right-1 top-1/2 h-4 w-4 -translate-y-1/2"
                                         id="shortcutClear"
                                         data-l10n-id="settingClearShortcut"
                                         data-l10n-attrs="title"
@@ -209,7 +209,7 @@
                     </section>
 
                     <section>
-                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingAudioHeader">Audio</h2>
+                        <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="settingAudioHeader">Audio</h2>
                         <div class="ml-8 space-x-1">
                             <input type="checkbox" id="audio" name="audio" />
                             <label for="audio" data-l10n-id="settingAudio">Fetch audio pronunciation</label>
@@ -217,7 +217,7 @@
                     </section>
 
                     <section>
-                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingContextMenuHeader">
+                        <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="settingContextMenuHeader">
                             Context menu
                         </h2>
                         <div class="ml-8 space-x-1">
@@ -229,7 +229,7 @@
                     </section>
 
                     <section>
-                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingSizesHeader">Sizes</h2>
+                        <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="settingSizesHeader">Sizes</h2>
 
                         <!--Font size-->
                         <div class="ml-8 flex items-start">
@@ -237,7 +237,7 @@
                             <div class="ml-10">
                                 <input
                                     id="fsize"
-                                    class="px-1 w-[7ch]"
+                                    class="w-[7ch] px-1"
                                     type="number"
                                     name="fontSize"
                                     value="16"
@@ -246,7 +246,7 @@
                                 />
                                 <span>px</span>
                             </div>
-                            <div id="fontSizeDemo" class="px-1 ml-auto mr-8">aA</div>
+                            <div id="fontSizeDemo" class="ml-auto mr-8 px-1">aA</div>
                         </div>
 
                         <!--Width-->
@@ -254,7 +254,7 @@
                             <label for="popupWidth" class="font-medium" data-l10n-id="settingSizesWidth">Width</label>
                             <input
                                 id="popupWidth"
-                                class="px-1 ml-1 mr-0.5"
+                                class="ml-1 mr-0.5 px-1"
                                 type="number"
                                 name="width"
                                 min="300"
@@ -270,7 +270,7 @@
                             >
                             <input
                                 id="popupHeight"
-                                class="px-1 ml-1 mr-0.5"
+                                class="ml-1 mr-0.5 px-1"
                                 type="number"
                                 name="height"
                                 min="300"
@@ -281,7 +281,7 @@
 
                             <button
                                 id="resetSizes"
-                                class="ml-6 px-1 flex items-center space-x-1 hover:text-blue-900"
+                                class="ml-6 flex items-center space-x-1 px-1 hover:text-blue-900"
                                 type="button"
                             >
                                 <svg
@@ -306,8 +306,8 @@
                     </section>
 
                     <section>
-                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="tipsBlock">Tips</h2>
-                        <ul class="ml-8 space-x-1 list-disc pl-8">
+                        <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="tipsBlock">Tips</h2>
+                        <ul class="ml-8 list-disc space-x-1 pl-8">
                             <li data-l10n-id="tipUseArrows">
                                 pressing Ctrl + Arrow Down/Up scrolls to the next/previous translation block
                             </li>

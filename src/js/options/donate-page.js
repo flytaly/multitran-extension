@@ -32,9 +32,9 @@ function addAddresses() {
         });
 
         toggleQRCodeBtn?.addEventListener('click', () => {
-            const img = li.querySelector('[data-type="qrcode"]')
-            img.src = info.QRCode
-            img.classList.toggle('hidden')
+            const img = li.querySelector('[data-type="qrcode"]');
+            img.src = info.QRCode;
+            img.classList.toggle('hidden');
         });
 
         ul.appendChild(li);

@@ -8,10 +8,10 @@
     </head>
 
     <body
-        class="flex flex-col min-w-[400px] min-h-[150px] text-slate-900 text-sm font-sans overflow-x-hidden overflow-y-auto accent-blue-600"
+        class="flex min-h-[150px] min-w-[400px] flex-col overflow-y-auto overflow-x-hidden font-sans text-sm text-slate-900 accent-blue-600"
     >
         <div id="top-bar" class="h-px bg-blue-800"></div>
-        <div class="flex bg-blue-800 whitespace-nowrap">
+        <div class="flex whitespace-nowrap bg-blue-800">
             <div id="tabs" class="flex w-max text-sm">
                 <!-- <button class="tab tab-active"></button> -->
             </div>
@@ -34,7 +34,7 @@
             </button>
         </div>
         <div class="p-2">
-            <div class="flex gap-2 items-center justify-between mb-2">
+            <div class="mb-2 flex items-center justify-between gap-2">
                 <a class="text-blue-600 hover:text-blue-500" href="https://multitran.com/" target="_blank">
                     <svg class="h-8 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                         <g class="fill-current stroke-current">
@@ -48,13 +48,13 @@
                         </g>
                     </svg>
                 </a>
-                <div data-type="lang-selector" class="flex gap-1 items-center flex-wrap justify-center">
-                    <select class="border border-black rounded-sm" id="l1"></select>
+                <div data-type="lang-selector" class="flex flex-wrap items-center justify-center gap-1">
+                    <select class="rounded-sm border border-black" id="l1"></select>
                     <a id="lang-swap" href="#">⇄</a>
-                    <select class="border border-black rounded-sm" id="l2"></select>
+                    <select class="rounded-sm border border-black" id="l2"></select>
                 </div>
                 <button
-                    class="w-4 h-4 origin-center hover:scale-110 active:scale-95 hover:text-blue-600"
+                    class="h-4 w-4 origin-center hover:scale-110 hover:text-blue-600 active:scale-95"
                     id="optionsButton"
                     data-l10n-id="optionsButton"
                     data-l10n-nocontent="true"
@@ -69,19 +69,19 @@
                 </button>
             </div>
             <form
-                class="flex w-full bg-white ring-1 ring-slate-500 focus-within:ring-2 focus-within:ring-blue-700 rounded-sm border-0"
+                class="flex w-full rounded-sm border-0 bg-white ring-1 ring-slate-500 focus-within:ring-2 focus-within:ring-blue-700"
                 id="input-form"
                 method="post"
             >
                 <input
-                    class="border-0 flex-grow text-lg px-1 py-0.5 pr-0 focus:outline-none"
+                    class="flex-grow border-0 px-1 py-0.5 pr-0 text-lg focus:outline-none"
                     name="words-input"
                     type="text"
                     placeholder="..."
                     autofocus
                 />
                 <button
-                    class="flex items-center ml-2 px-2 border border-l-slate-500 bg-slate-200 hover:bg-slate-300"
+                    class="ml-2 flex items-center border border-l-slate-500 bg-slate-200 px-2 hover:bg-slate-300"
                     type="submit"
                 >
                     <img class="h-4" src="images/Search.svg" />
@@ -89,13 +89,13 @@
             </form>
         </div>
 
-        <div id="loading" class="text-center font-bold mt-2" hidden>Loading...</div>
-        <div id="error" class="text-center text-red-700 font-bold mt-2" hidden></div>
-        <div id="not-found" class="text-center font-bold mt-2" hidden>Not Found</div>
+        <div id="loading" class="mt-2 text-center font-bold" hidden>Loading...</div>
+        <div id="error" class="mt-2 text-center font-bold text-red-700" hidden></div>
+        <div id="not-found" class="mt-2 text-center font-bold" hidden>Not Found</div>
 
         <div id="translation-container"></div>
 
-        <footer class="mt-auto mb-1 mr-4 text-xs text-right font-normal">
+        <footer class="mb-1 mr-4 mt-auto text-right text-xs font-normal">
             <a class="text-slate-600" href="donate.html" target="_blank">Donate</a>
             |
             <a class="text-slate-600" id="storeLink" href="#" target="_blank">Rating</a>

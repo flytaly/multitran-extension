@@ -56,7 +56,7 @@ export async function renderTranslation(text, options, pairIndex = 0) {
             width: 800, // clamp(options.width, 400, 800),
         });
 
-        setContainerWidth(options.width)
+        setContainerWidth(options.width);
 
         if (fetchAudio) {
             const container = translationElem.querySelector('#pronunciation');

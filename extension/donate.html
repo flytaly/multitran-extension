@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
     <head>
@@ -8,15 +8,15 @@
         <title>Multitran Popup | Donate</title>
     </head>
 
-    <body class="bg-slate-100 accent-blue-600 text-slate-900 pb-10">
+    <body class="bg-slate-100 pb-10 text-slate-900 accent-blue-600">
         <div class="h-2 bg-blue-600"></div>
-        <header class="mx-auto max-w-4xl w-full px-2" data-path="header.html"></header>
-        <div class="mx-auto max-w-4xl w-full px-2 text-base">
+        <header class="mx-auto w-full max-w-4xl px-2" data-path="header.html"></header>
+        <div class="mx-auto w-full max-w-4xl px-2 text-base">
             <!-- Back to options page  -->
             <a href="options.html">
                 <span class="inline-flex items-center">
                     <svg
-                        class="text-blue-600 h-6 w-auto"
+                        class="h-6 w-auto text-blue-600"
                         width="13"
                         height="20"
                         viewBox="0 0 13 20"
@@ -33,9 +33,9 @@
             </a>
 
             <main class="my-5 space-y-10">
-                <h1 class="text-lg font-bold text-blue-900 flex items-center justify-center gap-1 mx-auto">
+                <h1 class="mx-auto flex items-center justify-center gap-1 text-lg font-bold text-blue-900">
                     <svg
-                        class="stroke-slate-500 text-red-400 h-5 w-auto"
+                        class="h-5 w-auto stroke-slate-500 text-red-400"
                         width="22"
                         height="20"
                         viewBox="0 0 22 20"
@@ -53,10 +53,12 @@
                     <span data-l10n-id="donateHeader">Support extension’s development and maintenance</span>
                 </h1>
                 <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="donateSectionCrypto">Crypto</h2>
+                    <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="donateSectionCrypto">Crypto</h2>
                     <div class="ml-8 space-y-8">
                         <div>
-                            <h3 class="mb-4 text-sm" data-l10n-id="donateNowPayments">in any cryptocurrency via NOWPayments</h3>
+                            <h3 class="mb-4 text-sm" data-l10n-id="donateNowPayments">
+                                in any cryptocurrency via NOWPayments
+                            </h3>
                             <a
                                 href="https://nowpayments.io/donation/flytaly"
                                 class="inline"
@@ -99,9 +101,9 @@
                             <template id="crypto-address">
                                 <li>
                                     <b class="mb-1"></b>
-                                    <div class="py-1 px-1 bg-slate-200 border rounded-sm border-slate-300 text-sm">
+                                    <div class="rounded-sm border border-slate-300 bg-slate-200 px-1 py-1 text-sm">
                                         <div class="flex">
-                                            <span data-type="address" class="break-all mr-4"></span>
+                                            <span data-type="address" class="mr-4 break-all"></span>
                                             <button
                                                 data-type="copy-btn"
                                                 class="ml-auto hover:text-blue-600 active:text-blue-400"
@@ -130,7 +132,7 @@
                                                     </g>
                                                 </svg>
                                                 <svg
-                                                    class="h-5 w-auto text-green-600 hidden"
+                                                    class="hidden h-5 w-auto text-green-600"
                                                     data-type="was-copied"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     preserveAspectRatio="xMidYMid meet"
@@ -165,7 +167,7 @@
                                             </button>
                                         </div>
                                         <div class="flex justify-center">
-                                            <img src="" data-type="qrcode" class="w-full max-w-[16rem] mt-1 hidden" />
+                                            <img src="" data-type="qrcode" class="mt-1 hidden w-full max-w-[16rem]" />
                                         </div>
                                     </div>
                                 </li>
@@ -174,12 +176,12 @@
                     </div>
                 </section>
                 <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="donateSectionOther"></h2>
+                    <h2 class="mb-4 text-lg font-bold text-blue-900" data-l10n-id="donateSectionOther"></h2>
 
                     <div class="ml-8">
                         <a href="https://qiwi.com/n/FLYTALY" target="_blank">
                             <svg
-                                class="w-auto h-12"
+                                class="h-12 w-auto"
                                 viewBox="0 0 138 51"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
