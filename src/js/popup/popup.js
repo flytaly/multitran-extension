@@ -30,11 +30,12 @@ const onTabChange = (tabIndex) => {
 
 async function setListeners() {
     options = await storage.getOptions();
+    updateLangSelector(options);
     browser.storage.local.onChanged.addListener((change) => {
         if (change.options.newValue) {
             options = { ...options, ...change.options.newValue };
             updateTabs(options.pairs, options.currentPair, onTabChange);
-            updateLangSelector(options.pairs, options.currentPair);
+            updateLangSelector(options);
         }
     });
 

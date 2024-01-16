@@ -16,6 +16,7 @@ import { defaultSizes, langIds } from './constants.js';
  * @property {boolean} [withKey] - translate selected text only if key is pressed
  * @property {boolean} [contextMenuItem] - add item to the context menu
  * @property {boolean} [fetchAudio]
+ * @property {boolean} [allPairs] - enable all languages
  * @property {ShortcutKeys} [keys] - keys that should be pressed to show selected text translation
  */
 
@@ -76,6 +77,7 @@ export const storage = {
                 shiftKey: false,
                 additionalKey: null,
             };
+        if (options.allPairs === undefined) options.allPairs = false;
         return options;
     },
 

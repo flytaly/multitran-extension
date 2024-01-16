@@ -3,16 +3,27 @@ import browser from 'webextension-polyfill';
 import { langIds } from '../constants.js';
 import { translateElement } from '../l10n.js';
 import { storage } from '../storage.js';
+import { getPairsElements } from '../pairs.js';
+
+/**
+ * @typedef {import('../storage.js').Options} Options
+ */
+
+/**
+ * @typedef {Object} SelectorListeners
+ * @property {(l1:string, l2:string)=>Promise<void>} onChange
+ * @property {(id: string)=>Promise<void>} onDelete
+ * @property {(id: string)=>Promise<void>} onSetMain
+ */
 
 /**
  * @arg {string} l1
  * @arg {string} l2
  * @arg {number} id
- * @arg {(l1:string, l2:string)=>Promise<void>} onChange
- * @arg {(id: string)=>Promise<void>} onDelete
- * @arg {(id: string)=>Promise<void>} onSetMain
+ * @arg {Options} options
+ * @arg {SelectorListeners} listeners
  */
-function mountLangSelector(l1, l2, id, onChange, onDelete, onSetMain) {
+async function mountLangSelector(l1, l2, id, options, { onChange, onDelete, onSetMain } = {}) {
     /** @type DocumentFragment */
     const fragment = document.getElementById('lang-selector-tmp')?.content.cloneNode(true);
     translateElement(fragment);
@@ -26,13 +37,23 @@ function mountLangSelector(l1, l2, id, onChange, onDelete, onSetMain) {
     const setMainBtn = langBlock.querySelector('button[name="make-main"]');
     const langSwapBtn = langBlock.querySelector('[name="lang-swap"]');
 
-    const updateValues = (l1_, l2_, id_) => {
+    const renderOptions = async (allPairs = false) => {
+        const langOpts = await getPairsElements(allPairs ? 'all-languages' : 'main-languages');
+        l1Elem.innerHTML = '';
+        l1Elem.append(...langOpts.map((elem) => elem.cloneNode(true)));
+        l2Elem.innerHTML = '';
+        l2Elem.append(...langOpts.map((elem) => elem.cloneNode(true)));
+    };
+
+    /** @arg {Options} options_ */
+    const updateValues = async (l1_, l2_, id_, options_) => {
+        await renderOptions(options_.allPairs);
         langBlock.dataset.id = id_;
         l1Elem.value = l1_;
         l2Elem.value = l2_;
     };
 
-    updateValues(l1, l2, id);
+    await updateValues(l1, l2, id, options);
 
     if (onDelete) {
         delBtn.addEventListener('click', () => onDelete(langBlock.dataset.id));
@@ -68,13 +89,13 @@ function mountLangSelector(l1, l2, id, onChange, onDelete, onSetMain) {
     };
 }
 
-export async function setLangSelectorListeners() {
+/** @arg {import('../storage.js').Options} options */
+export async function setLangSelectorListeners(options) {
     const refs = {
-        /** @type {Array<ReturnType<mountLanguageSelector>>} refs to language pairs selectors */
+        /** @type {Array<Awaited<ReturnType<typeof mountLangSelector>>>} refs to language pairs selectors */
         pairs: [],
     };
 
-    let options = await storage.getOptions();
     const commitChanges = () => storage.saveOptions(options);
 
     const addButton = document.getElementById('add-pair');
@@ -84,12 +105,12 @@ export async function setLangSelectorListeners() {
         commitChanges();
     });
 
-    function render() {
-        const onUpdate = async (l1, l2, idx) => {
+    async function render() {
+        const onChange = async (l1, l2, idx) => {
             options.pairs[idx] = [l1, l2];
             return commitChanges();
         };
-        const onRemove = async (idx) => {
+        const onDelete = async (idx) => {
             if (options.pairs.length <= 1) return;
             options.pairs.splice(idx, 1);
             options.currentPair = options.currentPair < options.pairs.length ? options.currentPair : 0;
@@ -102,13 +123,20 @@ export async function setLangSelectorListeners() {
         };
 
         // mount or update
-        options.pairs.forEach(([l1, l2], idx) => {
-            if (!refs.pairs[idx]) {
-                refs.pairs.push(mountLangSelector(l1, l2, idx, onUpdate, idx && onRemove, idx && onSetMain));
-                return;
-            }
-            refs.pairs[idx].update(l1, l2, idx);
-        });
+        await Promise.allSettled(
+            options.pairs.map(async ([l1, l2], idx) => {
+                if (!refs.pairs[idx]) {
+                    const selector = await mountLangSelector(l1, l2, idx, options, {
+                        onChange,
+                        onDelete: idx !== 0 && onDelete,
+                        onSetMain: idx !== 0 && onSetMain,
+                    });
+                    refs.pairs.push(selector);
+                    return;
+                }
+                await refs.pairs[idx].update(l1, l2, idx, options);
+            }),
+        );
 
         // unmount on delete
         const len = options.pairs.length;
@@ -131,5 +159,5 @@ export async function setLangSelectorListeners() {
         render();
     });
 
-    render(options);
+    render();
 }

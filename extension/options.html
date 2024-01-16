@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
     <head>
@@ -8,343 +8,313 @@
         <title>Multitran Popup | Options</title>
     </head>
 
-    <body class="bg-slate-100 accent-blue-600 text-slate-900 pb-10">
+    <body class="bg-slate-100 accent-blue-600 text-slate-900 pb-10 flex flex-col">
         <div class="h-2 bg-blue-600"></div>
-        <header class="mx-auto max-w-4xl w-full px-2" data-path="header.html"></header>
-        <div class="mx-auto max-w-4xl w-full px-2">
-            <main class="text-base my-10 space-y-10">
-                <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingTranslationHeader">
-                        Translation settings
-                    </h2>
-                    <div class="ml-8 grid grid-cols-1 md:grid-cols-[auto,max-content] gap-x-4 gap-y-6 items-start">
-                        <label for="l1">
-                            <div class="font-medium" data-l10n-id="settingLangPairs">Language pairs</div>
-                            <div class="text-sm mt-1" data-l10n-id="settingLangPairsDesc"></div>
-                        </label>
-
-                        <div class="flex flex-col gap-2 items-center">
-                            <div data-type="lang-pairs" class="flex flex-col gap-2">
-                                <template id="lang-selector-tmp">
-                                    <div class="flex space-x-2 items-center" data-type="pair">
-                                        <select name="l1" class="border border-gray-700 px-3 rounded-sm">
-                                            <option value="10">Arabic</option>
-                                            <option value="15">Bulgarian</option>
-                                            <option value="17">Chinese</option>
-                                            <option value="8">Croatian</option>
-                                            <option value="16">Czech</option>
-                                            <option value="22">Danish</option>
-                                            <option value="24">Dutch</option>
-                                            <option value="1" selected>English</option>
-                                            <option value="26">Estonian</option>
-                                            <option value="36">Finnish</option>
-                                            <option value="4">French</option>
-                                            <option value="3">German</option>
-                                            <option value="38">Greek</option>
-                                            <option value="42">Hungarian</option>
-                                            <option value="49">Irish</option>
-                                            <option value="23">Italian</option>
-                                            <option value="28">Japanese</option>
-                                            <option value="39">Korean</option>
-                                            <option value="37">Latin</option>
-                                            <option value="27">Latvian</option>
-                                            <option value="12">Lithuanian</option>
-                                            <option value="78">Maltese</option>
-                                            <option value="30">Norwegian Bokmål</option>
-                                            <option value="14">Polish</option>
-                                            <option value="11">Portuguese</option>
-                                            <option value="13">Romanian</option>
-                                            <option value="2">Russian</option>
-                                            <option value="60">Slovak</option>
-                                            <option value="67">Slovenian</option>
-                                            <option value="5">Spanish</option>
-                                            <option value="29">Swedish</option>
-                                            <option value="32">Turkish</option>
-                                            <option value="33">Ukrainian</option>
-                                        </select>
-                                        <button name="lang-swap" class="px-3 rounded-sm">⇄</button>
-                                        <select name="l2" class="border border-gray-700 px-3 rounded-sm">
-                                            <option value="10">Arabic</option>
-                                            <option value="15">Bulgarian</option>
-                                            <option value="17">Chinese</option>
-                                            <option value="8">Croatian</option>
-                                            <option value="16">Czech</option>
-                                            <option value="22">Danish</option>
-                                            <option value="24">Dutch</option>
-                                            <option value="1">English</option>
-                                            <option value="26">Estonian</option>
-                                            <option value="36">Finnish</option>
-                                            <option value="4">French</option>
-                                            <option value="3">German</option>
-                                            <option value="38">Greek</option>
-                                            <option value="42">Hungarian</option>
-                                            <option value="49">Irish</option>
-                                            <option value="23">Italian</option>
-                                            <option value="28">Japanese</option>
-                                            <option value="39">Korean</option>
-                                            <option value="37">Latin</option>
-                                            <option value="27">Latvian</option>
-                                            <option value="12">Lithuanian</option>
-                                            <option value="78">Maltese</option>
-                                            <option value="30">Norwegian Bokmål</option>
-                                            <option value="14">Polish</option>
-                                            <option value="11">Portuguese</option>
-                                            <option value="13">Romanian</option>
-                                            <option value="2" selected>Russian</option>
-                                            <option value="60">Slovak</option>
-                                            <option value="67">Slovenian</option>
-                                            <option value="5">Spanish</option>
-                                            <option value="29">Swedish</option>
-                                            <option value="32">Turkish</option>
-                                            <option value="33">Ukrainian</option>
-                                        </select>
-                                        <button
-                                            name="make-main"
-                                            class="hover:text-blue-600 active:text-blue-500"
-                                            data-l10n-id="settingSetMainLangPair"
-                                            data-l10n-attrs="title"
-                                            data-l10n-nocontent="true"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="1em"
-                                                height="1em"
-                                                preserveAspectRatio="xMidYMid meet"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <rect x="0" y="0" width="16" height="16" fill="none" stroke="none" />
-                                                <path
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="1.5"
-                                                    d="m7.75 5.75l-3-3l-3 3m3 7.5V2.75m9.5 7.5l-3 3l-3-3m3-7.5v10.5"
-                                                />
-                                            </svg>
-                                        </button>
-                                        <button name="remove" class="hover:text-red-600 active:text-red-500">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="1em"
-                                                height="1em"
-                                                preserveAspectRatio="xMidYMid meet"
-                                                viewBox="0 0 1024 1024"
-                                            >
-                                                <path
-                                                    fill="currentColor"
-                                                    d="M160 256H96a32 32 0 0 1 0-64h256V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64h-64v672a32 32 0 0 1-32 32H192a32 32 0 0 1-32-32V256zm448-64v-64H416v64h192zM224 896h576V256H224v640zm192-128a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32zm192 0a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32z"
-                                                />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </template>
-                            </div>
-                            <button
-                                type="button"
-                                id="add-pair"
-                                class="group flex gap-x-1 min-w-[10rem] max-w-max mt-2 px-3 rounded-sm items-center text-blue-600 hover:text-blue-500 active:text-blue-400"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="1em"
-                                    height="1em"
-                                    preserveAspectRatio="xMidYMid meet"
-                                    viewBox="0 0 12 12"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M6.5 1.75a.75.75 0 0 0-1.5 0V5H1.75a.75.75 0 0 0 0 1.5H5v3.25a.75.75 0 0 0 1.5 0V6.5h3.25a.75.75 0 0 0 0-1.5H6.5V1.75Z"
-                                    />
-                                </svg>
-                                <span data-l10n-id="settingAddPair">add</span>
-                            </button>
-                        </div>
-
-                        <label for="mtLang">
-                            <div class="font-medium" data-l10n-id="settingMultitranLang">Multitran language</div>
-                            <div class="text-sm mt-1" data-l10n-id="settingMultitranLangDesc"></div>
-                        </label>
-                        <select id="mtLang" class="border border-gray-700 px-3 w-max rounded-sm">
-                            <option value="1">English</option>
-                            <option value="2">Русский</option>
-                            <option value="3">Deutsch</option>
-                            <option value="5">Español</option>
-                            <option value="17">中文</option>
-                            <option value="33">Українська</option>
-                        </select>
-                    </div>
-                </section>
-
-                <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingWebPageHeader">
-                        Web page translation
-                    </h2>
-                    <div id="tranAfter" class="ml-8 space-y-4">
-                        <div class="space-x-1">
-                            <input type="checkbox" id="doubleClick" name="doubleClick" />
-                            <label class="font-medium" for="doubleClick" data-l10n-id="settingDoubleClick"
-                                >Double clicking
+        <div class="max-w-5xl mx-auto">
+            <header class="w-full px-2" data-path="header.html"></header>
+            <div class="w-full px-2">
+                <main class="text-base my-10 space-y-10">
+                    <section>
+                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingTranslationHeader">
+                            Translation settings
+                        </h2>
+                        <div
+                            class="ml-8 grid grid-cols-1 lg:grid-cols-[auto,minmax(min-content,max-content)] gap-x-4 gap-y-6 items-start"
+                        >
+                            <label for="l1">
+                                <div class="font-medium" data-l10n-id="settingLangPairs">Language pairs</div>
+                                <div class="text-sm mt-1" data-l10n-id="settingLangPairsDesc"></div>
                             </label>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 items-center gap-y-1">
-                            <div>
-                                <div class="space-x-1">
-                                    <input type="checkbox" id="selecting" name="selecting" />
-                                    <label class="font-medium" for="selecting" data-l10n-id="settingSelectingText">
-                                        Translate text by Selecting
-                                    </label>
-                                </div>
-                                <div class="flex space-x-3 items-start">
-                                    <label for="shortcutInput" class="ml-[1.5rem]">
-                                        <div data-l10n-id="settingPressKey" data-l10n-attrs="title">
-                                            and pressing following keys:
+
+                            <div class="flex flex-col gap-2 items-center">
+                                <div data-type="lang-pairs" class="flex flex-col gap-2">
+                                    <template id="lang-selector-tmp">
+                                        <div data-type="pair" class="whitespace-nowrap">
+                                            <span class="inline-flex gap-2 items-center">
+                                                <select
+                                                    name="l1"
+                                                    class="border border-gray-700 px-3 rounded-sm"
+                                                ></select>
+                                                <button name="lang-swap" class="px-3 rounded-sm">⇄</button>
+                                                <select
+                                                    name="l2"
+                                                    class="border border-gray-700 px-3 rounded-sm"
+                                                ></select>
+                                            </span>
+                                            <span class="ml-2 inline-flex space-x-2 items-center">
+                                                <button
+                                                    name="make-main"
+                                                    class="hover:text-blue-600 active:text-blue-500"
+                                                    data-l10n-id="settingSetMainLangPair"
+                                                    data-l10n-attrs="title"
+                                                    data-l10n-nocontent="true"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="1em"
+                                                        height="1em"
+                                                        preserveAspectRatio="xMidYMid meet"
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <rect
+                                                            x="0"
+                                                            y="0"
+                                                            width="16"
+                                                            height="16"
+                                                            fill="none"
+                                                            stroke="none"
+                                                        />
+                                                        <path
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="1.5"
+                                                            d="m7.75 5.75l-3-3l-3 3m3 7.5V2.75m9.5 7.5l-3 3l-3-3m3-7.5v10.5"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                                <button name="remove" class="hover:text-red-600 active:text-red-500">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="1em"
+                                                        height="1em"
+                                                        preserveAspectRatio="xMidYMid meet"
+                                                        viewBox="0 0 1024 1024"
+                                                    >
+                                                        <path
+                                                            fill="currentColor"
+                                                            d="M160 256H96a32 32 0 0 1 0-64h256V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64h-64v672a32 32 0 0 1-32 32H192a32 32 0 0 1-32-32V256zm448-64v-64H416v64h192zM224 896h576V256H224v640zm192-128a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32zm192 0a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32z"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                            </span>
                                         </div>
-                                    </label>
+                                    </template>
                                 </div>
-                            </div>
-                            <span class="relative bg-red-100 ml-[1.5rem] w-[15rem]">
-                                <input
-                                    class="pl-3 pr-8 rounded-sm disabled:cursor-not-allowed w-full"
-                                    id="shortcutInput"
-                                    type="text"
-                                    data-l10n-id="settingPressKey"
-                                    data-l10n-attrs="placeholder"
-                                    data-l10n-nocontent="true"
-                                />
                                 <button
-                                    class="absolute -translate-y-1/2 top-1/2 right-1 w-4 h-4"
-                                    id="shortcutClear"
-                                    data-l10n-id="settingClearShortcut"
-                                    data-l10n-attrs="title"
-                                    data-l10n-nocontent="true"
+                                    type="button"
+                                    id="add-pair"
+                                    class="group flex gap-x-1 min-w-[10rem] max-w-max mt-2 px-3 rounded-sm items-center text-blue-600 hover:text-blue-500 active:text-blue-400"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        height="100%"
-                                        width="100%"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        width="1em"
+                                        height="1em"
+                                        preserveAspectRatio="xMidYMid meet"
+                                        viewBox="0 0 12 12"
                                     >
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="15" y1="9" x2="9" y2="15"></line>
-                                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                                        <path
+                                            fill="currentColor"
+                                            d="M6.5 1.75a.75.75 0 0 0-1.5 0V5H1.75a.75.75 0 0 0 0 1.5H5v3.25a.75.75 0 0 0 1.5 0V6.5h3.25a.75.75 0 0 0 0-1.5H6.5V1.75Z"
+                                        />
                                     </svg>
+                                    <span data-l10n-id="settingAddPair">add</span>
                                 </button>
-                            </span>
-                            <div class="col-span-full ml-[1.5rem] text-xs italic" data-l10n-id="settingPressKeyDesc">
-                                Allowed keys: Shift, Alt, Control, Cmd plus 1 Letter, Number or F2 key
+                            </div>
+
+                            <div class="col-span-full">
+                                <input type="checkbox" id="allPairs" name="allPairs" />
+                                <label class="font-medium" for="allPairs" data-l10n-id="settingAllPairs"></label>
+                                <div
+                                    class="text-sm mt-1"
+                                    data-l10n-id="settingAllPairsDesc"
+                                    data-l10n-is-html="true"
+                                ></div>
+                            </div>
+
+                            <label for="mtLang">
+                                <div class="font-medium" data-l10n-id="settingMultitranLang">Multitran language</div>
+                                <div class="text-sm mt-1" data-l10n-id="settingMultitranLangDesc"></div>
+                            </label>
+                            <select id="mtLang" class="border border-gray-700 px-3 w-max rounded-sm">
+                                <option value="1">English</option>
+                                <option value="2">Русский</option>
+                                <option value="3">Deutsch</option>
+                                <option value="5">Español</option>
+                                <option value="17">中文</option>
+                                <option value="33">Українська</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingWebPageHeader">
+                            Web page translation
+                        </h2>
+                        <div id="tranAfter" class="ml-8 space-y-4">
+                            <div class="space-x-1">
+                                <input type="checkbox" id="doubleClick" name="doubleClick" />
+                                <label class="font-medium" for="doubleClick" data-l10n-id="settingDoubleClick"
+                                    >Double clicking
+                                </label>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 items-center gap-y-1">
+                                <div>
+                                    <div class="space-x-1">
+                                        <input type="checkbox" id="selecting" name="selecting" />
+                                        <label class="font-medium" for="selecting" data-l10n-id="settingSelectingText">
+                                            Translate text by Selecting
+                                        </label>
+                                    </div>
+                                    <div class="flex space-x-3 items-start">
+                                        <label for="shortcutInput" class="ml-[1.5rem]">
+                                            <div data-l10n-id="settingPressKey" data-l10n-attrs="title">
+                                                and pressing following keys:
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <span class="relative bg-red-100 ml-[1.5rem] w-[15rem]">
+                                    <input
+                                        class="pl-3 pr-8 rounded-sm disabled:cursor-not-allowed w-full"
+                                        id="shortcutInput"
+                                        type="text"
+                                        data-l10n-id="settingPressKey"
+                                        data-l10n-attrs="placeholder"
+                                        data-l10n-nocontent="true"
+                                    />
+                                    <button
+                                        class="absolute -translate-y-1/2 top-1/2 right-1 w-4 h-4"
+                                        id="shortcutClear"
+                                        data-l10n-id="settingClearShortcut"
+                                        data-l10n-attrs="title"
+                                        data-l10n-nocontent="true"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            height="100%"
+                                            width="100%"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                                        </svg>
+                                    </button>
+                                </span>
+                                <div
+                                    class="col-span-full ml-[1.5rem] text-xs italic"
+                                    data-l10n-id="settingPressKeyDesc"
+                                >
+                                    Allowed keys: Shift, Alt, Control, Cmd plus 1 Letter, Number or F2 key
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingAudioHeader">Audio</h2>
-                    <div class="ml-8 space-x-1">
-                        <input type="checkbox" id="audio" name="audio" />
-                        <label for="audio" data-l10n-id="settingAudio">Fetch audio pronunciation</label>
-                    </div>
-                </section>
+                    <section>
+                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingAudioHeader">Audio</h2>
+                        <div class="ml-8 space-x-1">
+                            <input type="checkbox" id="audio" name="audio" />
+                            <label for="audio" data-l10n-id="settingAudio">Fetch audio pronunciation</label>
+                        </div>
+                    </section>
 
-                <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingContextMenuHeader">
-                        Context menu
-                    </h2>
-                    <div class="ml-8 space-x-1">
-                        <input type="checkbox" id="contextMenu" name="audio" />
-                        <label for="contextMenu" data-l10n-id="settingContextMenu">Add item to the context menu</label>
-                    </div>
-                </section>
+                    <section>
+                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingContextMenuHeader">
+                            Context menu
+                        </h2>
+                        <div class="ml-8 space-x-1">
+                            <input type="checkbox" id="contextMenu" name="audio" />
+                            <label for="contextMenu" data-l10n-id="settingContextMenu"
+                                >Add item to the context menu</label
+                            >
+                        </div>
+                    </section>
 
-                <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingSizesHeader">Sizes</h2>
+                    <section>
+                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="settingSizesHeader">Sizes</h2>
 
-                    <!--Font size-->
-                    <div class="ml-8 flex items-start">
-                        <label for="fsize" class="font-medium" data-l10n-id="settingSizesFont">Font size</label>
-                        <div class="ml-10">
+                        <!--Font size-->
+                        <div class="ml-8 flex items-start">
+                            <label for="fsize" class="font-medium" data-l10n-id="settingSizesFont">Font size</label>
+                            <div class="ml-10">
+                                <input
+                                    id="fsize"
+                                    class="px-1 w-[7ch]"
+                                    type="number"
+                                    name="fontSize"
+                                    value="16"
+                                    min="10"
+                                    max="25"
+                                />
+                                <span>px</span>
+                            </div>
+                            <div id="fontSizeDemo" class="px-1 ml-auto mr-8">aA</div>
+                        </div>
+
+                        <!--Width-->
+                        <div class="ml-8 mt-4 flex items-center">
+                            <label for="popupWidth" class="font-medium" data-l10n-id="settingSizesWidth">Width</label>
                             <input
-                                id="fsize"
-                                class="px-1 w-[7ch]"
+                                id="popupWidth"
+                                class="px-1 ml-1 mr-0.5"
                                 type="number"
-                                name="fontSize"
-                                value="16"
-                                min="10"
-                                max="25"
+                                name="width"
+                                min="300"
+                                max="1000"
+                                step="20"
                             />
                             <span>px</span>
-                        </div>
-                        <div id="fontSizeDemo" class="px-1 ml-auto mr-8">aA</div>
-                    </div>
 
-                    <!--Width-->
-                    <div class="ml-8 mt-4 flex items-center">
-                        <label for="popupWidth" class="font-medium" data-l10n-id="settingSizesWidth">Width</label>
-                        <input
-                            id="popupWidth"
-                            class="px-1 ml-1 mr-0.5"
-                            type="number"
-                            name="width"
-                            min="300"
-                            max="1000"
-                            step="20"
-                        />
-                        <span>px</span>
+                            <span class="mx-4">✕</span>
 
-                        <span class="mx-4">✕</span>
-
-                        <label for="popupHeigth" class="font-medium" data-l10n-id="settingSizesHeight">Height</label>
-                        <input
-                            id="popupHeight"
-                            class="px-1 ml-1 mr-0.5"
-                            type="number"
-                            name="height"
-                            min="300"
-                            max="1000"
-                            step="20"
-                        />
-                        <span>px</span>
-
-                        <button
-                            id="resetSizes"
-                            class="ml-6 px-1 flex items-center space-x-1 hover:text-blue-900"
-                            type="button"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true"
-                                role="img"
-                                width="1em"
-                                height="1em"
-                                preserveAspectRatio="xMidYMid meet"
-                                viewBox="0 0 15 15"
+                            <label for="popupHeigth" class="font-medium" data-l10n-id="settingSizesHeight"
+                                >Height</label
                             >
-                                <path
-                                    fill="currentColor"
-                                    fill-rule="evenodd"
-                                    d="M4.854 2.146a.5.5 0 0 1 0 .708L3.707 4H9a4.5 4.5 0 1 1 0 9H5a.5.5 0 0 1 0-1h4a3.5 3.5 0 1 0 0-7H3.707l1.147 1.146a.5.5 0 1 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2a.5.5 0 0 1 .708 0Z"
-                                    clip-rule="evenodd"
-                                />
-                            </svg>
-                            <span data-l10n-id="settingSizesReset">reset</span>
-                        </button>
-                    </div>
-                </section>
+                            <input
+                                id="popupHeight"
+                                class="px-1 ml-1 mr-0.5"
+                                type="number"
+                                name="height"
+                                min="300"
+                                max="1000"
+                                step="20"
+                            />
+                            <span>px</span>
 
-                <section>
-                    <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="tipsBlock">Tips</h2>
-                    <ul class="ml-8 space-x-1 list-disc pl-8">
-                        <li data-l10n-id="tipUseArrows">
-                            pressing Ctrl + Arrow Down/Up scrolls to the next/previous translation block
-                        </li>
-                    </ul>
-                </section>
-            </main>
+                            <button
+                                id="resetSizes"
+                                class="ml-6 px-1 flex items-center space-x-1 hover:text-blue-900"
+                                type="button"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true"
+                                    role="img"
+                                    width="1em"
+                                    height="1em"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 15 15"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                        d="M4.854 2.146a.5.5 0 0 1 0 .708L3.707 4H9a4.5 4.5 0 1 1 0 9H5a.5.5 0 0 1 0-1h4a3.5 3.5 0 1 0 0-7H3.707l1.147 1.146a.5.5 0 1 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2a.5.5 0 0 1 .708 0Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <span data-l10n-id="settingSizesReset">reset</span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="mb-4 font-bold text-lg text-blue-900" data-l10n-id="tipsBlock">Tips</h2>
+                        <ul class="ml-8 space-x-1 list-disc pl-8">
+                            <li data-l10n-id="tipUseArrows">
+                                pressing Ctrl + Arrow Down/Up scrolls to the next/previous translation block
+                            </li>
+                        </ul>
+                    </section>
+                </main>
+            </div>
         </div>
     </body>
 </html>

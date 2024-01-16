@@ -9,13 +9,21 @@ import { renderParts } from './render-parts.js';
 
 async function init() {
     await renderParts();
-    setLangSelectorListeners();
-    const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize, width, height } =
-        await storage.getOptions();
+    const options = await storage.getOptions();
+    await setLangSelectorListeners(options);
+
     // multitran interface language
+    const { multitranLang, doubleClick, select, keys, fetchAudio, contextMenuItem, fontSize, width, height, allPairs } =
+        options;
     const mtLang = document.getElementById('mtLang');
     mtLang.value = multitranLang;
     mtLang.addEventListener('change', () => storage.saveOptions({ multitranLang: mtLang.value }));
+
+    const allPairsInput = document.getElementById('allPairs');
+    allPairsInput.checked = allPairs;
+    allPairsInput.addEventListener('change', () => {
+        storage.saveOptions({ allPairs: allPairsInput.checked });
+    });
 
     const doubleClickInput = document.getElementById('doubleClick');
     doubleClickInput.checked = doubleClick;

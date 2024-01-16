@@ -42,6 +42,12 @@
     "settingAddPair": {
         "message": "add a language pair"
     },
+    "settingAllPairs": {
+        "message": "Enable all language pairs"
+    },
+    "settingAllPairsDesc": {
+        "message": "Note that most of the languages do not have dictionaries. To check, go to the <a href=\"https://www.multitran.com/m.exe?all=32\">multitran website</a> and click on the desired language."
+    },
     "settingMultitranLang": {
         "message": "Multitran interface language",
         "description": "Settings: multitran language"

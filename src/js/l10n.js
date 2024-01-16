@@ -55,9 +55,14 @@ function translateElement(element = document) {
     const children = element.querySelectorAll('*[data-l10n-id]');
     for (const child of children) {
         if (!child.dataset.l10nNocontent) {
+            const isHTML = child.dataset.l10nIsHtml;
             const data = browser.i18n.getMessage(child.dataset.l10nId);
             if (data && data !== '??') {
-                child.textContent = data;
+                if (isHTML) {
+                    child.innerHTML = data;
+                } else {
+                    child.textContent = data;
+                }
             }
         }
         if (child.dataset.l10nAttrs) {

@@ -9,8 +9,8 @@
 @layer components {
     .tab {
         @apply py-1 px-2 text-center select-none max-w-[12rem] overflow-hidden text-ellipsis
-               border border-b-0 border-transparent rounded-t-md 
-               bg-transparent hover:bg-slate-200 
+               border border-b-0 border-transparent rounded-t-md
+               bg-transparent hover:bg-slate-200
                text-slate-300 hover:text-slate-900;
     }
     .tab-active {

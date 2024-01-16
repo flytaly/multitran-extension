@@ -42,6 +42,12 @@
     "settingAddPair": {
         "message": "добавить языковую пару"
     },
+    "settingAllPairs": {
+        "message": "Показывать все языковые пары"
+    },
+    "settingAllPairsDesc": {
+        "message": "Обратите внимание, что большинство языков не имеют словарей. Чтобы проверить, зайдите на <a href=\"https://www.multitran.com/m.exe?all=32\">сайт  мультитрана</a> и выберите нужный язык."
+    },
     "settingMultitranLang": {
         "message": "Язык интерфейса мультитрана",
         "description": "Settings: multitran language"

@@ -35,6 +35,7 @@
         "implicit-arrow-linebreak": "off",
         "no-param-reassign": "off",
         "consistent-return": "off",
+        "no-continue": "off",
         "radix": "off"
     }
 }
