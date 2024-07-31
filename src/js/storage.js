@@ -58,27 +58,26 @@ export const storage = {
     async getOptions() {
         /** @type {{options: Options}} */
         const { options = {} } = await browser.storage.local.get('options');
-        if (!options.pairs || !options.pairs.length) options.pairs = [[langIds.English, langIds.Russian]];
-        if (options.currentPair === undefined) options.currentPair = 0;
-        if (!options.multitranLang) options.multitranLang = langIds.English;
-        if (options.doubleClick === undefined) options.doubleClick = false;
-        if (options.select === undefined) options.select = true;
-        if (options.withKey === undefined) options.withKey = true;
-        if (options.fetchAudio === undefined) options.fetchAudio = true;
-        if (options.contextMenuItem === undefined) options.contextMenuItem = true;
-        if (options.theme === undefined) options.theme = 'auto';
-        if (!options.fontSize) options.fontSize = defaultSizes.fontSize;
-        if (!options.width) options.width = defaultSizes.width;
-        if (!options.height) options.height = defaultSizes.height;
-        if (!options.keys)
-            options.keys = {
-                altKey: false,
-                ctrlKey: false,
-                metaKey: false,
-                shiftKey: false,
-                additionalKey: 'F2',
-            };
-        if (options.allPairs === undefined) options.allPairs = false;
+        if (!options.pairs?.length) options.pairs = [[langIds.English, langIds.Russian]];
+        options.currentPair ??= 0;
+        options.multitranLang ??= langIds.English;
+        options.doubleClick ??= false;
+        options.select ??= true;
+        options.withKey ??= true;
+        options.fetchAudio ??= true;
+        options.contextMenuItem ??= true;
+        options.theme ||= 'auto';
+        options.fontSize ||= defaultSizes.fontSize;
+        options.width ||= defaultSizes.width;
+        options.height ||= defaultSizes.height;
+        options.keys ||= {
+            altKey: false,
+            ctrlKey: false,
+            metaKey: false,
+            shiftKey: false,
+            additionalKey: 'F2',
+        };
+        options.allPairs ??= false;
         return options;
     },
 
