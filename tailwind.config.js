@@ -4,6 +4,7 @@ const fontSize = (n) => `calc(${n}*var(--font-size))`;
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ['./src/**/*.{html,js,css}', './extension/**/*.html'],
+    darkMode: 'selector',
     theme: {
         fill: {
             current: 'currentColor',

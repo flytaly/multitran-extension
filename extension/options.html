@@ -212,10 +212,28 @@
                         <h2 class="mb-4 text-lg font-bold" data-l10n-id="settingContextMenuHeader">Context menu</h2>
                         <div class="ml-8 space-x-1">
                             <input type="checkbox" id="contextMenu" name="audio" />
-                            <label for="contextMenu" data-l10n-id="settingContextMenu"
-                                >Add item to the context menu</label
-                            >
+                            <label for="contextMenu" data-l10n-id="settingContextMenu">
+                                Add item to the context menu
+                            </label>
                         </div>
+                    </section>
+
+                    <section>
+                        <h2 class="mb-4 text-lg font-bold" data-l10n-id="settingTheme">Theme</h2>
+                        <form id="theme" class="ml-8 flex flex-row gap-4">
+                            <label>
+                                <input type="radio" name="theme" value="light" />
+                                <span data-l10n-id="settingThemeLight">light</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="theme" value="dark" />
+                                <span data-l10n-id="settingThemeDark">dark</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="theme" value="auto" checked />
+                                <span data-l10n-id="settingThemeAuto">auto</span>
+                            </label>
+                        </form>
                     </section>
 
                     <section>
@@ -255,9 +273,9 @@
 
                             <span class="mx-4">✕</span>
 
-                            <label for="popupHeigth" class="font-medium" data-l10n-id="settingSizesHeight"
-                                >Height</label
-                            >
+                            <label for="popupHeigth" class="font-medium" data-l10n-id="settingSizesHeight">
+                                Height
+                            </label>
                             <input
                                 id="popupHeight"
                                 class="ml-1 mr-0.5 px-1"

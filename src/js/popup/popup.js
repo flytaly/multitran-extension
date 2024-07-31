@@ -1,13 +1,14 @@
 import browser from 'webextension-polyfill';
+import { langIds } from '../constants.js';
 import '../l10n.js';
 import { storage } from '../storage.js';
-import { throttle } from '../utils.js';
 import { addLinkToBrowserStore } from '../store-link.js';
+import { throttle } from '../utils.js';
 import { addKeyboardListener } from './keys.js';
-import { langIds } from '../constants.js';
-import { updateLangSelector, setLangSelectorListeners } from './lang-selector.js';
-import { onAddingTab, updateTabs } from './tabs.js';
+import { setLangSelectorListeners, updateLangSelector } from './lang-selector.js';
 import { renderTranslation, setContainerWidth } from './render-translation.js';
+import { onAddingTab, updateTabs } from './tabs.js';
+import { applyTheme } from '../apply-theme.js';
 
 /** @type {import('../storage').Options} */
 let options = {};
@@ -31,11 +32,13 @@ const onTabChange = (tabIndex) => {
 async function setListeners() {
     options = await storage.getOptions();
     updateLangSelector(options);
+    applyTheme(options.theme);
     browser.storage.local.onChanged.addListener((change) => {
         if (change.options.newValue) {
             options = { ...options, ...change.options.newValue };
             updateTabs(options.pairs, options.currentPair, onTabChange);
             updateLangSelector(options);
+            applyTheme(options.theme);
         }
     });
 

@@ -16,6 +16,7 @@ import { defaultSizes, langIds } from './constants.js';
  * @property {boolean} [contextMenuItem] - add item to the context menu
  * @property {boolean} [fetchAudio]
  * @property {boolean} [allPairs] - enable all languages
+ * @property {'auto'|'light'|'dark'} [theme]
  * @property {ShortcutKeys} [keys] - keys that should be pressed to show selected text translation
  */
 
@@ -65,6 +66,7 @@ export const storage = {
         if (options.withKey === undefined) options.withKey = true;
         if (options.fetchAudio === undefined) options.fetchAudio = true;
         if (options.contextMenuItem === undefined) options.contextMenuItem = true;
+        if (options.theme === undefined) options.theme = 'auto';
         if (!options.fontSize) options.fontSize = defaultSizes.fontSize;
         if (!options.width) options.width = defaultSizes.width;
         if (!options.height) options.height = defaultSizes.height;

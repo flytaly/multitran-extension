@@ -100,6 +100,22 @@
         "message": "Добавить ссылку на вызов перевода в контекстное меню",
         "description": "Settings: context menu block header"
     },
+    "settingTheme": {
+        "message": "Тема",
+        "description": "Settings: theme"
+    },
+    "settingThemeAuto": {
+        "message": "Системная",
+        "description": "Settings: theme"
+    },
+    "settingThemeDark": {
+        "message": "Темная",
+        "description": "Settings: theme"
+    },
+    "settingThemeLight": {
+        "message": "Светлая",
+        "description": "Settings: theme"
+    },
     "settingSizesHeader": {
         "message": "Размеры всплывающего окна",
         "description": "Settings: sizes block header"

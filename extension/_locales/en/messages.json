@@ -100,6 +100,22 @@
         "message": "Add item to the context menu",
         "description": "Settings: context menu block header"
     },
+    "settingTheme": {
+        "message": "Theme",
+        "description": "Settings: theme"
+    },
+    "settingThemeAuto": {
+        "message": "System",
+        "description": "Settings: theme"
+    },
+    "settingThemeDark": {
+        "message": "Dark",
+        "description": "Settings: theme"
+    },
+    "settingThemeLight": {
+        "message": "Light",
+        "description": "Settings: theme"
+    },
     "settingSizesHeader": {
         "message": "Popup sizes",
         "description": "Settings: sizes block header"

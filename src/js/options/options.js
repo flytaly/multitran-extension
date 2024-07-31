@@ -1,15 +1,17 @@
+import { applyTheme } from '../apply-theme.js';
+import { defaultSizes } from '../constants.js';
 import { addToContextMenu, removeFromContextMenu } from '../context-menu.js';
 import '../l10n.js';
-import { setLangSelectorListeners } from './lang-selector.js';
 import { storage } from '../storage.js';
-import { setShortcut } from './shortcuts.js';
 import { clamp } from '../utils.js';
-import { defaultSizes } from '../constants.js';
+import { setLangSelectorListeners } from './lang-selector.js';
 import { renderParts } from './render-parts.js';
+import { setShortcut } from './shortcuts.js';
 
 async function init() {
-    await renderParts();
     const options = await storage.getOptions();
+    applyTheme(options.theme);
+    await renderParts();
     await setLangSelectorListeners(options);
 
     // multitran interface language
@@ -60,6 +62,16 @@ async function init() {
         } else {
             removeFromContextMenu();
         }
+    });
+
+    // theme
+    /** @type {HTMLFormElement} */
+    const themeForm = document.querySelector('form#theme');
+    new FormData(themeForm).set('theme', options.theme);
+    themeForm.addEventListener('change', (e) => {
+        const theme = new FormData(e.currentTarget).get('theme');
+        storage.saveOptions({ theme });
+        applyTheme(theme);
     });
 
     // Font Size

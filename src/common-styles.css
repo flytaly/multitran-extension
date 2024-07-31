@@ -26,112 +26,105 @@
         border-color: theme('colors.blue.500');
         border-bottom-width: 0px;
     }
-    @media (prefers-color-scheme: dark) {
-        .tab {
-            color: theme('colors.slate.300');
-        }
-        .tab:hover {
-            color: theme('colors.slate.100');
-            background-color: theme('colors.neutral.700');
-        }
-        .tab-active {
-            color: theme('colors.slate.100');
-            background-color: theme('colors.neutral.800');
-            border-color: theme('colors.blue.400');
-        }
+
+    .tab:where(.dark, .dark *) {
+        color: theme('colors.slate.300');
+    }
+
+    .tab:hover:where(.dark, .dark *) {
+        color: theme('colors.slate.100');
+        background-color: theme('colors.neutral.700');
+    }
+
+    .tab-active:where(.dark, .dark *) {
+        color: theme('colors.slate.100');
+        background-color: theme('colors.neutral.800');
+        border-color: theme('colors.blue.400');
     }
 }
 
-:root,
-.root {
-    --base-spacing: 16px;
-    --font-size: 16px;
-    --popup-max-width: 400px;
-    --popup-max-height: 400px;
+@layer base {
+    :root,
+    .root {
+        --base-spacing: 16px;
+        --font-size: 16px;
+        --popup-max-width: 400px;
+        --popup-max-height: 400px;
 
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: initial;
-}
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: initial;
+    }
 
-body {
-    background-color: theme('colors.slate.100');
-    color: theme('colors.slate.900');
-    accent-color: theme('colors.blue.600');
-}
+    .dark {
+        color-scheme: dark;
+    }
 
-@media (prefers-color-scheme: dark) {
     body {
+        background-color: theme('colors.slate.100');
+        color: theme('colors.slate.900');
+        accent-color: theme('colors.blue.600');
+    }
+
+    body:where(.dark, .dark *) {
         background-color: theme('colors.neutral.800');
         color: theme('colors.slate.300');
         accent-color: theme('colors.blue.200');
     }
-}
 
-a {
-    color: theme('colors.slate.900');
-}
-
-a:hover {
-    color: theme('colors.blue.600');
-    text-decoration: underline;
-}
-
-@media (prefers-color-scheme: dark) {
     a {
+        color: theme('colors.slate.900');
+    }
+
+    a:where(.dark, .dark *) {
         color: theme('colors.slate.100');
     }
+
     a:hover {
+        color: theme('colors.blue.600');
+        text-decoration: underline;
+    }
+
+    a:hover:where(.dark, .dark *) {
         color: theme('colors.blue.400');
     }
-}
 
-select,
-input {
-    border: 1px solid theme('colors.slate.700');
-    background-color: theme('colors.slate.50');
-}
-select:hover,
-input:hover {
-    background-color: theme('colors.white');
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
     select,
     input {
+        border: 1px solid theme('colors.slate.700');
+        background-color: theme('colors.slate.50');
+    }
+
+    select:hover,
+    input:hover {
+        background-color: theme('colors.white');
+    }
+
+    select:where(.dark, .dark *),
+    input:where(.dark, .dark *) {
         border-color: theme('colors.slate.600');
         background-color: theme('colors.neutral.800');
     }
-    select:hover,
-    input:hover {
+
+    select:hover:where(.dark, .dark *),
+    input:hover:where(.dark, .dark *) {
         background-color: theme('colors.neutral.900');
     }
-}
 
-.translation-subject {
-    font-style: italic;
-    color: theme('colors.gray.500');
-}
-
-@media (prefers-color-scheme: dark) {
     .translation-subject {
+        font-style: italic;
+        color: theme('colors.gray.500');
+    }
+
+    .translation-subject:where(.dark, .dark *) {
         color: theme('colors.gray.400');
     }
-}
 
-h2 {
-    color: theme('colors.blue.900');
-}
-
-@media (prefers-color-scheme: dark) {
     h2 {
-        color: theme('colors.blue.300');
+        color: theme('colors.blue.900');
     }
-}
 
-@media (prefers-color-scheme: dark) {
-    * {
-        color-scheme: dark;
+    h2:where(.dark, .dark *) {
+        color: theme('colors.blue.300');
     }
 }
