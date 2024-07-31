@@ -1,11 +1,12 @@
 import browser from 'webextension-polyfill';
-import { state } from './state.js';
-import { parser } from '../engine/multitran-parser.js';
-import { applySizeVariables, idToLangMap } from '../utils.js';
+import { applyTheme } from '../apply-theme.js';
 import { addAudioElements } from '../audio.js';
-import { getTemplate } from '../templates.js';
+import { parser } from '../engine/multitran-parser.js';
 import { composeURL } from '../engine/multitran.js';
 import { addKeyboardListener } from '../popup/keys.js';
+import { getTemplate } from '../templates.js';
+import { applySizeVariables, idToLangMap } from '../utils.js';
+import { state } from './state.js';
 
 /**
  * @typedef { import("../engine/multitran-parser").MtGroup } MtGroup
@@ -170,6 +171,7 @@ export async function showPopup({
     const parsed = parser(translationPage);
     if (!parsed.data || !parsed.data.length) return null;
     const popupElement = await popupMarkup(parsed.data, text, l1, l2);
+    applyTheme(state.theme, popupElement);
     const { height, width, fontSize } = state;
     applySizeVariables(popupElement, { height, width, fontSize });
     if (state.fetchAudio) addPronunciation(text, parsed.l1 || l1, popupElement);
