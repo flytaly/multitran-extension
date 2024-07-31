@@ -9,7 +9,7 @@ export const shadow = {};
 
 window.requestIdleCallback(() => {
     const shadowHost = document.createElement('span');
-    shadowHost.style = 'all:unset;';
+    shadowHost.style = 'all:initial;';
     const shadowElem = shadowHost.attachShadow({ mode: 'open' });
     document.body.appendChild(shadowHost);
 
