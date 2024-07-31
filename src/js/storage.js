@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import browser from 'webextension-polyfill';
 import { defaultSizes, langIds } from './constants.js';
 /**

@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { baseURL } from '../constants.js';
 
 function fixURL(relativeURL = '') {

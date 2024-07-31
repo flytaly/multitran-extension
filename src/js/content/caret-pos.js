@@ -1,4 +1,3 @@
-/* eslint-disable radix */
 /**
  * Textarea Caret Position
  * https://github.com/component/textarea-caret-position

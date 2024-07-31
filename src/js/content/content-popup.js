@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import browser from 'webextension-polyfill';
 import { state } from './state.js';
 import { parser } from '../engine/multitran-parser.js';

@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import browser from 'webextension-polyfill';
 import { langIds } from '../constants.js';
 import { translateElement } from '../l10n.js';
