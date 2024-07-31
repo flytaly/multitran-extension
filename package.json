@@ -7,7 +7,7 @@
     "scripts": {
         "prepare-files": "tsx scripts/prepare.js",
         "js": "tsx scripts/esbuild.config.js",
-        "tw": "tailwind -i src/common-styles.css -o extension/dist/styles.css",
+        "tw": "tailwind -i src/styles.css -o extension/dist/styles.css",
         "styles:watch": "npm run tw -- -w",
         "styles:build": "npm run tw -- -m",
         "web-ext:ff": "web-ext run --source-dir extension",
