@@ -7,11 +7,9 @@
         <script src="dist/popup/popup.js" defer></script>
     </head>
 
-    <body
-        class="flex min-h-[150px] min-w-[400px] flex-col overflow-y-auto overflow-x-hidden font-sans text-sm text-slate-900 accent-blue-600"
-    >
-        <div id="top-bar" class="h-px bg-blue-800"></div>
-        <div class="flex whitespace-nowrap bg-blue-800">
+    <body class="flex min-h-[150px] min-w-[400px] flex-col overflow-y-auto overflow-x-hidden font-sans text-sm">
+        <div id="top-bar" class="h-px bg-blue-800 dark:bg-blue-700"></div>
+        <div class="flex whitespace-nowrap bg-blue-800 dark:bg-blue-700">
             <div id="tabs" class="flex w-max text-sm">
                 <!-- <button class="tab tab-active"></button> -->
             </div>
@@ -35,7 +33,11 @@
         </div>
         <div class="p-2">
             <div class="mb-2 flex items-center justify-between gap-2">
-                <a class="text-blue-600 hover:text-blue-500" href="https://multitran.com/" target="_blank">
+                <a
+                    class="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-400/80"
+                    href="https://multitran.com/"
+                    target="_blank"
+                >
                     <svg class="h-8 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                         <g class="fill-current stroke-current">
                             <path
@@ -49,12 +51,12 @@
                     </svg>
                 </a>
                 <div data-type="lang-selector" class="flex flex-wrap items-center justify-center gap-1">
-                    <select class="rounded-sm border border-black" id="l1"></select>
+                    <select class="rounded-sm" id="l1"></select>
                     <a id="lang-swap" href="#">⇄</a>
-                    <select class="rounded-sm border border-black" id="l2"></select>
+                    <select class="rounded-sm" id="l2"></select>
                 </div>
                 <button
-                    class="h-4 w-4 origin-center hover:scale-110 hover:text-blue-600 active:scale-95"
+                    class="h-4 w-4 origin-center hover:scale-110 hover:text-blue-600 active:scale-95 dark:hover:text-blue-400"
                     id="optionsButton"
                     data-l10n-id="optionsButton"
                     data-l10n-nocontent="true"
@@ -69,7 +71,7 @@
                 </button>
             </div>
             <form
-                class="flex w-full rounded-sm border-0 bg-white ring-1 ring-slate-500 focus-within:ring-2 focus-within:ring-blue-700"
+                class="flex w-full rounded-sm border-0 ring-1 ring-slate-500 focus-within:ring-2 focus-within:ring-blue-700 dark:focus-within:ring-blue-500"
                 id="input-form"
                 method="post"
             >
@@ -81,10 +83,15 @@
                     autofocus
                 />
                 <button
-                    class="ml-2 flex items-center border border-l-slate-500 bg-slate-200 px-2 hover:bg-slate-300"
-                    type="submit"
+                    class="flex items-center border border-l-slate-500 bg-slate-200 px-2 text-slate-600 hover:bg-slate-300 dark:border-none dark:bg-neutral-700 dark:text-slate-400 dark:hover:bg-neutral-600"
                 >
-                    <img class="h-4" src="images/Search.svg" />
+                    <!-- Search Icon  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-auto" viewBox="0 0 16 16">
+                        <path
+                            fill="currentColor"
+                            d="M15.707 14.293l-4.822-4.822a6.019 6.019 0 1 0-1.414 1.414l4.822 4.822a1 1 0 0 0 1.414-1.414zM6 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"
+                        ></path>
+                    </svg>
                 </button>
             </form>
         </div>
@@ -96,11 +103,16 @@
         <div id="translation-container"></div>
 
         <footer class="mb-1 mr-4 mt-auto text-right text-xs font-normal">
-            <a class="text-slate-600" href="donate.html" target="_blank">Donate</a>
+            <a class="text-slate-600 dark:text-slate-400" href="donate.html" target="_blank">Donate</a>
             |
-            <a class="text-slate-600" id="storeLink" href="#" target="_blank">Rating</a>
+            <a class="text-slate-600 dark:text-slate-400" id="storeLink" href="#" target="_blank">Rating</a>
             |
-            <a class="text-slate-600" href="https://github.com/flytaly/multitran-extension" target="_blank">GitHub</a>
+            <a
+                class="text-slate-600 dark:text-slate-400"
+                href="https://github.com/flytaly/multitran-extension"
+                target="_blank"
+                >GitHub</a
+            >
         </footer>
     </body>
 </html>

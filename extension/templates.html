@@ -1,7 +1,7 @@
 <template id="translate-popup">
     <article
         id="translate-popup-content"
-        class="root absolute z-[9999] block max-h-popup-h min-h-[40px] min-w-[100px] max-w-popup-w overflow-auto break-words rounded-md border border-gray-400 bg-gray-100 p-3 pt-2 font-sans text-sm font-normal text-black"
+        class="root absolute z-[9999] block max-h-popup-h min-h-[40px] min-w-[100px] max-w-popup-w overflow-auto break-words rounded-md border border-gray-400 bg-gray-100 p-3 pt-2 font-sans text-sm font-normal text-black dark:border-gray-500 dark:bg-neutral-800 dark:text-slate-50"
     >
         <header class="mb-2 flex items-center text-lg">
             <span class="mr-4 max-w-[200px] overflow-hidden overflow-ellipsis whitespace-nowrap font-bold"
@@ -48,9 +48,9 @@
 
 <template id="translation-list-header">
     <div class="flex justify-between" data-type="list-header">
-        <div class="mr-1 space-x-1 text-sm text-gray-500"></div>
+        <div class="mr-1 space-x-1 text-sm text-gray-500 dark:text-gray-200"></div>
         <button
-            class="invisible ml-auto flex items-center text-blue-700"
+            class="invisible ml-auto flex items-center text-blue-700 dark:text-blue-300"
             data-l10n-id="popupScrollIcon"
             data-l10n-nocontent="true"
             data-l10n-attrs="title"
@@ -71,5 +71,5 @@
 </template>
 
 <template id="translation-list">
-    <ol class="list-decimal p-2 pl-10 text-sm text-gray-500"></ol>
+    <ol class="list-decimal p-2 pl-10 text-sm text-gray-500 dark:text-gray-400"></ol>
 </template>

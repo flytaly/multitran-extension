@@ -2,19 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    @apply focus-visible:outline-blue-700;
-}
-
 @layer components {
     .tab {
-        @apply max-w-[12rem] select-none overflow-hidden text-ellipsis rounded-t-md border border-b-0
-               border-transparent bg-transparent px-2 py-1
-               text-center text-slate-300
-               hover:bg-slate-200 hover:text-slate-900;
+        max-width: theme('spacing.48');
+        user-select: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 1px solid transparent;
+        border-radius: theme('borderRadius.md') theme('borderRadius.md') 0 0;
+        background-color: transparent;
+        text-align: center;
+        padding: theme('spacing.1') theme('spacing.2');
+
+        color: theme('colors.slate.300');
+    }
+    .tab:hover {
+        color: theme('colors.slate.900');
+        background-color: theme('colors.slate.200');
     }
     .tab-active {
-        @apply border-blue-500 bg-slate-50 text-slate-900;
+        color: theme('colors.slate.900');
+        background-color: theme('colors.slate.50');
+        border-color: theme('colors.blue.500');
+        border-bottom-width: 0px;
+    }
+    @media (prefers-color-scheme: dark) {
+        .tab {
+            color: theme('colors.slate.300');
+        }
+        .tab:hover {
+            color: theme('colors.slate.100');
+            background-color: theme('colors.neutral.700');
+        }
+        .tab-active {
+            color: theme('colors.slate.100');
+            background-color: theme('colors.neutral.800');
+            border-color: theme('colors.blue.400');
+        }
     }
 }
 
@@ -31,22 +55,83 @@
 }
 
 body {
-    @apply bg-slate-100;
+    background-color: theme('colors.slate.100');
+    color: theme('colors.slate.900');
+    accent-color: theme('colors.blue.600');
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: theme('colors.neutral.800');
+        color: theme('colors.slate.300');
+        accent-color: theme('colors.blue.200');
+    }
 }
 
 a {
-    @apply text-slate-900 hover:text-blue-600 hover:underline;
+    color: theme('colors.slate.900');
+}
+
+a:hover {
+    color: theme('colors.blue.600');
+    text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: theme('colors.slate.100');
+    }
+    a:hover {
+        color: theme('colors.blue.400');
+    }
 }
 
 select,
 input {
-    @apply border border-slate-700 bg-slate-50 hover:bg-white;
+    border: 1px solid theme('colors.slate.700');
+    background-color: theme('colors.slate.50');
+}
+select:hover,
+input:hover {
+    background-color: theme('colors.white');
 }
 
-input {
-    @apply bg-slate-50 hover:border-blue-800 hover:bg-white;
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    select,
+    input {
+        border-color: theme('colors.slate.600');
+        background-color: theme('colors.neutral.800');
+    }
+    select:hover,
+    input:hover {
+        background-color: theme('colors.neutral.900');
+    }
 }
 
 .translation-subject {
-    @apply italic text-gray-500;
+    font-style: italic;
+    color: theme('colors.gray.500');
+}
+
+@media (prefers-color-scheme: dark) {
+    .translation-subject {
+        color: theme('colors.gray.400');
+    }
+}
+
+h2 {
+    color: theme('colors.blue.900');
+}
+
+@media (prefers-color-scheme: dark) {
+    h2 {
+        color: theme('colors.blue.300');
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color-scheme: dark;
+    }
 }
