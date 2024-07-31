@@ -1,5 +1,8 @@
-import { renderParts } from './render-parts.js';
+import { applyTheme } from '../apply-theme.js';
 import { addresses } from '../donate.js';
+import '../l10n.js';
+import { storage } from '../storage.js';
+import { renderParts } from './render-parts.js';
 
 function addAddresses() {
     const ul = document.getElementById('crypto-list');
@@ -42,6 +45,8 @@ function addAddresses() {
 }
 
 async function init() {
+    const options = await storage.getOptions();
+    applyTheme(options.theme);
     await renderParts();
     addAddresses();
 }
