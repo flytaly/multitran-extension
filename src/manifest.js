@@ -71,7 +71,7 @@ function browserSpecific() {
     if (TARGET === 'firefox') {
         manifest = {
             manifest_version: 2,
-            applications: {
+            browser_specific_settings: {
                 gecko: {
                     strict_min_version: '101.0',
                     id: 'multitran@flytaly',
