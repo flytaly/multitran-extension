@@ -1,6 +1,6 @@
 {
     "name": "multitran-extension",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Multitran Browser extension",
     "main": "manifest.json",
     "type": "module",
