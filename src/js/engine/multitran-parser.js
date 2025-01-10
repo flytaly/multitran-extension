@@ -18,8 +18,13 @@ function getParsedHTML(text) {
  * @returns {MtGroupHeader}
  */
 function getGroupHeader(td) {
-    const content = [];
-    td.querySelectorAll('a, span, em').forEach((elem) => {
+    // There is another table inside td element. Select the first row and the first column of the table.
+    const nestedTD = td.querySelector('tr:first-of-type > td:first-of-type');
+    if (nestedTD === null) {
+        return { type: 'header', content: [], };
+    }
+    const headerElems =Array.from(nestedTD.querySelectorAll(':scope > a, :scope > span, :scope > em'))
+    const content = headerElems.map((elem) => {
         const resultElem = document.createElement(elem.tagName);
         if (elem.tagName === 'A') {
             const url = fixURL(elem.getAttribute('href') || '');
@@ -39,7 +44,7 @@ function getGroupHeader(td) {
             if (name) resultElem.setAttribute('name', name);
         }
         resultElem.textContent = elem.textContent;
-        content.push(resultElem);
+        return resultElem
     });
     return {
         type: 'header',
