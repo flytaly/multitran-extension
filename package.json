@@ -29,7 +29,7 @@
         "autoprefixer": "^10.4.20",
         "chokidar": "^4.0.3",
         "cross-env": "^7.0.3",
-        "esbuild": "^0.24.2",
+        "esbuild": "^0.25.0",
         "fs-extra": "^11.2.0",
         "kolorist": "^1.8.0",
         "qrcode": "^1.5.4",
